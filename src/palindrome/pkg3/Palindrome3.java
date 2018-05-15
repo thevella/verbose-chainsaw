@@ -20,7 +20,7 @@ public class Palindrome3 {
        //Cole Mollica, Febuary 120th 2018, to revese a phrase and to see if it is a palendrome
         
         //asking for input from the user
-        System.out.println("Enter A Phrase to check if it is a palendrome (Dont not use caps)");
+        System.out.println("Enter A Phrase  obama did 9/11 to check if it is a palendrome (Dont not use caps)");
       
         //setting up input
         Scanner input = new Scanner(System.in);
