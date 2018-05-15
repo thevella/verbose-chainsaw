@@ -15,6 +15,38 @@ import java.util.InputMismatchException;
 import java.lang.Math;
 import java.io.*;
 
+class QuotesDatabase {
+
+    ArrayList<Quote> quotes = new ArrayList<Quote>();
+
+    public QuotesDatabase () {
+
+    }
+
+    public QuotesDatabase () {
+
+    }
+}
+
+class Quote {
+    private String author;
+    private String quote;
+    private String[] tags;
+
+    public Quote (String author, String quote) {
+        this.author = author;
+        this.quote = quote;
+    }
+
+    public String retAuthor () {
+        return author;
+    }
+
+    public String retQuote () {
+        return quote;
+    }
+}
+
 // Exception thrown when the value is not an expected value in user input.
 class NegNumber extends Exception {
     public NegNumber(String s) {
@@ -99,6 +131,9 @@ public class Quote {
                 }
             }
         });
+
+        // quotes file from: https://gist.github.com/erickedji/68802
+        BufferedReader file = new BufferedReader(new FileReader("quotes.txt"));
 
         // Value used to store user input
         String input1;
