@@ -17,14 +17,40 @@ import java.io.*;
 
 class QuotesDatabase {
 
-    ArrayList<Quote> quotes = new ArrayList<Quote>();
+    private ArrayList<Quote> quotes = new ArrayList<Quote>();
 
     public QuotesDatabase () {
 
     }
 
-    public QuotesDatabase () {
+    public QuotesDatabase (String file, String seperator) {
+        // quotes file from: https://gist.github.com/erickedji/68802
+        BufferedReader fileOpen = new BufferedReader(new FileReader(file));
 
+        // line initiated as null
+        String line = null;
+
+        // temp string and int for while loop
+        String temper = null;
+        int tempInt = 0;
+
+        while ((line = file.readLine()) != null){
+
+            // add the line to the last element
+            // in the arraylist
+            // if the line containes a "--",
+            // add a new arraylist element
+            if (line.contains(seperator)){
+                quotes.add(new Quote(temper, line.substring(2)));
+                temper = "";
+
+            } else {
+                temper += line + "\n";
+            }
+
+        }
+
+        fileOpen.close();
     }
 }
 
@@ -132,8 +158,7 @@ public class Quote {
             }
         });
 
-        // quotes file from: https://gist.github.com/erickedji/68802
-        BufferedReader file = new BufferedReader(new FileReader("quotes.txt"));
+        QuotesDatabase files = new QuotesDatabase("quotes.txt", "--");
 
         // Value used to store user input
         String input1;
