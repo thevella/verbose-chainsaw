@@ -82,10 +82,6 @@ class Quotes {
     private String author;
     private String quote;
     private String[] tags;
-    private String Loc;
-
-
-
 
 
     public Quotes(String author, String quote) {
