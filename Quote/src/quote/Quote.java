@@ -31,42 +31,42 @@ class QuotesDatabase {
         Ui aa=new Ui();
 
 
-        BufferedReader fileOpen = null;
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
-            fileOpen = new BufferedReader(new FileReader(file));
+            BufferedReader fileOpen = new BufferedReader(new FileReader(file));
+            // line initiated as null
+            String line = null;
+
+            // temp string and int for while loop
+            String temper = null;
+
+
+            try {
+
+                while ((line = fileOpen.readLine()) != null) {
+
+                    // add the line to the last element
+                    // in the arraylist
+                    // if the line containes a "--",
+                    // add a new arraylist element
+                    if (line.contains(seperator)) {
+                        quotesArr.add(new Quotes(temper, line.substring(seperator.length() - 1).trim()));
+                        temper = "";
+
+                    } else {
+                        temper += line + "\n";
+                    }
+
+                }
+                fileOpen.close();
+            } catch (IOException e) {
+                System.out.print (e.getMessage());
+            }
         } catch (FileNotFoundException e) {
             System.out.print (e.getMessage());
         }
 
-        // line initiated as null
-        String line = null;
 
-        // temp string and int for while loop
-        String temper = null;
-
-
-        try {
-
-            while ((line = fileOpen.readLine()) != null) {
-
-                // add the line to the last element
-                // in the arraylist
-                // if the line containes a "--",
-                // add a new arraylist element
-                if (line.contains(seperator)) {
-                    quotesArr.add(new Quotes(temper, line.substring(seperator.length() - 1).trim()));
-                    temper = "";
-
-                } else {
-                    temper += line + "\n";
-                }
-
-            }
-            fileOpen.close();
-        } catch (IOException e) {
-            System.out.print (e.getMessage());
-        }
 
     }
 }
