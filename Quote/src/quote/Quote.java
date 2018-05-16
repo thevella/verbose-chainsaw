@@ -55,11 +55,7 @@ class QuotesDatabase {
                 // if the line containes a "--",
                 // add a new arraylist element
                 if (line.contains(seperator)) {
-<<<<<<< HEAD
                     quotesArr.add(new Quotes(temper, line.substring(seperator.length() - 1).trim()));
-=======
-                    quotesArr.add(new Quotes(temper, line.substring(seperator.length()).trim()));
->>>>>>> 2b24700d5549cf3694073e0666f1d0b352c22699
                     temper = "";
 
                 } else {
