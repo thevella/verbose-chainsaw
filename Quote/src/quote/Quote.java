@@ -5,27 +5,36 @@
  */
 package quote;
 
-/**
- *
- * @author Coles Laptop
- */
+import org.h2.tools.DeleteDbFiles;
 
-import java.util.Scanner;
-import java.util.InputMismatchException;
-import java.lang.Math;
 import java.io.*;
+import java.lang.Math;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 class QuotesDatabase {
 
-    private ArrayList<Quote> quotes = new ArrayList<Quote>();
+    private ArrayList<Quotes> quotes = new ArrayList<Quotes>();
 
-    public QuotesDatabase () {
+    public QuotesDatabase() {
 
     }
 
-    public QuotesDatabase (String file, String seperator) {
-        // quotes file from: https://gist.github.com/erickedji/68802
-        BufferedReader fileOpen = new BufferedReader(new FileReader(file));
+    public QuotesDatabase(String file, String seperator) {
+        BufferedReader fileOpen = null;
+        try {
+            // quotes file from: https://gist.github.com/erickedji/68802
+            fileOpen = new BufferedReader(new FileReader(file));
+        } catch (FileNotFoundException e) {
+            System.out.print (e.getMessage());
+        }
 
         // line initiated as null
         String line = null;
@@ -34,41 +43,47 @@ class QuotesDatabase {
         String temper = null;
         int tempInt = 0;
 
-        while ((line = file.readLine()) != null){
+        try {
 
-            // add the line to the last element
-            // in the arraylist
-            // if the line containes a "--",
-            // add a new arraylist element
-            if (line.contains(seperator)){
-                quotes.add(new Quote(temper, line.substring(2)));
-                temper = "";
+            while ((line = fileOpen.readLine()) != null) {
 
-            } else {
-                temper += line + "\n";
+                // add the line to the last element
+                // in the arraylist
+                // if the line containes a "--",
+                // add a new arraylist element
+                if (line.contains(seperator)) {
+                    quotes.add(new Quotes(temper, line.substring(2)));
+                    temper = "";
+
+                } else {
+                    temper += line + "\n";
+                }
+
             }
-
+            fileOpen.close();
+        } catch (IOException e) {
+            System.out.print (e.getMessage());
         }
 
-        fileOpen.close();
+
     }
 }
 
-class Quote {
+class Quotes {
     private String author;
     private String quote;
     private String[] tags;
 
-    public Quote (String author, String quote) {
+    public Quotes(String author, String quote) {
         this.author = author;
         this.quote = quote;
     }
 
-    public String retAuthor () {
+    public String retAuthor() {
         return author;
     }
 
-    public String retQuote () {
+    public String retQuote() {
         return quote;
     }
 }
