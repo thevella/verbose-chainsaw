@@ -172,7 +172,7 @@ public class Quote {
             }
         });
 
-        QuotesDatabase files = new QuotesDatabase("quotes.txt", "--");
+        QuotesDatabase files = new QuotesDatabase("quote/quotes.txt", "--");
 
         // Value used to store user input
         Double input1;
