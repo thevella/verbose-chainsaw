@@ -166,6 +166,18 @@ public class Quote {
             ;
         }
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> 178b1400facefc46adf6ab012869ecb4693e635c
 
 
     public static void main(String[] args) {
