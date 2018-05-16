@@ -28,6 +28,9 @@ class QuotesDatabase {
     }
 
     public QuotesDatabase(String file, String seperator) {
+        Ui aa=new Ui();
+        
+        
         BufferedReader fileOpen = null;
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
