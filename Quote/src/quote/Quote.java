@@ -164,6 +164,7 @@ public class Quote {
     }
 
 
+
     public static void main(String[] args) {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
