@@ -66,6 +66,23 @@ class QuotesDatabase {
         }
 
 
+        while ((line = file.readLine()) != null){
+
+            // add the line to the last element
+            // in the arraylist
+            // if the line containes a "--",
+            // add a new arraylist element
+            if (line.contains(seperator)){
+                quotes.add(new Quotes(temper, line.substring(2)));
+                temper = "";
+
+            } else {
+                temper += line + "\n";
+            }
+
+
+
+        }
     }
 }
 
