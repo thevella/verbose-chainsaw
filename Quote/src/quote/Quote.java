@@ -21,13 +21,13 @@ import java.util.ArrayList;
 
 class QuotesDatabase {
 
-    private ArrayList<Quotes> quotes = new ArrayList<Quotes>();
+    private ArrayList<Quotes> quotesArr = new ArrayList<Quotes>();
 
     public QuotesDatabase() {
 
     }
 
-    public QuotesDatabase(String file, String seperator) {
+    public QuotesDatabase (String file, String seperator) {
         BufferedReader fileOpen = null;
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
@@ -41,7 +41,7 @@ class QuotesDatabase {
 
         // temp string and int for while loop
         String temper = null;
-        int tempInt = 0;
+
 
         try {
 
@@ -52,7 +52,7 @@ class QuotesDatabase {
                 // if the line containes a "--",
                 // add a new arraylist element
                 if (line.contains(seperator)) {
-                    quotes.add(new Quotes(temper, line.substring(2)));
+                    quotesArr.add(new Quotes(temper, line.substring(2)));
                     temper = "";
 
                 } else {
@@ -65,24 +65,6 @@ class QuotesDatabase {
             System.out.print (e.getMessage());
         }
 
-
-        while ((line = file.readLine()) != null){
-
-            // add the line to the last element
-            // in the arraylist
-            // if the line containes a "--",
-            // add a new arraylist element
-            if (line.contains(seperator)){
-                quotes.add(new Quotes(temper, line.substring(2)));
-                temper = "";
-
-            } else {
-                temper += line + "\n";
-            }
-
-
-
-        }
     }
 }
 
@@ -170,9 +152,6 @@ public class Quote {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
@@ -193,7 +172,7 @@ public class Quote {
         QuotesDatabase files = new QuotesDatabase("quotes.txt", "--");
 
         // Value used to store user input
-        String input1;
+        Double input1;
 
         // Scanner for getting user input for the year
         Scanner reader = new Scanner(System.in);
@@ -203,10 +182,9 @@ public class Quote {
             try {
                 print("Enter a double: ");
                 input1 = Double.valueOf(reader.nextLine());
-                print("Enter another double: ");
-                input2 = Double.valueOf(reader.nextLine());
+
                 // If the value is one that cannot be worked with, throw exception
-                if ((input1 == 1) || (input1 == 0) || (input2 == 1) || (input2 == 0)) {
+                if ((input1 == 1) || (input1 == 0)) {
                     throw new NegNumber(
                             "The number entered was either a 1 or a zero, please enter a number that can be worked with properly.");
                 }
