@@ -27,14 +27,10 @@ class QuotesDatabase {
 
     }
 
-<<<<<<< HEAD
-    public QuotesDatabase (String file, String seperator) {
-=======
     public QuotesDatabase(String file, String seperator) {
         Ui aa=new Ui();
-        
-        
->>>>>>> 9b56a366ae0f8d128ea1c2f23a9cabbfe2635f43
+
+
         BufferedReader fileOpen = null;
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
@@ -59,7 +55,7 @@ class QuotesDatabase {
                 // if the line containes a "--",
                 // add a new arraylist element
                 if (line.contains(seperator)) {
-                    quotesArr.add(new Quotes(temper, line.substring(2)));
+                    quotesArr.add(new Quotes(temper, line.substring(seperator.length() - 1).trim()));
                     temper = "";
 
                 } else {
