@@ -9,6 +9,7 @@ import org.h2.tools.DeleteDbFiles;
 
 import java.io.*;
 import java.lang.Math;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,7 +34,7 @@ class QuotesDatabase {
 
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
-            BufferedReader fileOpen = new BufferedReader(new FileReader(file));
+            BufferedReader fileOpen = new BufferedReader(new FileReader(GetLocation(file)));
             // line initiated as null
             String line = null;
 
@@ -69,12 +70,20 @@ class QuotesDatabase {
 
 
     }
+
+    private String GetLocation(String x) {
+        URL url = getClass().getResource(x);
+        return url.getPath().replaceAll("%20", " ");
+
+    }
 }
 
 class Quotes {
     private String author;
     private String quote;
     private String[] tags;
+
+
 
     public Quotes(String author, String quote) {
         this.author = author;
@@ -155,10 +164,16 @@ public class Quote {
         }
     }
 
+
+
+
+
+
     public static void main(String[] args) {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
+
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 try {
@@ -172,7 +187,7 @@ public class Quote {
             }
         });
 
-        QuotesDatabase files = new QuotesDatabase("quote/quotes.txt", "--");
+        QuotesDatabase files = new QuotesDatabase("quotes.txt", "--");
 
         // Value used to store user input
         Double input1;
