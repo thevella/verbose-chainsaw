@@ -1,0 +1,8 @@
+2018-05-17 13:04:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENTS" not found; SQL statement:
+SELECT * FROM Students [42102-197]
+2018-05-17 13:12:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE QUOTES
+CREATE[*] TABLE QUOTES (AUTHOR VARCHAR(255), BODY VARCHAR(10000)) "; SQL statement:
+drop table quotes
+Create table Quotes (author varchar(255), body varchar(10000)) [42000-197]
