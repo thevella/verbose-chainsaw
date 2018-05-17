@@ -195,7 +195,8 @@ public class Quote {
         return dbConnection;
     }
 
-    //
+    ////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////
 
     static void print(String stringer) {
         // Just a function to simplify output
