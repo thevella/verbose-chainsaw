@@ -29,7 +29,7 @@ class QuotesDatabase {
     }
 
     public QuotesDatabase(String file, String seperator) {
-       
+
 
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
@@ -106,7 +106,7 @@ public class Quote {
     // TODO: Needs to be customized for this program
 
     private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:~/test";
+    private static final String DB_CONNECTION = "jdbc:h2:" + GetLocation("QuotesDatabase");
     private static final String DB_USER = "";
     private static final String DB_PASSWORD = "";
 
@@ -260,9 +260,9 @@ public class Quote {
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
      UserInterfaec aa= new UserInterfaec();
-     
+
      aa.setVisible(true);
-        
+
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 try {
