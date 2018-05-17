@@ -29,7 +29,7 @@ class QuotesDatabase {
     }
 
     public QuotesDatabase(String file, String seperator) {
-        Ui aa = new Ui();
+       
 
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
@@ -259,7 +259,10 @@ public class Quote {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
-
+     UserInterfaec aa= new UserInterfaec();
+     
+     aa.setVisible(true);
+        
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 try {
