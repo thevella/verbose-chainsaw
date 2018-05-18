@@ -7,61 +7,44 @@ package quote;
 
 /**
  *
- * @author Coles Laptop
- Sample code for visability 
- * import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
-
-public class togglepanel {
-
-    public static void main(String[] args) {
-
-        final JFrame frame = new JFrame();
-        final JPanel panel1 = new JPanel();
-        final JPanel panel2 = new JPanel();
-        JButton button1 = new JButton("previous frame!");
-        JButton button2 = new JButton("next frame");
-
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(true);
-        frame.setVisible(true);
-        frame.setSize(600, 400);
-        frame.add(panel1);
-        frame.add(panel2);
-
-        panel1.add(button2);
-        panel1.setVisible(true);
-
-        panel2.add(button1);
-        panel2.setVisible(false);
-
-        button1.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent arg0) {
-
-                panel1.setVisible(true);
-                panel2.setVisible(false);
-
-            }
-        });
-
-
-        button2.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent arg0) {
-
-                panel1.setVisible(false);
-                panel2.setVisible(true);
-            }
-        });
-    }
-}
- 
- 
- 
+ * @author Coles Laptop Sample code for visability import
+ * java.awt.event.ActionEvent; import java.awt.event.ActionListener; import
+ * javax.swing.JButton; import javax.swing.JPanel; import javax.swing.JFrame;
+ *
+ * public class togglepanel {
+ *
+ * public static void main(String[] args) {
+ *
+ * final JFrame frame = new JFrame(); final JPanel panel1 = new JPanel(); final
+ * JPanel panel2 = new JPanel(); JButton button1 = new JButton("previous
+ * frame!"); JButton button2 = new JButton("next frame");
+ *
+ * frame.setLocationRelativeTo(null); frame.setResizable(true);
+ * frame.setVisible(true); frame.setSize(600, 400); frame.add(panel1);
+ * frame.add(panel2);
+ *
+ * panel1.add(button2); panel1.setVisible(true);
+ *
+ * panel2.add(button1); panel2.setVisible(false);
+ *
+ * button1.addActionListener(new ActionListener() {
+ *
+ * public void actionPerformed(ActionEvent arg0) {
+ *
+ * panel1.setVisible(true); panel2.setVisible(false);
+ *
+ * }
+ * });
+ *
+ *
+ * button2.addActionListener(new ActionListener() {
+ *
+ * public void actionPerformed(ActionEvent arg0) {
+ *
+ * panel1.setVisible(false); panel2.setVisible(true); } }); } }
+ *
+ *
+ *
  */
 public class UserInterfaec extends javax.swing.JFrame {
 
@@ -70,7 +53,6 @@ public class UserInterfaec extends javax.swing.JFrame {
      */
     public UserInterfaec() {
         initComponents();
-        
         
     }
 
@@ -104,8 +86,18 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
 
         AddButton.setText("Add");
+        AddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddButtonActionPerformed(evt);
+            }
+        });
 
         RemoveButton.setText("Remove");
+        RemoveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RemoveButtonActionPerformed(evt);
+            }
+        });
 
         AuthoButton.setText("Author");
         AuthoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,12 +107,12 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
 
         QuoteButton.setText("Quote");
-
-        OutScreen.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                OutScreenPropertyChange(evt);
+        QuoteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuoteButtonActionPerformed(evt);
             }
         });
+
         jScrollPane1.setViewportView(OutScreen);
 
         jScrollPane2.setViewportView(SearchWord);
@@ -188,30 +180,51 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void AuthoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AuthoButtonActionPerformed
         // TODO add your handling code here:
+        QuoteButton.setSelected(false);
     }//GEN-LAST:event_AuthoButtonActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-OutScreen.setText("new string");
-//OutScreen.is)
+        
+        String test=SearchWord.getText();
+        OutScreen.setText(test);
+//OutScreen.setVisible(false);
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-       
+        AddButton.setSelected(false);
+        RemoveButton.setSelected(false);
     }//GEN-LAST:event_SearchButtonActionPerformed
 
-    private void OutScreenPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_OutScreenPropertyChange
+    private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
+        SearchButton.setSelected(false);
+        AddButton.setSelected(false);
+    }//GEN-LAST:event_RemoveButtonActionPerformed
+
+    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
+        RemoveButton.setSelected(false);
+        SearchButton.setSelected(false);
+    }//GEN-LAST:event_AddButtonActionPerformed
+
+    private void QuoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuoteButtonActionPerformed
+        AuthoButton.setSelected(false);
         // TODO add your handling code here:
-    }//GEN-LAST:event_OutScreenPropertyChange
+    }//GEN-LAST:event_QuoteButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -237,6 +250,10 @@ OutScreen.setText("new string");
             }
         });
     }
+    
+   
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton AddButton;
