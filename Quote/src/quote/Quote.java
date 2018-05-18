@@ -67,7 +67,7 @@ class QuotesDatabase {
 
     }
 
-    private String GetLocation(String x) {
+    public String GetLocation(String x) {
         URL url = getClass().getResource(x);
         return url.getPath().replaceAll("%20", " ");
 
@@ -106,9 +106,15 @@ public class Quote {
     // TODO: Needs to be customized for this program
 
     private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:" + GetLocation("QuotesDatabase");
+    private static final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
+    
+    private String GetLocation(String x) {
+        URL url = getClass().getResource(x);
+        return url.getPath().replaceAll("%20", " ");
+
+    }
 
     // H2 SQL Statement Example
     private static void insertWithStatement() throws SQLException {
