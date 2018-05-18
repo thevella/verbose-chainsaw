@@ -1,0 +1,133 @@
+Alan J. Perlis (Epigrams in programming) >
+Alan J. Perlis (Epigrams in program ming) >
+Alan Perlis > Alan J. Perlis
+
+Bill Gates, 1981 > Bill Gates
+Bjarne Stroustrap > Bjarne Stroustrup
+
+Blaise Pascal (attributed) >
+Blaise Pascal (Lettres Provinciales) >
+Blasie Pascal > Blaise Pascal
+
+Alfred North Whitehead (Introduction to Mathematics) > Alfred North Whitehead
+Ben Hoyts (micropledge) > Ben Hoyts
+
+? >
+unknown > Anonymous
+
+Brad Bird, writer and director, The Incredibles > Brad Bird
+Chuck Norris(?) > Chuck Norris
+Crayz (Commentor on blog.raganwald.com) > Crayz
+David Mamet (as relayed by Joss Whedon) > David Mamet
+Dennis (blog comment) > Dennis
+Douglas Crockford (Author of JSON and JsLint) > Douglas Crockford
+
+E. W. Dijkstra, The humble programmer >
+E. W. Dijkstra, On the nature of computing science. >
+E.W. Dijkstra >
+E. W. Dijkstra >
+Edsger Dijkstra, CACM, 15:10 >
+Edsger Dijkstra > Edsger W. Dijkstra
+
+Eric S. Raymond, How To Be A Hacker	>
+Eric S. Raymond, How to become a hacker > Eric S. Raymond
+Steve Jobs, to John Sculley (former Pepsi executive) > Steve Jobs
+
+Steve Yegge, Tour de Babel. >
+Steve Yegge. > Steve Yegge
+
+Sebastien, sur commentcamarche.net > Sebastien
+Tim Gallwey, The inner game of work > Tim Gallwey
+J. B. Bossuet, Politics from Holy Writ, 1709 > J. B. Bossuet
+Eric S. Raymond, How To Be A Hacker > Eric S. Raymond
+Frederick P. Brooks, No Sliver Bullet. > Frederick P. Brooks
+Daniel Lovewin (Guillaume Kpotufe) > Daniel Lovewin
+Karim BAINA (en parlant du dailogue avec les administrations) > Karim Baina
+George Leonard, Mastery. > George Leonard
+Rainer Maria Rilke, The Man Watching. > Rainer Maria Rilke
+Darryl AMEDON > Darryl Amedon
+almkgor, on reddit > almkgor
+
+Mark Tarver (of "The bipolar Lisp programmer" fame) >
+The bipolar lisp programmer > Mark Tarver
+
+Jeff "hemos" Bates, Director, OSDN; Co-evolver, Slashdot > Jeff "hemos" Bates
+Yukihiro "Matz" Matsumoto, creator of Ruby > Yukihiro "Matz" Matsumoto
+Juan Meng, Reviewing "The future of ideas" by Lawrence Lessig > Juan Meng
+Roger Schank, Engines for Education > Roger Schank
+
+Translate -- Xavier Tartacover
+Translate -- Shnuup, sur l'hypertexte (SELFHTML -> Introduction -> Definitions sur l'hypertexte)
+
+Shnuup, sur l'hypertexte (SELFHTML -> Introduction -> Definitions sur l'hypertexte) > -- Shnuup
+Hermann Weyl, The Mathematical Way of Thinking > Hermann Weyl
+John Locke, An Essay Concerning Human Understanding (1690) > John Locke
+Napoleon Bonaparte (allegedly) > Napoleon Bonaparte
+Larry Wall (Programming Perl) > Larry Wall
+Joel Spolsky (The Law of Leaky Abstractions) > Joel Spolsky
+
+Translate Blaise Pascal
+
+David Mamet (as relayed by Joss Whedon) > David Mamet
+William Strunk, Jr. (The Elements of Style) > William Strunk, Jr.
+Milton Friedman (Thomas Sowell: A Conflict of Visions, p130) > Milton Friedman
+Brave New World (paraphrased) > Brave New World
+Catwoman (The Batman TV Series, episode 83) > Catwoman
+Rush (Freewill) > Rush
+Alfred North Whitehead (Introduction to Mathematics) > Alfred North Whitehead
+Philip Greenspun (Greenspun's Tenth Rule) > Philip Greenspun
+David Heinemeier Hansson (Ruby On Rails' creator) > David Heinemeier Hansson
+Paul Graham (a talk at Y Combinator, for startup creators). > Paul Graham
+SlideTrombone (comment on "Programming can ruin your life") > SlideTrombone
+Isaac (blog comment) > Isaac
+Super-sizing YouTube with Python (Mike Solomon, mike@youtube.com) > Mike Solomon
+Douglas Crockford (Author of JSON and JsLint) > Douglas Crockford
+Corneluis (comment on 'Are you going to change the world? (Really?)') > Corneluis
+Bruce Wilder (blog post comment) > Bruce Wilder
+Paul Graham, The other road ahead. > Paul Graham
+Stevey, Refactoring Trilogy, Part 1. > Stevey
+Marc (http://kickin-the-darkness.blogspot.com/) > Marc
+VladimirSlepnev > Vladimir Slepnev
+
+Translate Le PDG de NURV, dans "Anti-trust".
+
+David Gorman (ImThere.com) > David Gorman
+Marc Andreessen (http://blog.pmarca.com/) > Marc Andreessen
+Nassim Nicholas Taleb, "The Black Swan". > Nassim Nicholas Taleb
+Johann Wolfgang Von Goethe (1749-1832) > Johann Wolfgang Von Goethe
+Paul Graham, on the Lightweight Languages mailing list. > Paul Graham
+Max Levchin, PayPal founder, Talk at StartupSchool2007 > Max Levchin
+Hadi Partovi & Ali Partovi (iLike.com), Talk at StartupSchool2007 > Hadi Partovi & Ali Partovi
+
+Translate Anatole France
+Translate Ben Hoyts (micropledge)
+
+Ben Hoyts (micropledge) > Ben Hoyts
+LeCamarade (freeshells.ch) > LeCamarade
+engtech (internetducttape.com) > engtech
+OO Sucks (bluetail.com) > OO Sucks
+ASPN : Python Cookbook : Explicit Tail Call > ASPN
+Ridderstrale & Nordstorm, Funky Business > Ridderstrale & Nordstorm
+Steve Jobs, to John Sculley (former Pepsi executive) > Steve Jobs
+Lawrence Lessig, Free Culture. > Lawrence Lessig
+
+H. Hardy, A mathematician's apology. > G. H. Hardy
+
+Dennis (blog comment) > Dennis
+Crayz (Commentor on blog.raganwald.com) > Crayz
+Richard P. Gabriel & Ron Goldman, Mob Software: The Erotic Life of Code > Richard P. Gabriel & Ron Goldman
+Matz, LL2 > Matz
+William Shakespeare, "Henry VI" > William Shakespeare
+Charles H. Duell, Commissioner, U.S. Office of Patents, 1899 > Charles H. Duell
+Thomas J. Watson, Chairman of the Board, IBM, circa 1948 > Thomas J. Watson
+John Von Neumann, circa 1949 > John Von Neumann
+Engineer at the Advanced Computing Systems Division of IBM, commenting on the microchip, 1968 > Engineer at IBM
+Ken Olson, President, Digital Equipment Corporation, 1977 > Ken Olson
+Microsoft, on the development of Windows NT, 1992 > Microsoft
+arcus, #scheme on Freenode > arcus
+Jeffrey Mark Siskind <qobi@research.nj.nec.com> in comp.lang.lisp > Jeffrey Mark Siskind
+Lament, #scheme@freenode.net > Lament
+Gary Kildall (inventor of CP/M, one of the first OS for the micro). > Gary Kildall
+Malcolm Gladwell, Who says big ideas are rare? > Malcolm Gladwell
+Dee Hock, Birth of the Chaordic Age > Dee Hock
+Randy S. Nelson (dean of Pixar University) > Randy S. Nelson
