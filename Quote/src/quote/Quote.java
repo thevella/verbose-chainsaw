@@ -137,7 +137,7 @@ public class Quote {
             connection.commit();
         } catch (SQLException e) {
             System.out.println("Exception Message " + e.getLocalizedMessage());
-        } catch (Exception e) {
+        } catch (Exception e) {//le
             e.printStackTrace();
         } finally {
             connection.close();
