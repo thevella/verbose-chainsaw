@@ -97,6 +97,11 @@ public class UserInterfaec extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         SearchButton.setText("Search");
+        SearchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchButtonActionPerformed(evt);
+            }
+        });
 
         AddButton.setText("Add");
 
@@ -111,6 +116,11 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         QuoteButton.setText("Quote");
 
+        OutScreen.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                OutScreenPropertyChange(evt);
+            }
+        });
         jScrollPane1.setViewportView(OutScreen);
 
         jScrollPane2.setViewportView(SearchWord);
@@ -182,7 +192,16 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
 OutScreen.setText("new string");
+//OutScreen.is)
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
+       
+    }//GEN-LAST:event_SearchButtonActionPerformed
+
+    private void OutScreenPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_OutScreenPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OutScreenPropertyChange
 
     /**
      * @param args the command line arguments
