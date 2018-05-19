@@ -74,7 +74,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         OutScreen = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         SearchWord = new javax.swing.JEditorPane();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        Button = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,10 +117,10 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(SearchWord);
 
-        jToggleButton1.setText("Search");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        Button.setText("Search");
+        Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                ButtonActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                                     .addComponent(AuthoButton)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(122, 122, 122)
-                                .addComponent(jToggleButton1)
+                                .addComponent(Button)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
@@ -172,7 +172,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton1))))
+                        .addComponent(Button))))
         );
 
         pack();
@@ -183,27 +183,30 @@ public class UserInterfaec extends javax.swing.JFrame {
         QuoteButton.setSelected(false);
     }//GEN-LAST:event_AuthoButtonActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonActionPerformed
         
         String test=SearchWord.getText();
         OutScreen.setText(test);
 //OutScreen.setVisible(false);
 
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_ButtonActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
         AddButton.setSelected(false);
         RemoveButton.setSelected(false);
+        Button.setText("Search");
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
         SearchButton.setSelected(false);
         AddButton.setSelected(false);
+        Button.setText("Remove");
     }//GEN-LAST:event_RemoveButtonActionPerformed
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
         RemoveButton.setSelected(false);
         SearchButton.setSelected(false);
+        Button.setText("Add");
     }//GEN-LAST:event_AddButtonActionPerformed
 
     private void QuoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuoteButtonActionPerformed
@@ -258,6 +261,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton AddButton;
     private javax.swing.JRadioButton AuthoButton;
+    private javax.swing.JToggleButton Button;
     private javax.swing.JTextPane OutScreen;
     private javax.swing.JRadioButton QuoteButton;
     private javax.swing.JRadioButton RemoveButton;
@@ -265,6 +269,5 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JEditorPane SearchWord;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
