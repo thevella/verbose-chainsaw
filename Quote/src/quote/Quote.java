@@ -109,12 +109,7 @@ public class Quote {
     private static final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
-    
-    private String GetLocation(String x) {
-        URL url = getClass().getResource(x);
-        return url.getPath().replaceAll("%20", " ");
 
-    }
 
     // H2 SQL Statement Example
     private static void insertWithStatement() throws SQLException {
@@ -241,7 +236,7 @@ public class Quote {
             }
         });
 
-        QuotesDatabase files = new QuotesDatabase("quotes.txt", "--");
+        
 
         // Value used to store user input
         Double input1;
