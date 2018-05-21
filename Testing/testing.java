@@ -150,7 +150,7 @@ public class testing {
 
     }*/
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
@@ -167,8 +167,34 @@ public class testing {
             }
         });
 
+        //resets the value
+
+
+
+
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            stmt.execute("ALTER TABLE quotes MODIFY COLUMN ID INT(10) UNSIGNED");
+            stmt.execute("COMMIT");
+            stmt.execute("ALTER TABLE quotes MODIFY COLUMN ID INT(10) UNSIGNED AUTO_INCREMENT");
+            stmt.execute("COMMIT");
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+
         ArrayList<String> authors = new ArrayList<String>();
-        
+
         String seperator = "--";
 
         try {
