@@ -111,7 +111,7 @@ public class Quote {
     private static final String DB_PASSWORD = "";
 
     // H2 SQL Statement Example
-    private static void insertQuotes(String value1, String value2, String value3) throws SQLException {
+    public static void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -131,7 +131,7 @@ public class Quote {
         }
     }
 
-    private static void insertAuthor(String value1, String value2, String value3) throws SQLException {
+    public static void insertAuthor(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -151,6 +151,30 @@ public class Quote {
         }
     }
 
+    public static int getCount (String table) throws SQLException {
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            rs = stmt.executeQuery("SELECT COUNT(*) FROM " + table);
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+
+        rs.next();
+        return rs.getInt(1);
+    }
+
     private static Connection getDBConnection() {
         Connection dbConnection = null;
         try {
@@ -165,6 +189,29 @@ public class Quote {
             System.out.println(e.getMessage());
         }
         return dbConnection;
+    }
+
+    private static void resetNumbering(String table) throws SQLException {
+
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            stmt.execute("SET  @num = 0");
+            stmt.execute("UPDATE " + table + " SET id = @num := (@num+1)");
+            stmt.execute("ALTER TABLE " + table + " AUTO_INCREMENT =1");
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
     }
 
     ////////////////////////////////////////////////////

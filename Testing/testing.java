@@ -171,7 +171,7 @@ public class testing {
 
 
 
-
+        /*
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -192,7 +192,7 @@ public class testing {
         } finally {
             connection.close();
         }
-
+        */
         ArrayList<String> authors = new ArrayList<String>();
 
         String seperator = "--";
