@@ -30739,3 +30739,2227 @@ INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('Some guy who isn't famous', '', 
 2018-05-17 23:42:48 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '[*]')"; SQL statement:
 INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', 'nullDon't worry about what anybody else is going to do. The best way to
+predict the future is to invent it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', 'nullDon't worry about what anybody else is going to do. The best way to
+predict the future is to invent it.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Jeff ""hemos"" Bates', '
+What Paul does, and does very well, is to take ideas and concepts that
+are beautiful in the abstract, and brings them down to a real world
+level. That's a rare talent to find in writing these days.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Jeff "hemos" Bates', '
+What Paul does, and does very well, is to take ideas and concepts that
+are beautiful in the abstract, and brings them down to a real world
+level. That's a rare talent to find in writing these days.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Dealing with failure is easy: Work hard to improve. Success is also easy
+to handle: You've solved the wrong problem. Work hard to improve.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Dealing with failure is easy: Work hard to improve. Success is also easy
+to handle: You've solved the wrong problem. Work hard to improve.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Roger Schank', '
+We really have to get over the idea that some stuff is just worth
+knowing even if you never do anything with it. Human memories happily
+erase stuff that has no purpose, so why try to fill up children's heads
+with such stuff?
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Roger Schank', '
+We really have to get over the idea that some stuff is just worth
+knowing even if you never do anything with it. Human memories happily
+erase stuff that has no purpose, so why try to fill up children's heads
+with such stuff?
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Xavier Tartacover', '
+La tactique, c'est ce que vous faites quand il y a quelque chose à
+faire; la stratégie, c'est ce que vous faites quand il n'y a rien à
+faire.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Xavier Tartacover', '
+La tactique, c'est ce que vous faites quand il y a quelque chose à
+faire; la stratégie, c'est ce que vous faites quand il n'y a rien à
+faire.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Shnuup', '
+Ce n'est que par les relations qu'on entretient entre nos différentes
+connaissances qu'elles nous restent accessibles.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Shnuup', '
+Ce n'est que par les relations qu'on entretient entre nos différentes
+connaissances qu'elles nous restent accessibles.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Eric Lippert.', '
+An expert is, according to my working definition ""someone who doesn't
+need to look up answers to easy questions[*]"".
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Eric Lippert.', '
+An expert is, according to my working definition "someone who doesn't
+need to look up answers to easy questions".
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Napoleon Bonaparte', '
+When your enemy is making a very serious mistake, don't be impolite and
+disturb him.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Napoleon Bonaparte', '
+When your enemy is making a very serious mistake, don't be impolite and
+disturb him.
+', '') [42000-197]
+2018-05-18 13:15:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Joel Spolsky', '
+And if you go too far up, abstraction-wise, you run out of oxygen.
+Sometimes smart thinkers just don'T[*] KNOW WHEN TO STOP, AND THEY CREATE
+THESE ABSURD, ALL-ENCOMPASSING, HIGH-LEVEL PICTURES OF THE UNIVERSE THAT
+ARE ALL GOOD AND FINE, BUT DON't actually mean anything at all.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Joel Spolsky', '
+And if you go too far up, abstraction-wise, you run out of oxygen.
+Sometimes smart thinkers just don't know when to stop, and they create
+these absurd, all-encompassing, high-level pictures of the universe that
+are all good and fine, but don't actually mean anything at all.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Guido van Rossum', '
+XML wasn't designed to be edited by humans on a regular basis.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Guido van Rossum', '
+XML wasn't designed to be edited by humans on a regular basis.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+A language that doesn't affect the way you think about programming, is
+not worth knowing.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+A language that doesn't affect the way you think about programming, is
+not worth knowing.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Blaise Pascal', '
+Je n'AI[*] FAIT CELLE-CI PLUS LONGUE QUE PARCE QUE JE N'ai pas eu le loisir
+de la faire plus courte. (I have made this letter so long only because I
+did not have the leisure to make it shorter.)
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Blaise Pascal', '
+Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir
+de la faire plus courte. (I have made this letter so long only because I
+did not have the leisure to make it shorter.)
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Mamet', '
+Everybody makes their own fun. If you don't make it yourself, it ain't
+fun - it's entertainment.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Mamet', '
+Everybody makes their own fun. If you don't make it yourself, it ain't
+fun - it's entertainment.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Galileo Galilei', '
+I have never met a man so ignorant that I couldn't learn something from
+him.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Galileo Galilei', '
+I have never met a man so ignorant that I couldn't learn something from
+him.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('C.S. Lewis', '
+Of all tyrannies a tyranny sincerely exercised for the good of its
+victims may be the most oppressive. It may be better to live under
+robber barons than under omnipotent moral busybodies, The robber baron's
+cruelty may sometimes sleep, his cupidity may at some point be satiated;
+but those who torment us for own good will torment us without end, for
+they do so with the approval of their own conscience.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('C.S. Lewis', '
+Of all tyrannies a tyranny sincerely exercised for the good of its
+victims may be the most oppressive. It may be better to live under
+robber barons than under omnipotent moral busybodies, The robber baron's
+cruelty may sometimes sleep, his cupidity may at some point be satiated;
+but those who torment us for own good will torment us without end, for
+they do so with the approval of their own conscience.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Catwoman', '
+Fools! Don'T[*] THEY KNOW THAT TEARS ARE A WOMAN's most effective weapon?
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Catwoman', '
+Fools! Don't they know that tears are a woman's most effective weapon?
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('some chick in Alien vs. Predator, when asked why she always carries a gun', '
+It'S[*] LIKE A CONDOM; I'd rather have it and not need it than need it and
+not have it.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('some chick in Alien vs. Predator, when asked why she always carries a gun', '
+It's like a condom; I'd rather have it and not need it than need it and
+not have it.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anonymous', '
+Show, don't tell.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anonymous', '
+Show, don't tell.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Brad Bird', '
+The reason to do animation is caricature. Good caricature picks out the
+essense of the statement and removes everything else. It'S[*] NOT SIMPLY
+ABOUT REPRODUCING REALITY; IT's about bumping it up.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Brad Bird', '
+The reason to do animation is caricature. Good caricature picks out the
+essense of the statement and removes everything else. It's not simply
+about reproducing reality; It's about bumping it up.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ferris Bueller', '
+Life moves pretty fast. If you don't stop and look around once in a
+while, you could miss it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ferris Bueller', '
+Life moves pretty fast. If you don't stop and look around once in a
+while, you could miss it.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I was talking recently to a friend who teaches at MIT. His field is hot
+now and every year he is inundated by applications from would-be
+graduate students. ""A lot of them seem smart,"" he said. ""What I can't
+tell is whether they have any kind of taste.[*]""
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I was talking recently to a friend who teaches at MIT. His field is hot
+now and every year he is inundated by applications from would-be
+graduate students. "A lot of them seem smart," he said. "What I can't
+tell is whether they have any kind of taste."
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+It'S[*] NO TRICK FOR TALENTED PEOPLE TO BE INTERESTING, BUT IT's a gift to
+be interested. We want an organization filled with interested people.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+It's no trick for talented people to be interesting, but it's a gift to
+be interested. We want an organization filled with interested people.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+Why teach drawing to accountants? Because drawing class doesn't just
+teach people to draw. It teaches them to be more observant. There's no
+company on earth that wouldn't benefit from having people become more
+observant.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+Why teach drawing to accountants? Because drawing class doesn't just
+teach people to draw. It teaches them to be more observant. There's no
+company on earth that wouldn't benefit from having people become more
+observant.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[fact]', '
+A non negative binary integer value x is a power of 2 iff (x & (x-1)) is
+0 using 2's complement arithmetic.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[fact]', '
+A non negative binary integer value x is a power of 2 iff (x & (x-1)) is
+0 using 2's complement arithmetic.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+To do something well you have to love it. So to the extent you can
+preserve hacking as something you love, you'RE[*] LIKELY TO DO IT WELL. TRY
+TO KEEP THE SENSE OF WONDER YOU HAD ABOUT PROGRAMMING AT AGE 14. IF
+YOU're worried that your current job is rotting your brain, it probably
+is.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+To do something well you have to love it. So to the extent you can
+preserve hacking as something you love, you're likely to do it well. Try
+to keep the sense of wonder you had about programming at age 14. If
+you're worried that your current job is rotting your brain, it probably
+is.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Ideas for flamewars]', '
+- If you give him a penny for his thoughts, you'd get change.
+- Not the sharpest knife in the drawer.
+- A prime candidate for natural deselection.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Ideas for flamewars]', '
+- If you give him a penny for his thoughts, you'd get change.
+- Not the sharpest knife in the drawer.
+- A prime candidate for natural deselection.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+What I didn't understand was that the value of some new acquisition
+wasn't the difference between its retail price and what I paid for it.
+It was the value I derived from it. Stuff is an extremely illiquid
+asset. Unless you have some plan for selling that valuable thing you got
+so cheaply, what difference does it make what it's ""worth?"" The only way
+you're ever going to extract any value from it is to use it. And if you
+don't have any immediate use for it, you probably never will.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+What I didn't understand was that the value of some new acquisition
+wasn't the difference between its retail price and what I paid for it.
+It was the value I derived from it. Stuff is an extremely illiquid
+asset. Unless you have some plan for selling that valuable thing you got
+so cheaply, what difference does it make what it's "worth?" The only way
+you're ever going to extract any value from it is to use it. And if you
+don't have any immediate use for it, you probably never will.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Buchheit', '
+Humans aren't rational - they rationalize. And I don't just mean ""some
+of them"" or ""other people"". I'm talking about everyone. We have a ""logic
+engine"" in our brains, but for the most part, it's not the one in the
+driver's seat - instead it operates after the fact, generating
+rationalizations and excuses for our behavior.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Buchheit', '
+Humans aren't rational - they rationalize. And I don't just mean "some
+of them" or "other people". I'm talking about everyone. We have a "logic
+engine" in our brains, but for the most part, it's not the one in the
+driver's seat - instead it operates after the fact, generating
+rationalizations and excuses for our behavior.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('The culture code.', '
+What do Americans look for in a car? I've heard many answers when I've
+asked this question. The answers include excellent safety ratings, great
+gas mileage, handling, and cornering ability, among others. I don't
+believe any of these. That's because the first principle of the Culture
+Code is that the only effective way to understand what people truly mean
+is to ignore what they say. This is not to suggest that people
+intentionally lie or misrepresent themselves. What it means is that,
+when asked direct questions about their interests and preferences,
+people tend to give answers they believe the questioner wants to hear.
+Again, this is not because they intend to mislead. It is because people
+respond to these questions with their cortexes, the parts of their
+brains that control intelligence rather than emotion or instinct. They
+ponder a question, they process a question, and when they deliver an
+answer, it is the product of deliberation. They believe they are telling
+the truth. A lie detector would confirm this. In most cases, however,
+they aren't saying what they mean.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('The culture code.', '
+What do Americans look for in a car? I've heard many answers when I've
+asked this question. The answers include excellent safety ratings, great
+gas mileage, handling, and cornering ability, among others. I don't
+believe any of these. That's because the first principle of the Culture
+Code is that the only effective way to understand what people truly mean
+is to ignore what they say. This is not to suggest that people
+intentionally lie or misrepresent themselves. What it means is that,
+when asked direct questions about their interests and preferences,
+people tend to give answers they believe the questioner wants to hear.
+Again, this is not because they intend to mislead. It is because people
+respond to these questions with their cortexes, the parts of their
+brains that control intelligence rather than emotion or instinct. They
+ponder a question, they process a question, and when they deliver an
+answer, it is the product of deliberation. They believe they are telling
+the truth. A lie detector would confirm this. In most cases, however,
+they aren't saying what they mean.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Harford', '
+The lesson of the story might appear to be that self-interested and
+ambitious people in power are often the cause of wastefulness in
+developing countries. But self-interested and ambitious people are in
+positions of power, great and small, all over the world. In many places,
+they are restrained by the law, the press, and democratic opposition.
+Cameroon's tragedy is that there is nothing to hold self-interest in
+check.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Harford', '
+The lesson of the story might appear to be that self-interested and
+ambitious people in power are often the cause of wastefulness in
+developing countries. But self-interested and ambitious people are in
+positions of power, great and small, all over the world. In many places,
+they are restrained by the law, the press, and democratic opposition.
+Cameroon's tragedy is that there is nothing to hold self-interest in
+check.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '
+Having large case statements in an object-oriented language is a sure
+sign your design is flawed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '
+Having large case statements in an object-oriented language is a sure
+sign your design is flawed.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sincerity Theory', '
+Being a programmer is the same way. The only way to be a good programmer
+is to write code. When you realize you haven't been writing much code
+lately, and it seems like all you do is brag about code you wrote in the
+past, and people start looking at you funny while you're shooting your
+mouth off, realize it's because they know. They might not even know they
+know, but they know. So, yes, doing what you love brings success, and by
+all means, throw yourself a nice big party, buy yourself a nice car,
+soak up the adulation of an adoring crowd. Then shut the fuck up and get
+back to work.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sincerity Theory', '
+Being a programmer is the same way. The only way to be a good programmer
+is to write code. When you realize you haven't been writing much code
+lately, and it seems like all you do is brag about code you wrote in the
+past, and people start looking at you funny while you're shooting your
+mouth off, realize it's because they know. They might not even know they
+know, but they know. So, yes, doing what you love brings success, and by
+all means, throw yourself a nice big party, buy yourself a nice car,
+soak up the adulation of an adoring crowd. Then shut the fuck up and get
+back to work.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Another feature about this guy is his low threshold of boredom. He'LL[*]
+PICK UP ON A TASK AND WORK FRANTICALLY AT IT, ACCOMPLISHING WONDERS IN A
+SHORT TIME AND THEN GET BORED AND DROP IT BEFORE ITS PROPERLY FINISHED.
+HE'll do nothing but strum his guitar and lie around in bed for several
+days after. Thats also part of the pattern too; periods of frenetic
+activity followed by periods of melancholia, withdrawal and inactivity.
+This is a bipolar personality.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Another feature about this guy is his low threshold of boredom. He'll
+pick up on a task and work frantically at it, accomplishing wonders in a
+short time and then get bored and drop it before its properly finished.
+He'll do nothing but strum his guitar and lie around in bed for several
+days after. Thats also part of the pattern too; periods of frenetic
+activity followed by periods of melancholia, withdrawal and inactivity.
+This is a bipolar personality.
+', '') [42001-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Heinemeier Hansson', '
+My dream is that people adopt it on its own merits. We're not trying to
+bend Ruby on Rails to fit the enterprise, we're encouraging enterprises
+to bend to Ruby on Rails. Come if you like it, stay away if you don't.
+We're not going head over heels to accommodate the enterprise or to lure
+them away from Java. That's how you end up with Java, if you start
+bending to special interest groups.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Heinemeier Hansson', '
+My dream is that people adopt it on its own merits. We're not trying to
+bend Ruby on Rails to fit the enterprise, we're encouraging enterprises
+to bend to Ruby on Rails. Come if you like it, stay away if you don't.
+We're not going head over heels to accommodate the enterprise or to lure
+them away from Java. That's how you end up with Java, if you start
+bending to special interest groups.
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('William S. Annis', '
+New eyes have X-ray vision. [someone that hasn't written it is more
+likely to spot the bug. ""someone"" can be you after a break]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('William S. Annis', '
+New eyes have X-ray vision. [someone that hasn't written it is more
+likely to spot the bug. "someone" can be you after a break]
+', '') [42000-197]
+2018-05-18 13:15:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+So the mere constraint of staying in regular contact with us will push
+you to make things happen, because otherwise you'LL[*] BE EMBARRASSED TO
+TELL US THAT YOU HAVEN't done anything new since the last time we
+talked.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+So the mere constraint of staying in regular contact with us will push
+you to make things happen, because otherwise you'll be embarrassed to
+tell us that you haven't done anything new since the last time we
+talked.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+Resume writing is just like dating, or applying for a bank loan, in that
+nobody wants you if you're desperate.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+Resume writing is just like dating, or applying for a bank loan, in that
+nobody wants you if you're desperate.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Bruce Lee', '
+If I tell you I'M[*] GOOD, YOU WOULD PROBABLY THINK I'm boasting. If I tell
+you I'M NO GOOD, YOU KNOW I'm lying.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Bruce Lee', '
+If I tell you I'm good, you would probably think I'm boasting. If I tell
+you I'm no good, you know I'm lying.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Vladimir Slepnev', '
+Let me try to get this straight: Lisp is a language for describing
+algorithms. This was JohnMcCarthy's original purpose, anyway: to build
+something more convenient than a Turing machine. Lisp is not about file,
+socket or GUI programming - Lisp is about expressive power. (For
+example, you can design multiple object systems for Lisp, in Lisp. Or
+implement the now-fashionable AOP. Or do arbitrary transformations on
+parsed source code.) If you don't value expressive power, Lisp ain't for
+you. I, personally, would prefer Lisp to not become mainstream: this
+would necessarily involve a dumbing down.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Vladimir Slepnev', '
+Let me try to get this straight: Lisp is a language for describing
+algorithms. This was JohnMcCarthy's original purpose, anyway: to build
+something more convenient than a Turing machine. Lisp is not about file,
+socket or GUI programming - Lisp is about expressive power. (For
+example, you can design multiple object systems for Lisp, in Lisp. Or
+implement the now-fashionable AOP. Or do arbitrary transformations on
+parsed source code.) If you don't value expressive power, Lisp ain't for
+you. I, personally, would prefer Lisp to not become mainstream: this
+would necessarily involve a dumbing down.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Le PDG de NURV, dans ""Anti-trust"".', '
+Je ne vous impose aucune contrainte, aucune limite. Surprenez-moi,
+étonnez-moi, défiez-moi, défiez-vous vous-même. Vous avez le choix: vous
+pouvez rester dans l'OMBRE[*] OU EN SORTIR EN ÉTANT PARMIS LES TROP RARES
+EXCEPTIONS À AVOIR RÉUSSI. L'heure est venue d'ALLER BIEN AU DELÀ DE
+VOTRE POTENTIEL. L'heure est venue maintenant de descendre vraiment en
+vous. L'HEURE EST VENUE DE DÉMONTRER POURQUOI VOUS ÊTES L'élite, les
+quelques élus, les rares lueurs qui offrent à cette compagnie son
+caractère exceptionnel, sa luminescence.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Le PDG de NURV, dans "Anti-trust".', '
+Je ne vous impose aucune contrainte, aucune limite. Surprenez-moi,
+étonnez-moi, défiez-moi, défiez-vous vous-même. Vous avez le choix: vous
+pouvez rester dans l'ombre ou en sortir en étant parmis les trop rares
+exceptions à avoir réussi. L'heure est venue d'aller bien au delà de
+votre potentiel. L'heure est venue maintenant de descendre vraiment en
+vous. L'heure est venue de démontrer pourquoi vous êtes l'élite, les
+quelques élus, les rares lueurs qui offrent à cette compagnie son
+caractère exceptionnel, sa luminescence.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Marc Andreessen', '
+Opportunities that present themselves to you are the consequence - at
+least partially - of being in the right place at the right time. They
+tend to present themselves when you'RE[*] NOT EXPECTING IT - AND OFTEN
+WHEN YOU ARE ENGAGED IN OTHER ACTIVITIES THAT WOULD SEEM TO PRECLUDE YOU
+FROM PURSUING THEM. AND THEY COME AND GO QUICKLY - IF YOU DON't jump
+all over an opportunity, someone else generally will and it will vanish.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Marc Andreessen', '
+Opportunities that present themselves to you are the consequence - at
+least partially - of being in the right place at the right time. They
+tend to present themselves when you're not expecting it - and often
+when you are engaged in other activities that would seem to preclude you
+from pursuing them. And they come and go quickly - if you don't jump
+all over an opportunity, someone else generally will and it will vanish.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I think the root of your mistake is saying that macros don'T[*] SCALE TO
+LARGER GROUPS. THE REAL TRUTH IS THAT MACROS DON't scale to stupider
+groups.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I think the root of your mistake is saying that macros don't scale to
+larger groups. The real truth is that macros don't scale to stupider
+groups.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Don'T[*] HAVE GOOD IDEAS IF YOU AREN't willing to be responsible for them.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Don't have good ideas if you aren't willing to be responsible for them.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+The most damaging phrase in the language is, It's always been done that
+way.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+The most damaging phrase in the language is, It's always been done that
+way.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+Getting back to failing early, I'VE[*] LEARNED IT's important to completely
+fail. Get fired. Shoot the project, then burn its corpse. Melt the CVS
+repository and microwave the backup CDs. When things go wrong, I'VE
+OFTEN TRIED TO PLAY THE HERO FROM START TO FINISH. GUESS WHAT? SOME
+PROJECTS ARE DOOMED NO MATTER WHAT. SOME NEED SKILLS I DON't possess.
+And some need a fresh face.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+Getting back to failing early, I've learned it's important to completely
+fail. Get fired. Shoot the project, then burn its corpse. Melt the CVS
+repository and microwave the backup CDs. When things go wrong, I've
+often tried to play the hero from start to finish. Guess what? Some
+projects are doomed no matter what. Some need skills I don't possess.
+And some need a fresh face.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Measure everything you can about the product, and you'll start seeing
+patterns.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Measure everything you can about the product, and you'll start seeing
+patterns.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Something Confusing about ""Hard"":
+It's tempting to think that if it's hard, then it's valuable.
+Most valuable things are hard.
+Most hard things are completely useless - (picture of someone smashing
+their head through concrete blocks kung-fu style).
+Hard DOES NOT EQUATE TO BEING valuable.
+Remember Friendster back in the day?
+You'd sign in, invite friends, have 25 friends, go to their profile, and
+then it'd show how you were connected to each one.
+That's an impressive [some geeky CS jargon] Cone traversal of a tree -
+100 million string comparisons per page - it won't scale.
+Used to take a minute per page to load, and Friendster died a painful
+death.
+
+MySpace - not interested in solving problems
+They use the shortcut of ""Miss Fitzpatrick is in your extended network""
+(i.e. even when you're not even signed up for MySpace)
+They didn't solve the hard problem. But they make the more relevant
+assumption that you want to be connected to hot women. [LOL]
+Shows Alexa graph showing that in early 2005 Myspace took off, and
+quickly bypassed Friendster and never looked back.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Something Confusing about "Hard":
+It's tempting to think that if it's hard, then it's valuable.
+Most valuable things are hard.
+Most hard things are completely useless - (picture of someone smashing
+their head through concrete blocks kung-fu style).
+Hard DOES NOT EQUATE TO BEING valuable.
+Remember Friendster back in the day?
+You'd sign in, invite friends, have 25 friends, go to their profile, and
+then it'd show how you were connected to each one.
+That's an impressive [some geeky CS jargon] Cone traversal of a tree -
+100 million string comparisons per page - it won't scale.
+Used to take a minute per page to load, and Friendster died a painful
+death.
+
+MySpace - not interested in solving problems
+They use the shortcut of "Miss Fitzpatrick is in your extended network"
+(i.e. even when you're not even signed up for MySpace)
+They didn't solve the hard problem. But they make the more relevant
+assumption that you want to be connected to hot women. [LOL]
+Shows Alexa graph showing that in early 2005 Myspace took off, and
+quickly bypassed Friendster and never looked back.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('http://www.cpax.org.uk/prg/', '
+Write it properly first. It's easier to make a correct program fast,
+than to make a fast program correct.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('http://www.cpax.org.uk/prg/', '
+Write it properly first. It's easier to make a correct program fast,
+than to make a fast program correct.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anatole France', '
+J'AI[*] TOUJOURS PRÉFÉRÉ LA FOLIE DES PASSIONS À LA SAGESSE DE
+L'indifférence.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anatole France', '
+J'ai toujours préféré la folie des passions à la sagesse de
+l'indifférence.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('LeCamarade', '
+Processors don't get better so that they can have more free time.
+Processors get better so _you_ can have more free time.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('LeCamarade', '
+Processors don't get better so that they can have more free time.
+Processors get better so _you_ can have more free time.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anton van Straaten', '
+The venerable master Qc Na was walking with his student, Anton. Hoping to
+prompt the master into a discussion, Anton said ""Master, I have heard that
+objects are a very good thing - is this true?"" Qc Na looked pityingly at
+his student and replied, ""Foolish pupil - objects are merely a poor man's
+closures.""
+ Chastised, Anton took his leave from his master and returned to his cell,
+intent on studying closures. He carefully read the entire ""Lambda: The
+Ultimate..."" series of papers and its cousins, and implemented a small
+Scheme interpreter with a closure-based object system. He learned much, and
+looked forward to informing his master of his progress.
+ On his next walk with Qc Na, Anton attempted to impress his master by
+saying ""Master, I have diligently studied the matter, and now understand
+that objects are truly a poor man's closures."" Qc Na responded by hitting
+Anton with his stick, saying ""When will you learn? Closures are a poor man's
+object.[*]"" At that moment, Anton became enlightened.
+(Na = Norman Adams, Qa = Christian Queinnec)
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anton van Straaten', '
+The venerable master Qc Na was walking with his student, Anton. Hoping to
+prompt the master into a discussion, Anton said "Master, I have heard that
+objects are a very good thing - is this true?" Qc Na looked pityingly at
+his student and replied, "Foolish pupil - objects are merely a poor man's
+closures."
+ Chastised, Anton took his leave from his master and returned to his cell,
+intent on studying closures. He carefully read the entire "Lambda: The
+Ultimate..." series of papers and its cousins, and implemented a small
+Scheme interpreter with a closure-based object system. He learned much, and
+looked forward to informing his master of his progress.
+ On his next walk with Qc Na, Anton attempted to impress his master by
+saying "Master, I have diligently studied the matter, and now understand
+that objects are truly a poor man's closures." Qc Na responded by hitting
+Anton with his stick, saying "When will you learn? Closures are a poor man's
+object." At that moment, Anton became enlightened.
+(Na = Norman Adams, Qa = Christian Queinnec)
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ragala Khalid', '
+Ils ne sont pas forts parce qu'ils sont forts. Ils sont forts parce que
+nous sommes faibles.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ragala Khalid', '
+Ils ne sont pas forts parce qu'ils sont forts. Ils sont forts parce que
+nous sommes faibles.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Jobs', '
+The problem is that Microsoft just has no taste. And I don't mean that
+in a small way, I mean that in a big way.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Jobs', '
+The problem is that Microsoft just has no taste. And I don't mean that
+in a small way, I mean that in a big way.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Crayz', '
+I'M[*] ALWAYS HAPPY TO TRADE PERFORMANCE FOR READABILITY AS LONG AS THE
+FORMER ISN't already scarce.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Crayz', '
+I'm always happy to trade performance for readability as long as the
+former isn't already scarce.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+You have to write for your audience. I would never write (1..5).map
+&'*2' in Java when I could write
+ListFactoryFactory.getListFactoryFromResource(
+ new ResourceName('[*]COM.JAVAX.MAGNITUDES.INTEGERS').
+setLowerBound(1).setUpperBound(5).setStep(1).applyFunctor(
+ new Functor () { public void eval (x) { return x * 2; } }))
+I'M SIMPLIFYING, OF COURSE, I've left out the security and logging
+wrappers.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+You have to write for your audience. I would never write (1..5).map
+&'*2' in Java when I could write
+ListFactoryFactory.getListFactoryFromResource(
+ new ResourceName('com.javax.magnitudes.integers').
+setLowerBound(1).setUpperBound(5).setStep(1).applyFunctor(
+ new Functor () { public void eval (x) { return x * 2; } }))
+I'm simplifying, of course, I've left out the security and logging
+wrappers.
+', '') [42001-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Some guy who isn't famous', '
+Programming is the art of figuring out what you want so precisely that
+even a machine can do it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Some guy who isn't famous', '
+Programming is the art of figuring out what you want so precisely that
+even a machine can do it.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+C and Lisp stand at opposite ends of the spectrum; they're each great at
+what the other one sucks at.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+C and Lisp stand at opposite ends of the spectrum; they're each great at
+what the other one sucks at.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Burns', '
+Don't stay in bed, unless you can make money in bed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Burns', '
+Don't stay in bed, unless you can make money in bed.
+', '') [42000-197]
+2018-05-18 13:15:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mario Andretti', '
+If everything seems under control, you're not going fast enough.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mario Andretti', '
+If everything seems under control, you're not going fast enough.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Lament', '
+I guess, when you're drunk, every woman looks beautiful and every
+language looks (like) a Lisp :)
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Lament', '
+I guess, when you're drunk, every woman looks beautiful and every
+language looks (like) a Lisp :)
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Thomas Edison', '
+Many of life's failures are people who did not realize how close they
+were to success when they gave up.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Thomas Edison', '
+Many of life's failures are people who did not realize how close they
+were to success when they gave up.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't become proficient at something until he or she has done
+it many times. In other words., if you want someone to be really good at
+building a software system, he or she will have to have built 10 or more
+systems of that type.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't become proficient at something until he or she has done
+it many times. In other words., if you want someone to be really good at
+building a software system, he or she will have to have built 10 or more
+systems of that type.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't retain proficiency at a task unless he or she has at one
+time learned to perform that task very rapidly. Learning research
+demonstrates that the skills of people who become accurate but not fast
+deteriorate much sooner than the skills of people who become both
+accurate and fast.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't retain proficiency at a task unless he or she has at one
+time learned to perform that task very rapidly. Learning research
+demonstrates that the skills of people who become accurate but not fast
+deteriorate much sooner than the skills of people who become both
+accurate and fast.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+Training research shows that if you get speed now you can get quality
+later. But if you don't get speed you will never get quality in the long
+run.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+Training research shows that if you get speed now you can get quality
+later. But if you don't get speed you will never get quality in the long
+run.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Functional programming is to algorithms as the ubiquitous little black
+dress is to women's fashion.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Functional programming is to algorithms as the ubiquitous little black
+dress is to women's fashion.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+For complex systems, the compiler and development environment need to be
+in the same language that its supporting. It's the only way to grow
+code.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+For complex systems, the compiler and development environment need to be
+in the same language that its supporting. It's the only way to grow
+code.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+If you don'T[*] FAIL AT LEAST 90 PERCENT OF THE TIME, YOU're not aiming
+high enough.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+If you don't fail at least 90 percent of the time, you're not aiming
+high enough.
+', '') [42001-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Official definition of ""duck typing""', '
+If it looks like a duck, walks like a duck, and quacks like a duck, it's
+a duck.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Official definition of "duck typing"', '
+If it looks like a duck, walks like a duck, and quacks like a duck, it's
+a duck.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('almkgor', '
+In OO, it's the data that is the ""important"" thing: you define the class
+which contains member data, and only incidentally contains code for
+manipulating the object. In FP, it's the code that's important: you
+define a function which contains code for working with the data, and
+only incidentally define what the data is.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('almkgor', '
+In OO, it's the data that is the "important" thing: you define the class
+which contains member data, and only incidentally contains code for
+manipulating the object. In FP, it's the code that's important: you
+define a function which contains code for working with the data, and
+only incidentally define what the data is.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Linus Torvalds', '
+It was Edison who said ‘1% inspiration, 99% perspiration’. That may have
+been true a hundred years ago. These days it's ‘0.01% inspiration,
+99.99% perspiration’, and the inspiration is the easy part.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Linus Torvalds', '
+It was Edison who said ‘1% inspiration, 99% perspiration’. That may have
+been true a hundred years ago. These days it's ‘0.01% inspiration,
+99.99% perspiration’, and the inspiration is the easy part.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sebastien', '
+Heureux l'étudiant qui comme la Rivière peut suivre son cours sans
+quitter son lit...
+[Happy the student who like the River can follow his course without
+to leave his bed ...]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sebastien', '
+Heureux l'étudiant qui comme la Rivière peut suivre son cours sans
+quitter son lit...
+[Happy the student who like the River can follow his course without
+to leave his bed ...]
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Gallwey', '
+Workers of the world, the chains that bind you are not held in place by
+a ruling class, a ""superior"" race, by society, the state, or a leader.
+They are held in place by none other than yourself. Those who seek to
+exploit are not themselves free, for they place no value in freedom. Who
+is it that really employs you and commands you to pick up your daily
+load? And who is it that you allow to pass judgment on the adequacy of
+your toil? Who have you empowered to dangle the carrot before you and
+threaten with disapproval? Who, when you wake each morning, sends you
+off to what you call your work?
+Is there an ""I want to"" behind all your ""I have to,"" or have you been so
+long forgotten to yourself that ""I want"" exists only as an idea in your
+head? If you have disconnected from your soul's desire and are drowning
+in an ocean of ""have to,"" then rise up and overthrow your master. Begin
+the journey toward emancipation. Work only in such a way that you are
+truly self-employed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Gallwey', '
+Workers of the world, the chains that bind you are not held in place by
+a ruling class, a "superior" race, by society, the state, or a leader.
+They are held in place by none other than yourself. Those who seek to
+exploit are not themselves free, for they place no value in freedom. Who
+is it that really employs you and commands you to pick up your daily
+load? And who is it that you allow to pass judgment on the adequacy of
+your toil? Who have you empowered to dangle the carrot before you and
+threaten with disapproval? Who, when you wake each morning, sends you
+off to what you call your work?
+Is there an "I want to" behind all your "I have to," or have you been so
+long forgotten to yourself that "I want" exists only as an idea in your
+head? If you have disconnected from your soul's desire and are drowning
+in an ocean of "have to," then rise up and overthrow your master. Begin
+the journey toward emancipation. Work only in such a way that you are
+truly self-employed.
+', '') [42000-197]
+2018-05-18 13:15:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Gbi de fer', '
+- Gbi de fer
+- Howa!
+- On va en France
+- Non, je vais pas!
+- Pourquoi?
+- Parce ki y a pas agouti là-bas!
+[- Iron Gbi
+- Howa!
+- We'RE[*] GOING TO FRANCE
+- NO, I'm not going!
+- Why?
+- Because there was no agouti there!]
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Gbi de fer', '
+- Gbi de fer
+- Howa!
+- On va en France
+- Non, je vais pas!
+- Pourquoi?
+- Parce ki y a pas agouti là-bas!
+[- Iron Gbi
+- Howa!
+- We're going to France
+- No, I'm not going!
+- Why?
+- Because there was no agouti there!]
+', '') [42001-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy Pausch', '
+Experience is what you get when you don't get what you want.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy Pausch', '
+Experience is what you get when you don't get what you want.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+It's easier to ask forgiveness than it is to get permission.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+It's easier to ask forgiveness than it is to get permission.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('everything2.com', '
+A CS professor once explained recursion as follows:
+A child couldn't sleep, so her mother told her a story about a little frog,
+ who couldn't sleep, so the frog's mother told her a story about a little bear,
+ who couldn't sleep, so the bear's mother told her a story about a little weasel...
+ who fell asleep.
+ ...and the little bear fell asleep;
+ ...and the little frog fell asleep;
+...and the child fell asleep.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('everything2.com', '
+A CS professor once explained recursion as follows:
+A child couldn't sleep, so her mother told her a story about a little frog,
+ who couldn't sleep, so the frog's mother told her a story about a little bear,
+ who couldn't sleep, so the bear's mother told her a story about a little weasel...
+ who fell asleep.
+ ...and the little bear fell asleep;
+ ...and the little frog fell asleep;
+...and the child fell asleep.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Albert Einstein', '
+Only two things are infinite, the universe and human stupidity. And I'm not so
+sure about the former.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Albert Einstein', '
+Only two things are infinite, the universe and human stupidity. And I'm not so
+sure about the former.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Daniel Lovewin', '
+La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa
+correction.
+[The knowledge of a defect does not remove it, it tortures us to its
+correction.]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Daniel Lovewin', '
+La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa
+correction.
+[The knowledge of a defect does not remove it, it tortures us to its
+correction.]
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Twain', '
+If you tell the truth, you don't have to remember anything.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Twain', '
+If you tell the truth, you don't have to remember anything.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Dr. Seuss', '
+You know you'RE[*] IN LOVE WHEN YOU CAN't fall asleep because reality is finally
+better than your dreams.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Dr. Seuss', '
+You know you're in love when you can't fall asleep because reality is finally
+better than your dreams.
+', '') [42001-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Elie Wiesel', '
+The opposite of love is not hate, it's indifference.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Elie Wiesel', '
+The opposite of love is not hate, it's indifference.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('John Lennon', '
+Life is what happens to you while you're busy making other plans.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('John Lennon', '
+Life is what happens to you while you're busy making other plans.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+In terms of energy, it's better to make a wrong choice than none at all.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+In terms of energy, it's better to make a wrong choice than none at all.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+Acknowledging the negative doesn't mean sniveling [whining, complaining]; it
+means facing the truth and then moving on.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+Acknowledging the negative doesn't mean sniveling [whining, complaining]; it
+means facing the truth and then moving on.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rainer Maria Rilke', '
+What we choose to fight is so tiny!
+What fights us is so great!
+...
+When we win it's with small things,
+and the triumph itself makes us small.
+...
+Winning does not tempt that man.
+This is how he grows: by being defeated, decisively,
+by constantly greater beings.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rainer Maria Rilke', '
+What we choose to fight is so tiny!
+What fights us is so great!
+...
+When we win it's with small things,
+and the triumph itself makes us small.
+...
+Winning does not tempt that man.
+This is how he grows: by being defeated, decisively,
+by constantly greater beings.
+', '') [42000-197]
+2018-05-18 13:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+We fail to realize that mastery is not about perfection. It's about a process,
+a journey. The master is the one who stays on the path day after day, year after
+year. The master is the one who is willing to try, and fail, and try again, for
+as long as he or she lives.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+We fail to realize that mastery is not about perfection. It's about a process,
+a journey. The master is the one who stays on the path day after day, year after
+year. The master is the one who is willing to try, and fail, and try again, for
+as long as he or she lives.
+', '') [42000-197]
+2018-05-18 13:15:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('Some guy who isn't famous', '', '[*]')"; SQL statement:
+INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('Some guy who isn't famous', '', '') [42000-197]
+2018-05-18 13:15:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '[*]')"; SQL statement:
+INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '') [42000-197]
+2018-05-20 18:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', 'nullDon't worry about what anybody else is going to do. The best way to
+predict the future is to invent it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', 'nullDon't worry about what anybody else is going to do. The best way to
+predict the future is to invent it.
+', '') [42000-197]
+2018-05-20 18:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Jeff ""hemos"" Bates', '
+What Paul does, and does very well, is to take ideas and concepts that
+are beautiful in the abstract, and brings them down to a real world
+level. That's a rare talent to find in writing these days.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Jeff "hemos" Bates', '
+What Paul does, and does very well, is to take ideas and concepts that
+are beautiful in the abstract, and brings them down to a real world
+level. That's a rare talent to find in writing these days.
+', '') [42000-197]
+2018-05-20 18:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Dealing with failure is easy: Work hard to improve. Success is also easy
+to handle: You've solved the wrong problem. Work hard to improve.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Dealing with failure is easy: Work hard to improve. Success is also easy
+to handle: You've solved the wrong problem. Work hard to improve.
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Roger Schank', '
+We really have to get over the idea that some stuff is just worth
+knowing even if you never do anything with it. Human memories happily
+erase stuff that has no purpose, so why try to fill up children's heads
+with such stuff?
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Roger Schank', '
+We really have to get over the idea that some stuff is just worth
+knowing even if you never do anything with it. Human memories happily
+erase stuff that has no purpose, so why try to fill up children's heads
+with such stuff?
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Xavier Tartacover', '
+La tactique, c'est ce que vous faites quand il y a quelque chose à
+faire; la stratégie, c'est ce que vous faites quand il n'y a rien à
+faire.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Xavier Tartacover', '
+La tactique, c'est ce que vous faites quand il y a quelque chose à
+faire; la stratégie, c'est ce que vous faites quand il n'y a rien à
+faire.
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Shnuup', '
+Ce n'est que par les relations qu'on entretient entre nos différentes
+connaissances qu'elles nous restent accessibles.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Shnuup', '
+Ce n'est que par les relations qu'on entretient entre nos différentes
+connaissances qu'elles nous restent accessibles.
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Eric Lippert.', '
+An expert is, according to my working definition ""someone who doesn't
+need to look up answers to easy questions[*]"".
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Eric Lippert.', '
+An expert is, according to my working definition "someone who doesn't
+need to look up answers to easy questions".
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Napoleon Bonaparte', '
+When your enemy is making a very serious mistake, don't be impolite and
+disturb him.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Napoleon Bonaparte', '
+When your enemy is making a very serious mistake, don't be impolite and
+disturb him.
+', '') [42000-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Joel Spolsky', '
+And if you go too far up, abstraction-wise, you run out of oxygen.
+Sometimes smart thinkers just don'T[*] KNOW WHEN TO STOP, AND THEY CREATE
+THESE ABSURD, ALL-ENCOMPASSING, HIGH-LEVEL PICTURES OF THE UNIVERSE THAT
+ARE ALL GOOD AND FINE, BUT DON't actually mean anything at all.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Joel Spolsky', '
+And if you go too far up, abstraction-wise, you run out of oxygen.
+Sometimes smart thinkers just don't know when to stop, and they create
+these absurd, all-encompassing, high-level pictures of the universe that
+are all good and fine, but don't actually mean anything at all.
+', '') [42001-197]
+2018-05-20 18:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Guido van Rossum', '
+XML wasn't designed to be edited by humans on a regular basis.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Guido van Rossum', '
+XML wasn't designed to be edited by humans on a regular basis.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+A language that doesn't affect the way you think about programming, is
+not worth knowing.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+A language that doesn't affect the way you think about programming, is
+not worth knowing.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Blaise Pascal', '
+Je n'AI[*] FAIT CELLE-CI PLUS LONGUE QUE PARCE QUE JE N'ai pas eu le loisir
+de la faire plus courte. (I have made this letter so long only because I
+did not have the leisure to make it shorter.)
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Blaise Pascal', '
+Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir
+de la faire plus courte. (I have made this letter so long only because I
+did not have the leisure to make it shorter.)
+', '') [42001-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Mamet', '
+Everybody makes their own fun. If you don't make it yourself, it ain't
+fun - it's entertainment.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Mamet', '
+Everybody makes their own fun. If you don't make it yourself, it ain't
+fun - it's entertainment.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Galileo Galilei', '
+I have never met a man so ignorant that I couldn't learn something from
+him.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Galileo Galilei', '
+I have never met a man so ignorant that I couldn't learn something from
+him.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('C.S. Lewis', '
+Of all tyrannies a tyranny sincerely exercised for the good of its
+victims may be the most oppressive. It may be better to live under
+robber barons than under omnipotent moral busybodies, The robber baron's
+cruelty may sometimes sleep, his cupidity may at some point be satiated;
+but those who torment us for own good will torment us without end, for
+they do so with the approval of their own conscience.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('C.S. Lewis', '
+Of all tyrannies a tyranny sincerely exercised for the good of its
+victims may be the most oppressive. It may be better to live under
+robber barons than under omnipotent moral busybodies, The robber baron's
+cruelty may sometimes sleep, his cupidity may at some point be satiated;
+but those who torment us for own good will torment us without end, for
+they do so with the approval of their own conscience.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Catwoman', '
+Fools! Don'T[*] THEY KNOW THAT TEARS ARE A WOMAN's most effective weapon?
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Catwoman', '
+Fools! Don't they know that tears are a woman's most effective weapon?
+', '') [42001-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('some chick in Alien vs. Predator, when asked why she always carries a gun', '
+It'S[*] LIKE A CONDOM; I'd rather have it and not need it than need it and
+not have it.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('some chick in Alien vs. Predator, when asked why she always carries a gun', '
+It's like a condom; I'd rather have it and not need it than need it and
+not have it.
+', '') [42001-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anonymous', '
+Show, don't tell.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anonymous', '
+Show, don't tell.
+', '') [42000-197]
+2018-05-20 18:07:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Brad Bird', '
+The reason to do animation is caricature. Good caricature picks out the
+essense of the statement and removes everything else. It'S[*] NOT SIMPLY
+ABOUT REPRODUCING REALITY; IT's about bumping it up.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Brad Bird', '
+The reason to do animation is caricature. Good caricature picks out the
+essense of the statement and removes everything else. It's not simply
+about reproducing reality; It's about bumping it up.
+', '') [42001-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ferris Bueller', '
+Life moves pretty fast. If you don't stop and look around once in a
+while, you could miss it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ferris Bueller', '
+Life moves pretty fast. If you don't stop and look around once in a
+while, you could miss it.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I was talking recently to a friend who teaches at MIT. His field is hot
+now and every year he is inundated by applications from would-be
+graduate students. ""A lot of them seem smart,"" he said. ""What I can't
+tell is whether they have any kind of taste.[*]""
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I was talking recently to a friend who teaches at MIT. His field is hot
+now and every year he is inundated by applications from would-be
+graduate students. "A lot of them seem smart," he said. "What I can't
+tell is whether they have any kind of taste."
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+It'S[*] NO TRICK FOR TALENTED PEOPLE TO BE INTERESTING, BUT IT's a gift to
+be interested. We want an organization filled with interested people.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+It's no trick for talented people to be interesting, but it's a gift to
+be interested. We want an organization filled with interested people.
+', '') [42001-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+Why teach drawing to accountants? Because drawing class doesn't just
+teach people to draw. It teaches them to be more observant. There's no
+company on earth that wouldn't benefit from having people become more
+observant.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy S. Nelson', '
+Why teach drawing to accountants? Because drawing class doesn't just
+teach people to draw. It teaches them to be more observant. There's no
+company on earth that wouldn't benefit from having people become more
+observant.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[fact]', '
+A non negative binary integer value x is a power of 2 iff (x & (x-1)) is
+0 using 2's complement arithmetic.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[fact]', '
+A non negative binary integer value x is a power of 2 iff (x & (x-1)) is
+0 using 2's complement arithmetic.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+To do something well you have to love it. So to the extent you can
+preserve hacking as something you love, you'RE[*] LIKELY TO DO IT WELL. TRY
+TO KEEP THE SENSE OF WONDER YOU HAD ABOUT PROGRAMMING AT AGE 14. IF
+YOU're worried that your current job is rotting your brain, it probably
+is.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+To do something well you have to love it. So to the extent you can
+preserve hacking as something you love, you're likely to do it well. Try
+to keep the sense of wonder you had about programming at age 14. If
+you're worried that your current job is rotting your brain, it probably
+is.
+', '') [42001-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Ideas for flamewars]', '
+- If you give him a penny for his thoughts, you'd get change.
+- Not the sharpest knife in the drawer.
+- A prime candidate for natural deselection.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Ideas for flamewars]', '
+- If you give him a penny for his thoughts, you'd get change.
+- Not the sharpest knife in the drawer.
+- A prime candidate for natural deselection.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+What I didn't understand was that the value of some new acquisition
+wasn't the difference between its retail price and what I paid for it.
+It was the value I derived from it. Stuff is an extremely illiquid
+asset. Unless you have some plan for selling that valuable thing you got
+so cheaply, what difference does it make what it's ""worth?"" The only way
+you're ever going to extract any value from it is to use it. And if you
+don't have any immediate use for it, you probably never will.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+What I didn't understand was that the value of some new acquisition
+wasn't the difference between its retail price and what I paid for it.
+It was the value I derived from it. Stuff is an extremely illiquid
+asset. Unless you have some plan for selling that valuable thing you got
+so cheaply, what difference does it make what it's "worth?" The only way
+you're ever going to extract any value from it is to use it. And if you
+don't have any immediate use for it, you probably never will.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Buchheit', '
+Humans aren't rational - they rationalize. And I don't just mean ""some
+of them"" or ""other people"". I'm talking about everyone. We have a ""logic
+engine"" in our brains, but for the most part, it's not the one in the
+driver's seat - instead it operates after the fact, generating
+rationalizations and excuses for our behavior.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Buchheit', '
+Humans aren't rational - they rationalize. And I don't just mean "some
+of them" or "other people". I'm talking about everyone. We have a "logic
+engine" in our brains, but for the most part, it's not the one in the
+driver's seat - instead it operates after the fact, generating
+rationalizations and excuses for our behavior.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('The culture code.', '
+What do Americans look for in a car? I've heard many answers when I've
+asked this question. The answers include excellent safety ratings, great
+gas mileage, handling, and cornering ability, among others. I don't
+believe any of these. That's because the first principle of the Culture
+Code is that the only effective way to understand what people truly mean
+is to ignore what they say. This is not to suggest that people
+intentionally lie or misrepresent themselves. What it means is that,
+when asked direct questions about their interests and preferences,
+people tend to give answers they believe the questioner wants to hear.
+Again, this is not because they intend to mislead. It is because people
+respond to these questions with their cortexes, the parts of their
+brains that control intelligence rather than emotion or instinct. They
+ponder a question, they process a question, and when they deliver an
+answer, it is the product of deliberation. They believe they are telling
+the truth. A lie detector would confirm this. In most cases, however,
+they aren't saying what they mean.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('The culture code.', '
+What do Americans look for in a car? I've heard many answers when I've
+asked this question. The answers include excellent safety ratings, great
+gas mileage, handling, and cornering ability, among others. I don't
+believe any of these. That's because the first principle of the Culture
+Code is that the only effective way to understand what people truly mean
+is to ignore what they say. This is not to suggest that people
+intentionally lie or misrepresent themselves. What it means is that,
+when asked direct questions about their interests and preferences,
+people tend to give answers they believe the questioner wants to hear.
+Again, this is not because they intend to mislead. It is because people
+respond to these questions with their cortexes, the parts of their
+brains that control intelligence rather than emotion or instinct. They
+ponder a question, they process a question, and when they deliver an
+answer, it is the product of deliberation. They believe they are telling
+the truth. A lie detector would confirm this. In most cases, however,
+they aren't saying what they mean.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Harford', '
+The lesson of the story might appear to be that self-interested and
+ambitious people in power are often the cause of wastefulness in
+developing countries. But self-interested and ambitious people are in
+positions of power, great and small, all over the world. In many places,
+they are restrained by the law, the press, and democratic opposition.
+Cameroon's tragedy is that there is nothing to hold self-interest in
+check.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Harford', '
+The lesson of the story might appear to be that self-interested and
+ambitious people in power are often the cause of wastefulness in
+developing countries. But self-interested and ambitious people are in
+positions of power, great and small, all over the world. In many places,
+they are restrained by the law, the press, and democratic opposition.
+Cameroon's tragedy is that there is nothing to hold self-interest in
+check.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '
+Having large case statements in an object-oriented language is a sure
+sign your design is flawed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '
+Having large case statements in an object-oriented language is a sure
+sign your design is flawed.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sincerity Theory', '
+Being a programmer is the same way. The only way to be a good programmer
+is to write code. When you realize you haven't been writing much code
+lately, and it seems like all you do is brag about code you wrote in the
+past, and people start looking at you funny while you're shooting your
+mouth off, realize it's because they know. They might not even know they
+know, but they know. So, yes, doing what you love brings success, and by
+all means, throw yourself a nice big party, buy yourself a nice car,
+soak up the adulation of an adoring crowd. Then shut the fuck up and get
+back to work.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sincerity Theory', '
+Being a programmer is the same way. The only way to be a good programmer
+is to write code. When you realize you haven't been writing much code
+lately, and it seems like all you do is brag about code you wrote in the
+past, and people start looking at you funny while you're shooting your
+mouth off, realize it's because they know. They might not even know they
+know, but they know. So, yes, doing what you love brings success, and by
+all means, throw yourself a nice big party, buy yourself a nice car,
+soak up the adulation of an adoring crowd. Then shut the fuck up and get
+back to work.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Another feature about this guy is his low threshold of boredom. He'LL[*]
+PICK UP ON A TASK AND WORK FRANTICALLY AT IT, ACCOMPLISHING WONDERS IN A
+SHORT TIME AND THEN GET BORED AND DROP IT BEFORE ITS PROPERLY FINISHED.
+HE'll do nothing but strum his guitar and lie around in bed for several
+days after. Thats also part of the pattern too; periods of frenetic
+activity followed by periods of melancholia, withdrawal and inactivity.
+This is a bipolar personality.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Another feature about this guy is his low threshold of boredom. He'll
+pick up on a task and work frantically at it, accomplishing wonders in a
+short time and then get bored and drop it before its properly finished.
+He'll do nothing but strum his guitar and lie around in bed for several
+days after. Thats also part of the pattern too; periods of frenetic
+activity followed by periods of melancholia, withdrawal and inactivity.
+This is a bipolar personality.
+', '') [42001-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Heinemeier Hansson', '
+My dream is that people adopt it on its own merits. We're not trying to
+bend Ruby on Rails to fit the enterprise, we're encouraging enterprises
+to bend to Ruby on Rails. Come if you like it, stay away if you don't.
+We're not going head over heels to accommodate the enterprise or to lure
+them away from Java. That's how you end up with Java, if you start
+bending to special interest groups.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('David Heinemeier Hansson', '
+My dream is that people adopt it on its own merits. We're not trying to
+bend Ruby on Rails to fit the enterprise, we're encouraging enterprises
+to bend to Ruby on Rails. Come if you like it, stay away if you don't.
+We're not going head over heels to accommodate the enterprise or to lure
+them away from Java. That's how you end up with Java, if you start
+bending to special interest groups.
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('William S. Annis', '
+New eyes have X-ray vision. [someone that hasn't written it is more
+likely to spot the bug. ""someone"" can be you after a break]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('William S. Annis', '
+New eyes have X-ray vision. [someone that hasn't written it is more
+likely to spot the bug. "someone" can be you after a break]
+', '') [42000-197]
+2018-05-20 18:07:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+So the mere constraint of staying in regular contact with us will push
+you to make things happen, because otherwise you'LL[*] BE EMBARRASSED TO
+TELL US THAT YOU HAVEN't done anything new since the last time we
+talked.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+So the mere constraint of staying in regular contact with us will push
+you to make things happen, because otherwise you'll be embarrassed to
+tell us that you haven't done anything new since the last time we
+talked.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+Resume writing is just like dating, or applying for a bank loan, in that
+nobody wants you if you're desperate.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+Resume writing is just like dating, or applying for a bank loan, in that
+nobody wants you if you're desperate.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Bruce Lee', '
+If I tell you I'M[*] GOOD, YOU WOULD PROBABLY THINK I'm boasting. If I tell
+you I'M NO GOOD, YOU KNOW I'm lying.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Bruce Lee', '
+If I tell you I'm good, you would probably think I'm boasting. If I tell
+you I'm no good, you know I'm lying.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Vladimir Slepnev', '
+Let me try to get this straight: Lisp is a language for describing
+algorithms. This was JohnMcCarthy's original purpose, anyway: to build
+something more convenient than a Turing machine. Lisp is not about file,
+socket or GUI programming - Lisp is about expressive power. (For
+example, you can design multiple object systems for Lisp, in Lisp. Or
+implement the now-fashionable AOP. Or do arbitrary transformations on
+parsed source code.) If you don't value expressive power, Lisp ain't for
+you. I, personally, would prefer Lisp to not become mainstream: this
+would necessarily involve a dumbing down.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Vladimir Slepnev', '
+Let me try to get this straight: Lisp is a language for describing
+algorithms. This was JohnMcCarthy's original purpose, anyway: to build
+something more convenient than a Turing machine. Lisp is not about file,
+socket or GUI programming - Lisp is about expressive power. (For
+example, you can design multiple object systems for Lisp, in Lisp. Or
+implement the now-fashionable AOP. Or do arbitrary transformations on
+parsed source code.) If you don't value expressive power, Lisp ain't for
+you. I, personally, would prefer Lisp to not become mainstream: this
+would necessarily involve a dumbing down.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Le PDG de NURV, dans ""Anti-trust"".', '
+Je ne vous impose aucune contrainte, aucune limite. Surprenez-moi,
+étonnez-moi, défiez-moi, défiez-vous vous-même. Vous avez le choix: vous
+pouvez rester dans l'OMBRE[*] OU EN SORTIR EN ÉTANT PARMIS LES TROP RARES
+EXCEPTIONS À AVOIR RÉUSSI. L'heure est venue d'ALLER BIEN AU DELÀ DE
+VOTRE POTENTIEL. L'heure est venue maintenant de descendre vraiment en
+vous. L'HEURE EST VENUE DE DÉMONTRER POURQUOI VOUS ÊTES L'élite, les
+quelques élus, les rares lueurs qui offrent à cette compagnie son
+caractère exceptionnel, sa luminescence.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Le PDG de NURV, dans "Anti-trust".', '
+Je ne vous impose aucune contrainte, aucune limite. Surprenez-moi,
+étonnez-moi, défiez-moi, défiez-vous vous-même. Vous avez le choix: vous
+pouvez rester dans l'ombre ou en sortir en étant parmis les trop rares
+exceptions à avoir réussi. L'heure est venue d'aller bien au delà de
+votre potentiel. L'heure est venue maintenant de descendre vraiment en
+vous. L'heure est venue de démontrer pourquoi vous êtes l'élite, les
+quelques élus, les rares lueurs qui offrent à cette compagnie son
+caractère exceptionnel, sa luminescence.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Marc Andreessen', '
+Opportunities that present themselves to you are the consequence - at
+least partially - of being in the right place at the right time. They
+tend to present themselves when you'RE[*] NOT EXPECTING IT - AND OFTEN
+WHEN YOU ARE ENGAGED IN OTHER ACTIVITIES THAT WOULD SEEM TO PRECLUDE YOU
+FROM PURSUING THEM. AND THEY COME AND GO QUICKLY - IF YOU DON't jump
+all over an opportunity, someone else generally will and it will vanish.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Marc Andreessen', '
+Opportunities that present themselves to you are the consequence - at
+least partially - of being in the right place at the right time. They
+tend to present themselves when you're not expecting it - and often
+when you are engaged in other activities that would seem to preclude you
+from pursuing them. And they come and go quickly - if you don't jump
+all over an opportunity, someone else generally will and it will vanish.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I think the root of your mistake is saying that macros don'T[*] SCALE TO
+LARGER GROUPS. THE REAL TRUTH IS THAT MACROS DON't scale to stupider
+groups.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Paul Graham', '
+I think the root of your mistake is saying that macros don't scale to
+larger groups. The real truth is that macros don't scale to stupider
+groups.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Don'T[*] HAVE GOOD IDEAS IF YOU AREN't willing to be responsible for them.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan J. Perlis', '
+Don't have good ideas if you aren't willing to be responsible for them.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+The most damaging phrase in the language is, It's always been done that
+way.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+The most damaging phrase in the language is, It's always been done that
+way.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+Getting back to failing early, I'VE[*] LEARNED IT's important to completely
+fail. Get fired. Shoot the project, then burn its corpse. Melt the CVS
+repository and microwave the backup CDs. When things go wrong, I'VE
+OFTEN TRIED TO PLAY THE HERO FROM START TO FINISH. GUESS WHAT? SOME
+PROJECTS ARE DOOMED NO MATTER WHAT. SOME NEED SKILLS I DON't possess.
+And some need a fresh face.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+Getting back to failing early, I've learned it's important to completely
+fail. Get fired. Shoot the project, then burn its corpse. Melt the CVS
+repository and microwave the backup CDs. When things go wrong, I've
+often tried to play the hero from start to finish. Guess what? Some
+projects are doomed no matter what. Some need skills I don't possess.
+And some need a fresh face.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Measure everything you can about the product, and you'll start seeing
+patterns.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Measure everything you can about the product, and you'll start seeing
+patterns.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Something Confusing about ""Hard"":
+It's tempting to think that if it's hard, then it's valuable.
+Most valuable things are hard.
+Most hard things are completely useless - (picture of someone smashing
+their head through concrete blocks kung-fu style).
+Hard DOES NOT EQUATE TO BEING valuable.
+Remember Friendster back in the day?
+You'd sign in, invite friends, have 25 friends, go to their profile, and
+then it'd show how you were connected to each one.
+That's an impressive [some geeky CS jargon] Cone traversal of a tree -
+100 million string comparisons per page - it won't scale.
+Used to take a minute per page to load, and Friendster died a painful
+death.
+
+MySpace - not interested in solving problems
+They use the shortcut of ""Miss Fitzpatrick is in your extended network""
+(i.e. even when you're not even signed up for MySpace)
+They didn't solve the hard problem. But they make the more relevant
+assumption that you want to be connected to hot women. [LOL]
+Shows Alexa graph showing that in early 2005 Myspace took off, and
+quickly bypassed Friendster and never looked back.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Max Levchin', '
+Something Confusing about "Hard":
+It's tempting to think that if it's hard, then it's valuable.
+Most valuable things are hard.
+Most hard things are completely useless - (picture of someone smashing
+their head through concrete blocks kung-fu style).
+Hard DOES NOT EQUATE TO BEING valuable.
+Remember Friendster back in the day?
+You'd sign in, invite friends, have 25 friends, go to their profile, and
+then it'd show how you were connected to each one.
+That's an impressive [some geeky CS jargon] Cone traversal of a tree -
+100 million string comparisons per page - it won't scale.
+Used to take a minute per page to load, and Friendster died a painful
+death.
+
+MySpace - not interested in solving problems
+They use the shortcut of "Miss Fitzpatrick is in your extended network"
+(i.e. even when you're not even signed up for MySpace)
+They didn't solve the hard problem. But they make the more relevant
+assumption that you want to be connected to hot women. [LOL]
+Shows Alexa graph showing that in early 2005 Myspace took off, and
+quickly bypassed Friendster and never looked back.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('http://www.cpax.org.uk/prg/', '
+Write it properly first. It's easier to make a correct program fast,
+than to make a fast program correct.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('http://www.cpax.org.uk/prg/', '
+Write it properly first. It's easier to make a correct program fast,
+than to make a fast program correct.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anatole France', '
+J'AI[*] TOUJOURS PRÉFÉRÉ LA FOLIE DES PASSIONS À LA SAGESSE DE
+L'indifférence.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anatole France', '
+J'ai toujours préféré la folie des passions à la sagesse de
+l'indifférence.
+', '') [42001-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('LeCamarade', '
+Processors don't get better so that they can have more free time.
+Processors get better so _you_ can have more free time.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('LeCamarade', '
+Processors don't get better so that they can have more free time.
+Processors get better so _you_ can have more free time.
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anton van Straaten', '
+The venerable master Qc Na was walking with his student, Anton. Hoping to
+prompt the master into a discussion, Anton said ""Master, I have heard that
+objects are a very good thing - is this true?"" Qc Na looked pityingly at
+his student and replied, ""Foolish pupil - objects are merely a poor man's
+closures.""
+ Chastised, Anton took his leave from his master and returned to his cell,
+intent on studying closures. He carefully read the entire ""Lambda: The
+Ultimate..."" series of papers and its cousins, and implemented a small
+Scheme interpreter with a closure-based object system. He learned much, and
+looked forward to informing his master of his progress.
+ On his next walk with Qc Na, Anton attempted to impress his master by
+saying ""Master, I have diligently studied the matter, and now understand
+that objects are truly a poor man's closures."" Qc Na responded by hitting
+Anton with his stick, saying ""When will you learn? Closures are a poor man's
+object.[*]"" At that moment, Anton became enlightened.
+(Na = Norman Adams, Qa = Christian Queinnec)
+', '')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Anton van Straaten', '
+The venerable master Qc Na was walking with his student, Anton. Hoping to
+prompt the master into a discussion, Anton said "Master, I have heard that
+objects are a very good thing - is this true?" Qc Na looked pityingly at
+his student and replied, "Foolish pupil - objects are merely a poor man's
+closures."
+ Chastised, Anton took his leave from his master and returned to his cell,
+intent on studying closures. He carefully read the entire "Lambda: The
+Ultimate..." series of papers and its cousins, and implemented a small
+Scheme interpreter with a closure-based object system. He learned much, and
+looked forward to informing his master of his progress.
+ On his next walk with Qc Na, Anton attempted to impress his master by
+saying "Master, I have diligently studied the matter, and now understand
+that objects are truly a poor man's closures." Qc Na responded by hitting
+Anton with his stick, saying "When will you learn? Closures are a poor man's
+object." At that moment, Anton became enlightened.
+(Na = Norman Adams, Qa = Christian Queinnec)
+', '') [42000-197]
+2018-05-20 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ragala Khalid', '
+Ils ne sont pas forts parce qu'ils sont forts. Ils sont forts parce que
+nous sommes faibles.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Ragala Khalid', '
+Ils ne sont pas forts parce qu'ils sont forts. Ils sont forts parce que
+nous sommes faibles.
+', '') [42000-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Jobs', '
+The problem is that Microsoft just has no taste. And I don't mean that
+in a small way, I mean that in a big way.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Jobs', '
+The problem is that Microsoft just has no taste. And I don't mean that
+in a small way, I mean that in a big way.
+', '') [42000-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Crayz', '
+I'M[*] ALWAYS HAPPY TO TRADE PERFORMANCE FOR READABILITY AS LONG AS THE
+FORMER ISN't already scarce.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Crayz', '
+I'm always happy to trade performance for readability as long as the
+former isn't already scarce.
+', '') [42001-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+You have to write for your audience. I would never write (1..5).map
+&'*2' in Java when I could write
+ListFactoryFactory.getListFactoryFromResource(
+ new ResourceName('[*]COM.JAVAX.MAGNITUDES.INTEGERS').
+setLowerBound(1).setUpperBound(5).setStep(1).applyFunctor(
+ new Functor () { public void eval (x) { return x * 2; } }))
+I'M SIMPLIFYING, OF COURSE, I've left out the security and logging
+wrappers.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Reginald Braithwaite', '
+You have to write for your audience. I would never write (1..5).map
+&'*2' in Java when I could write
+ListFactoryFactory.getListFactoryFromResource(
+ new ResourceName('com.javax.magnitudes.integers').
+setLowerBound(1).setUpperBound(5).setStep(1).applyFunctor(
+ new Functor () { public void eval (x) { return x * 2; } }))
+I'm simplifying, of course, I've left out the security and logging
+wrappers.
+', '') [42001-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Some guy who isn't famous', '
+Programming is the art of figuring out what you want so precisely that
+even a machine can do it.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Some guy who isn't famous', '
+Programming is the art of figuring out what you want so precisely that
+even a machine can do it.
+', '') [42000-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+C and Lisp stand at opposite ends of the spectrum; they're each great at
+what the other one sucks at.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Steve Yegge', '
+C and Lisp stand at opposite ends of the spectrum; they're each great at
+what the other one sucks at.
+', '') [42000-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Burns', '
+Don't stay in bed, unless you can make money in bed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Burns', '
+Don't stay in bed, unless you can make money in bed.
+', '') [42000-197]
+2018-05-20 18:07:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mario Andretti', '
+If everything seems under control, you're not going fast enough.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mario Andretti', '
+If everything seems under control, you're not going fast enough.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Lament', '
+I guess, when you're drunk, every woman looks beautiful and every
+language looks (like) a Lisp :)
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Lament', '
+I guess, when you're drunk, every woman looks beautiful and every
+language looks (like) a Lisp :)
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Thomas Edison', '
+Many of life's failures are people who did not realize how close they
+were to success when they gave up.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Thomas Edison', '
+Many of life's failures are people who did not realize how close they
+were to success when they gave up.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't become proficient at something until he or she has done
+it many times. In other words., if you want someone to be really good at
+building a software system, he or she will have to have built 10 or more
+systems of that type.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't become proficient at something until he or she has done
+it many times. In other words., if you want someone to be really good at
+building a software system, he or she will have to have built 10 or more
+systems of that type.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't retain proficiency at a task unless he or she has at one
+time learned to perform that task very rapidly. Learning research
+demonstrates that the skills of people who become accurate but not fast
+deteriorate much sooner than the skills of people who become both
+accurate and fast.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+A person won't retain proficiency at a task unless he or she has at one
+time learned to perform that task very rapidly. Learning research
+demonstrates that the skills of people who become accurate but not fast
+deteriorate much sooner than the skills of people who become both
+accurate and fast.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+Training research shows that if you get speed now you can get quality
+later. But if you don't get speed you will never get quality in the long
+run.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Philip Greenspun', '
+Training research shows that if you get speed now you can get quality
+later. But if you don't get speed you will never get quality in the long
+run.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Functional programming is to algorithms as the ubiquitous little black
+dress is to women's fashion.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Tarver', '
+Functional programming is to algorithms as the ubiquitous little black
+dress is to women's fashion.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+For complex systems, the compiler and development environment need to be
+in the same language that its supporting. It's the only way to grow
+code.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+For complex systems, the compiler and development environment need to be
+in the same language that its supporting. It's the only way to grow
+code.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+If you don'T[*] FAIL AT LEAST 90 PERCENT OF THE TIME, YOU're not aiming
+high enough.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Alan Kay', '
+If you don't fail at least 90 percent of the time, you're not aiming
+high enough.
+', '') [42001-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Official definition of ""duck typing""', '
+If it looks like a duck, walks like a duck, and quacks like a duck, it's
+a duck.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Official definition of "duck typing"', '
+If it looks like a duck, walks like a duck, and quacks like a duck, it's
+a duck.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('almkgor', '
+In OO, it's the data that is the ""important"" thing: you define the class
+which contains member data, and only incidentally contains code for
+manipulating the object. In FP, it's the code that's important: you
+define a function which contains code for working with the data, and
+only incidentally define what the data is.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('almkgor', '
+In OO, it's the data that is the "important" thing: you define the class
+which contains member data, and only incidentally contains code for
+manipulating the object. In FP, it's the code that's important: you
+define a function which contains code for working with the data, and
+only incidentally define what the data is.
+', '') [42000-197]
+2018-05-20 18:07:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Linus Torvalds', '
+It was Edison who said ‘1% inspiration, 99% perspiration’. That may have
+been true a hundred years ago. These days it's ‘0.01% inspiration,
+99.99% perspiration’, and the inspiration is the easy part.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Linus Torvalds', '
+It was Edison who said ‘1% inspiration, 99% perspiration’. That may have
+been true a hundred years ago. These days it's ‘0.01% inspiration,
+99.99% perspiration’, and the inspiration is the easy part.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sebastien', '
+Heureux l'étudiant qui comme la Rivière peut suivre son cours sans
+quitter son lit...
+[Happy the student who like the River can follow his course without
+to leave his bed ...]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Sebastien', '
+Heureux l'étudiant qui comme la Rivière peut suivre son cours sans
+quitter son lit...
+[Happy the student who like the River can follow his course without
+to leave his bed ...]
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Gallwey', '
+Workers of the world, the chains that bind you are not held in place by
+a ruling class, a ""superior"" race, by society, the state, or a leader.
+They are held in place by none other than yourself. Those who seek to
+exploit are not themselves free, for they place no value in freedom. Who
+is it that really employs you and commands you to pick up your daily
+load? And who is it that you allow to pass judgment on the adequacy of
+your toil? Who have you empowered to dangle the carrot before you and
+threaten with disapproval? Who, when you wake each morning, sends you
+off to what you call your work?
+Is there an ""I want to"" behind all your ""I have to,"" or have you been so
+long forgotten to yourself that ""I want"" exists only as an idea in your
+head? If you have disconnected from your soul's desire and are drowning
+in an ocean of ""have to,"" then rise up and overthrow your master. Begin
+the journey toward emancipation. Work only in such a way that you are
+truly self-employed.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Tim Gallwey', '
+Workers of the world, the chains that bind you are not held in place by
+a ruling class, a "superior" race, by society, the state, or a leader.
+They are held in place by none other than yourself. Those who seek to
+exploit are not themselves free, for they place no value in freedom. Who
+is it that really employs you and commands you to pick up your daily
+load? And who is it that you allow to pass judgment on the adequacy of
+your toil? Who have you empowered to dangle the carrot before you and
+threaten with disapproval? Who, when you wake each morning, sends you
+off to what you call your work?
+Is there an "I want to" behind all your "I have to," or have you been so
+long forgotten to yourself that "I want" exists only as an idea in your
+head? If you have disconnected from your soul's desire and are drowning
+in an ocean of "have to," then rise up and overthrow your master. Begin
+the journey toward emancipation. Work only in such a way that you are
+truly self-employed.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Gbi de fer', '
+- Gbi de fer
+- Howa!
+- On va en France
+- Non, je vais pas!
+- Pourquoi?
+- Parce ki y a pas agouti là-bas!
+[- Iron Gbi
+- Howa!
+- We'RE[*] GOING TO FRANCE
+- NO, I'm not going!
+- Why?
+- Because there was no agouti there!]
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Gbi de fer', '
+- Gbi de fer
+- Howa!
+- On va en France
+- Non, je vais pas!
+- Pourquoi?
+- Parce ki y a pas agouti là-bas!
+[- Iron Gbi
+- Howa!
+- We're going to France
+- No, I'm not going!
+- Why?
+- Because there was no agouti there!]
+', '') [42001-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy Pausch', '
+Experience is what you get when you don't get what you want.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Randy Pausch', '
+Experience is what you get when you don't get what you want.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+It's easier to ask forgiveness than it is to get permission.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rear Admiral Dr. Grace Hopper', '
+It's easier to ask forgiveness than it is to get permission.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('everything2.com', '
+A CS professor once explained recursion as follows:
+A child couldn't sleep, so her mother told her a story about a little frog,
+ who couldn't sleep, so the frog's mother told her a story about a little bear,
+ who couldn't sleep, so the bear's mother told her a story about a little weasel...
+ who fell asleep.
+ ...and the little bear fell asleep;
+ ...and the little frog fell asleep;
+...and the child fell asleep.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('everything2.com', '
+A CS professor once explained recursion as follows:
+A child couldn't sleep, so her mother told her a story about a little frog,
+ who couldn't sleep, so the frog's mother told her a story about a little bear,
+ who couldn't sleep, so the bear's mother told her a story about a little weasel...
+ who fell asleep.
+ ...and the little bear fell asleep;
+ ...and the little frog fell asleep;
+...and the child fell asleep.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Albert Einstein', '
+Only two things are infinite, the universe and human stupidity. And I'm not so
+sure about the former.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Albert Einstein', '
+Only two things are infinite, the universe and human stupidity. And I'm not so
+sure about the former.
+', '') [42000-197]
+2018-05-20 18:07:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Daniel Lovewin', '
+La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa
+correction.
+[The knowledge of a defect does not remove it, it tortures us to its
+correction.]
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Daniel Lovewin', '
+La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa
+correction.
+[The knowledge of a defect does not remove it, it tortures us to its
+correction.]
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Twain', '
+If you tell the truth, you don't have to remember anything.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Mark Twain', '
+If you tell the truth, you don't have to remember anything.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Dr. Seuss', '
+You know you'RE[*] IN LOVE WHEN YOU CAN't fall asleep because reality is finally
+better than your dreams.
+', '') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Dr. Seuss', '
+You know you're in love when you can't fall asleep because reality is finally
+better than your dreams.
+', '') [42001-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Elie Wiesel', '
+The opposite of love is not hate, it's indifference.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Elie Wiesel', '
+The opposite of love is not hate, it's indifference.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('John Lennon', '
+Life is what happens to you while you're busy making other plans.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('John Lennon', '
+Life is what happens to you while you're busy making other plans.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+In terms of energy, it's better to make a wrong choice than none at all.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+In terms of energy, it's better to make a wrong choice than none at all.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+Acknowledging the negative doesn't mean sniveling [whining, complaining]; it
+means facing the truth and then moving on.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+Acknowledging the negative doesn't mean sniveling [whining, complaining]; it
+means facing the truth and then moving on.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rainer Maria Rilke', '
+What we choose to fight is so tiny!
+What fights us is so great!
+...
+When we win it's with small things,
+and the triumph itself makes us small.
+...
+Winning does not tempt that man.
+This is how he grows: by being defeated, decisively,
+by constantly greater beings.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('Rainer Maria Rilke', '
+What we choose to fight is so tiny!
+What fights us is so great!
+...
+When we win it's with small things,
+and the triumph itself makes us small.
+...
+Winning does not tempt that man.
+This is how he grows: by being defeated, decisively,
+by constantly greater beings.
+', '') [42000-197]
+2018-05-20 18:07:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+We fail to realize that mastery is not about perfection. It's about a process,
+a journey. The master is the one who stays on the path day after day, year after
+year. The master is the one who is willing to try, and fail, and try again, for
+as long as he or she lives.
+', '[*]')"; SQL statement:
+INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('George Leonard', '
+We fail to realize that mastery is not about perfection. It's about a process,
+a journey. The master is the one who stays on the path day after day, year after
+year. The master is the one who is willing to try, and fail, and try again, for
+as long as he or she lives.
+', '') [42000-197]
+2018-05-20 18:07:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('Some guy who isn't famous', '', '[*]')"; SQL statement:
+INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('Some guy who isn't famous', '', '') [42000-197]
+2018-05-20 18:07:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '[*]')"; SQL statement:
+INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('[Fixing architecture flaws in Rails' ORM]', '', '') [42000-197]
