@@ -30,7 +30,6 @@ class QuotesDatabase {
 
     public QuotesDatabase(String file, String seperator) {
 
-
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
             BufferedReader fileOpen = new BufferedReader(new FileReader(GetLocation(file)));
@@ -106,10 +105,10 @@ public class Quote {
     // TODO: Needs to be customized for this program
 
     private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
+    private static final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
+            .substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
-
 
     // H2 SQL Statement Example
     private static void insertWithStatement() throws SQLException {
@@ -219,9 +218,9 @@ public class Quote {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
-     UserInterfaec aa= new UserInterfaec();
+        UserInterfaec aa = new UserInterfaec();
 
-     aa.setVisible(true);
+        aa.setVisible(true);
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
@@ -238,44 +237,7 @@ public class Quote {
 
         
 
-        // Value used to store user input
-        Double input1;
 
-        // Scanner for getting user input for the year
-        Scanner reader = new Scanner(System.in);
-        while (true) {
-            // Try block so that if a user inputs a letter
-            // the code accounts for this
-            try {
-                print("Enter a double: ");
-                input1 = Double.valueOf(reader.nextLine());
-
-                // If the value is one that cannot be worked with, throw exception
-                if ((input1 == 1) || (input1 == 0)) {
-                    throw new NegNumber(
-                            "The number entered was either a 1 or a zero, please enter a number that can be worked with properly.");
-                }
-                // If successful, exit
-                break;
-                // If the user inputs a number that is not an integer
-            } catch (InputMismatchException e) {
-                print("\n" + "A letter or a symbol please enter a double." + "\n");
-                // Clear the input so that the code isn't stuck in an infinite loop with same error
-                reader.next();
-                continue;
-                // If the user inputs a number that is not an integer
-            } catch (NumberFormatException e) {
-                print("\n" + "A letter or a symbol please enter an integer." + "\n");
-                // Clear the input so that the code isn't stuck in an infinite loop with same error
-                continue;
-                // If the number entered is less than the minimum number
-            } catch (NegNumber ex) {
-                print("\n" + ex.getMessage() + "\n");
-                continue;
-            }
-        }
-        // Closes the reader
-        reader.close();
     }
 
 }
