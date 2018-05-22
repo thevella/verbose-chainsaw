@@ -113,6 +113,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             }
         });
 
+        OutScreen.setEditable(false);
         jScrollPane1.setViewportView(OutScreen);
 
         jScrollPane2.setViewportView(SearchWord);
@@ -184,8 +185,8 @@ public class UserInterfaec extends javax.swing.JFrame {
     }//GEN-LAST:event_AuthoButtonActionPerformed
 
     private void ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonActionPerformed
-        
-        String test=SearchWord.getText();
+              
+        String test=OutScreen.getText() + SearchWord.getText();
         OutScreen.setText(test);
 //OutScreen.setVisible(false);
 
