@@ -174,6 +174,7 @@ public class Quote {
         rs.next();
         return rs.getInt(1);
 
+
     }
 
     private static Connection getDBConnection() {
