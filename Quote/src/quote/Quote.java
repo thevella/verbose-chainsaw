@@ -173,7 +173,11 @@ public class Quote {
 
         rs.next();
         return rs.getInt(1);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> b6d2f41146454e80be4ea5578e3226af7e39cecb
     }
 
     private static Connection getDBConnection() {
