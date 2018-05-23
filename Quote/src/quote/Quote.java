@@ -194,7 +194,7 @@ public class Quote {
                     "^\\s*[[D|d][R|r][O|o][P|p]|[A|a][L|l][T|t][E|e][R|r]|[T|t][R|r][U|u][N|n][C|c][A|a][T|t][E|e]]\\s+?[T|t][A|a][B|b][L|l][E|e]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
                 return true;
             } else if (x.matches(
-                    "^\\s*[S|s][E|e][L|e][E|e][C|c][T|t]\\s+?.+?\\s+?[F|f][R|r][O|o][M|m]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
+                    "^\\s*[[S|s][E|e][L|e][E|e][C|c][T|t]|[D|e][L|l][E|e][T|t][E|e]]\\s+?.+?\\s+?[F|f][R|r][O|o][M|m][\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]|]")) {
                 return true;
             } else if (x.matches("^\\s*[D|d][R|r][O|o][P|p]\\s+?[D|d][A|a][T|t][A|a][B|b][A|a][S|s][E|e]")) {
                 return true;
