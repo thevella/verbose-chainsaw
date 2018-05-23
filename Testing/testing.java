@@ -1,5 +1,6 @@
 import org.h2.tools.DeleteDbFiles;
 import org.h2.Driver;
+import java.util.concurrent.TimeUnit;
 
 import java.io.*;
 import java.util.*;
@@ -40,9 +41,9 @@ public class testing {
             stmt.close();
             connection.commit();
         } catch (SQLException e) {
-            System.out.println("Exception Message " + e.getLocalizedMessage());
+            //System.out.println("Exception Message " + e.getLocalizedMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } finally {
             connection.close();
         }
@@ -60,9 +61,9 @@ public class testing {
             stmt.close();
             connection.commit();
         } catch (SQLException e) {
-            System.out.println("Exception Message " + e.getLocalizedMessage());
+            //System.out.println("Exception Message " + e.getLocalizedMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } finally {
             connection.close();
         }
@@ -150,7 +151,7 @@ public class testing {
 
     }*/
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, InterruptedException{
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
@@ -171,7 +172,7 @@ public class testing {
 
 
 
-        /*
+
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -192,7 +193,7 @@ public class testing {
         } finally {
             connection.close();
         }
-        */
+        
         ArrayList<String> authors = new ArrayList<String>();
 
         String seperator = "--";
@@ -223,14 +224,16 @@ public class testing {
                         }
 
                         try {
-                            insertQuotes(line.trim().substring(seperator.length()).trim(), temper, "");
+                            insertQuotes(line.trim().substring(seperator.length()).trim(), temper.trim(), "");
                         } catch (SQLException e) {
-                            e.getMessage();
+                            //e.getMessage();
                         }
 
                         temper = "";
 
-                    } else if (!line.equals("\n")) {
+                    } else if (!line.matches("\n")) {
+                        //print (line);
+                        //TimeUnit.SECONDS.sleep(5);
                         temper += line + "\n";
                     }
 

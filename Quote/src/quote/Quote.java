@@ -118,6 +118,10 @@ public class Quote {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
+            if (isValid(value1) || isValid(value2) || isValid(value3)){
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
+
             stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
 
             stmt.close();
@@ -137,6 +141,10 @@ public class Quote {
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
+
+            if (isValid(value1) || isValid(value2) || isValid(value3)){
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
 
             stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
 
@@ -175,6 +183,71 @@ public class Quote {
         return rs.getInt(1);
 
 
+    }
+
+    private static boolean isValid (String term) {
+        String[] splitTerms = term.split(";");
+
+        for (String x : splitTerms) {
+            if (x.matches("^\\s*[[D|d][R|r][O|o][P|p]|[A|a][L|l][T|t][E|e][R|r]|[T|t][R|r][U|u][N|n][C|c][A|a][T|t][E|e]]\\s[T|t][A|a][B|b][L|l][E|e]\\s[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
+                return true;
+            } else if (x.matches("^\\s*[S|s][E|e][L|e][E|e][C|c][T|t]\\s.+?\\s[F|f][R|r][O|o][M|m]\\s[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
+                return true;
+            } else if (x.matches("^\\s*[D|d][R|r][O|o][P|p]\\s[D|d][A|a][T|t][A|a][B|b][A|a][S|s][E|e]")) {
+                return true;
+            } else if (x.matches("[O|o][R|r]\\s+?(.+?)\\s*?\\=\\s*?\\1.*?")) {
+                return true;
+            } else if (x.matches("[O|o][R|r]\\s+?(-+|)\\s*?\\d+\\s*?(\\=|\\<\\=|\\>\\=|\\>|\\<)\\s*?(-+|)\\s*?\\d+.*?")) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static ResultSet searchExact (int tables, String searchTerm, int type) throws SQLException {
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        ResultSet rs = null;
+        if (tables == 1) {
+            table="AUTHOR";
+        } else {
+            table="QUOTES";
+        }
+
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            if (isValid(searchTerm)){
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
+
+            if (type == 1) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID=" + searchTerm);
+            } else if (type == 2) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR='" + searchTerm + "'");
+            } else if (type == 3) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY='" + searchTerm + "'");
+            } else if (type == 4) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '% " + searchTerm + " %'");
+            } else if (type == 5) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO='" + searchTerm + "'");
+            }
+
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+
+        rs.next();
+        return rs;
     }
 
     private static Connection getDBConnection() {
