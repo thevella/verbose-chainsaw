@@ -298,6 +298,50 @@ public class Quote {
         return rs;
     }
 
+    private static ResultSet searchRough(int tables, String searchTerm, int type) throws SQLException {
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        ResultSet rs = null;
+        if (tables == 1) {
+            table = "AUTHOR";
+        } else {
+            table = "QUOTES";
+        }
+
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            if (isValid(searchTerm)) {
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
+
+            if (type == 1) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID like '%" + searchTerm.trim() + "%'");
+            } else if (type == 2) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR like '%" + searchTerm.trim() + "%'");
+            } else if (type == 3) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY like '%" + searchTerm.trim() + "%'");
+            } else if (type == 4) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '%" + searchTerm.trim() + "%'");
+            } else if (type == 5) {
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%'");
+            }
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+
+        rs.next();
+        return rs;
+    }
+
     private static Connection getDBConnection() {
         Connection dbConnection = null;
         try {
