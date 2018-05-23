@@ -62475,3 +62475,6 @@ select * from quotes where exists [42001-197]
 2018-05-22 21:55:49 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM QUOTES WHERE EXISTS AUTHOR[*] "; expected "("; SQL statement:
 select * from quotes where exists author [42001-197]
+2018-05-22 22:28:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE VIEW [*]"; expected "identifier"; SQL statement:
+create view [42001-197]
