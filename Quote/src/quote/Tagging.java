@@ -13,6 +13,6 @@ import java.util.ArrayList;
  */
 public class Tagging {
     public ArrayList<String> happyL = new ArrayList<String>();
-    
-    
+
+
 }
