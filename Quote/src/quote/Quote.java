@@ -118,11 +118,12 @@ public class Quote {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
-            if (isValid(value1) || isValid(value2) || isValid(value3)){
+            if (isValid(value1) || isValid(value2) || isValid(value3)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
 
-            stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
+            stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
+                    + "')");
 
             stmt.close();
             connection.commit();
@@ -142,11 +143,12 @@ public class Quote {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
-            if (isValid(value1) || isValid(value2) || isValid(value3)){
+            if (isValid(value1) || isValid(value2) || isValid(value3)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
 
-            stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
+            stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
+                    + "')");
 
             stmt.close();
             connection.commit();
@@ -159,7 +161,7 @@ public class Quote {
         }
     }
 
-    public static int getCount (String table) throws SQLException {
+    public static int getCount(String table) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
@@ -182,24 +184,27 @@ public class Quote {
         rs.next();
         return rs.getInt(1);
 
-
     }
 
-    private static boolean isValid (String term) {
+    private static boolean isValid(String term) {
         String[] splitTerms = term.split(";");
 
         for (String x : splitTerms) {
-            if (x.matches("^\\s*[[D|d][R|r][O|o][P|p]|[A|a][L|l][T|t][E|e][R|r]|[T|t][R|r][U|u][N|n][C|c][A|a][T|t][E|e]]\\s+?[T|t][A|a][B|b][L|l][E|e]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
+            if (x.matches(
+                    "^\\s*[[D|d][R|r][O|o][P|p]|[A|a][L|l][T|t][E|e][R|r]|[T|t][R|r][U|u][N|n][C|c][A|a][T|t][E|e]]\\s+?[T|t][A|a][B|b][L|l][E|e]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
                 return true;
-            } else if (x.matches("^\\s*[S|s][E|e][L|e][E|e][C|c][T|t]\\s+?.+?\\s+?[F|f][R|r][O|o][M|m]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
+            } else if (x.matches(
+                    "^\\s*[S|s][E|e][L|e][E|e][C|c][T|t]\\s+?.+?\\s+?[F|f][R|r][O|o][M|m]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
                 return true;
             } else if (x.matches("^\\s*[D|d][R|r][O|o][P|p]\\s+?[D|d][A|a][T|t][A|a][B|b][A|a][S|s][E|e]")) {
                 return true;
-            } else if (x.matches("^\\s*[C|c][R|r][E|e][A|a][T|t][E|e]\\s+?[[A|a][L|l][I|i][A|a][S|s]|[A|a][G|g][G|g][R|r][E|e][G|g][A|a][T|t][E|e]|[I|i][N|n][D|e][X|x]|[T|t][A|a][B|b][L|l][E|e]|[U|u][S|s][E|e][R|r]]")) {
+            } else if (x.matches(
+                    "^\\s*[C|c][R|r][E|e][A|a][T|t][E|e]\\s+?[[A|a][L|l][I|i][A|a][S|s]|[A|a][G|g][G|g][R|r][E|e][G|g][A|a][T|t][E|e]|[I|i][N|n][D|e][X|x]|[T|t][A|a][B|b][L|l][E|e]|[U|u][S|s][E|e][R|r]]")) {
                 return true;
             } else if (x.matches("[O|o][R|r]\\s+?(.+?)\\s*?\\=\\s*?\\1.*?")) {
                 return true;
-            } else if (x.matches("[O|o][R|r]\\s+?(-+|)\\s*?\\d+\\s*?(\\=|\\<\\=|\\>\\=|\\>|\\<)\\s*?(-+|)\\s*?\\d+.*?")) {
+            } else if (x
+                    .matches("[O|o][R|r]\\s+?(-+|)\\s*?\\d+\\s*?(\\=|\\<\\=|\\>\\=|\\>|\\<)\\s*?(-+|)\\s*?\\d+.*?")) {
                 return true;
             }
         }
@@ -207,21 +212,21 @@ public class Quote {
         return false;
     }
 
-    private static ResultSet searchExact (int tables, String searchTerm, int type) throws SQLException {
+    private static ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
         if (tables == 1) {
-            table="AUTHOR";
+            table = "AUTHOR";
         } else {
-            table="QUOTES";
+            table = "QUOTES";
         }
 
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
-            if (isValid(searchTerm)){
+            if (isValid(searchTerm)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
 
@@ -236,7 +241,6 @@ public class Quote {
             } else if (type == 5) {
                 rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO='" + searchTerm + "'");
             }
-
 
             stmt.close();
             connection.commit();
@@ -371,9 +375,6 @@ public class Quote {
                 }
             }
         });
-
-
-
 
     }
 
