@@ -298,6 +298,7 @@ public class Quote {
         return rs;
     }
 
+
     private static Connection getDBConnection() {
         Connection dbConnection = null;
         try {
