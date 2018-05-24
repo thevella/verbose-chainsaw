@@ -104,14 +104,14 @@ public class Quote {
     // Variables and methods for sqlDatabase
     // TODO: Needs to be customized for this program
 
-    private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
+    private final String DB_DRIVER = "org.h2.Driver";
+    private final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
             .substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
-    private static final String DB_USER = "sa";
-    private static final String DB_PASSWORD = "";
+    private final String DB_USER = "sa";
+    private final String DB_PASSWORD = "";
 
     // H2 SQL Statement Example
-    public static void insertQuotes(String value1, String value2, String value3) throws SQLException {
+    public void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -136,7 +136,7 @@ public class Quote {
         }
     }
 
-    public static void insertAuthor(String value1, String value2, String value3) throws SQLException {
+    public void insertAuthor(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -161,7 +161,7 @@ public class Quote {
         }
     }
 
-    public static int getCount(String table) throws SQLException {
+    public int getCount(String table) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
@@ -186,7 +186,7 @@ public class Quote {
 
     }
 
-    private static boolean isValid(String term) {
+    public  boolean isValid(String term) {
         String[] splitTerms = term.split(";");
 
         for (String x : splitTerms) {
@@ -212,7 +212,7 @@ public class Quote {
         return false;
     }
 
-    public static ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
+    public  ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
@@ -256,7 +256,7 @@ public class Quote {
         return rs;
     }
 
-    public static ResultSet searchRough(int tables, String searchTerm, int type) throws SQLException {
+    public  ResultSet searchRough(int tables, String searchTerm, int type) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
@@ -302,7 +302,7 @@ public class Quote {
     }
 
 
-    private static Connection getDBConnection() {
+    public Connection getDBConnection() {
         Connection dbConnection = null;
         try {
             Class.forName(DB_DRIVER);
@@ -318,7 +318,7 @@ public class Quote {
         return dbConnection;
     }
 
-    private static void resetNumbering(String table) throws SQLException {
+    public  void resetNumbering(String table) throws SQLException {
 
         Connection connection = getDBConnection();
         Statement stmt = null;
