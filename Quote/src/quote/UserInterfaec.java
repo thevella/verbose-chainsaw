@@ -420,7 +420,8 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             try {
                 while (resultSet.next()) {
-                    test += resultSet.getString(2) + "\n";
+                    test += resultSet.getString(3) + "\n";
+                    test +="-"+resultSet.getString(2) + "\n"+"\n";
 
                 }
             } catch (SQLException ex) {
