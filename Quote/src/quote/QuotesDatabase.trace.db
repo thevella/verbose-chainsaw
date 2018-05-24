@@ -6,3 +6,7 @@ org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE QUOTES
 CREATE[*] TABLE QUOTES (AUTHOR VARCHAR(255), BODY VARCHAR(10000)) "; SQL statement:
 drop table quotes
 Create table Quotes (author varchar(255), body varchar(10000)) [42000-197]
+2018-05-24 12:41:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-05-24 12:43:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
