@@ -161,6 +161,76 @@ public class Quote {
         }
     }
 
+    public void removeAuthor (String deleteTerm, int typeInt) {
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        String type = "";
+
+        if (typeInt == 1) {
+            type = "AUTHOR";
+        } else if (typeInt == 2) {
+            type = "INFO";
+        } else if (typeInt == 3) {
+            type = "TAGS";
+        }
+
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            if (isValid(deleteTerm)) {
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
+
+            stmt.execute("DELETE FROM AUTHORS WHERE " + type + "='" + deleteTerm + "'");
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+    }
+
+
+    public void removeQuote (String deleteTerm, int typeInt) {
+        Connection connection = getDBConnection();
+        Statement stmt = null;
+        String type = "";
+        if (typeInt == 1) {
+            type = "ID";
+        } else if (typeInt == 2) {
+            type = "AUTHOR";
+        } else if (typeInt == 3) {
+            type = "BODY";
+        } else if (typeInt == 4) {
+            type = "TAGS";
+        }
+
+        try {
+            connection.setAutoCommit(false);
+            stmt = connection.createStatement();
+
+            if (isValid(deleteTerm)) {
+                throw new NegNumber("The string contains a valid SQL damaging statement");
+            }
+
+            stmt.execute("DELETE FROM QUOTES WHERE " + type + "='" + deleteTerm + "'");
+
+            stmt.close();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println("Exception Message " + e.getLocalizedMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+    }
+
     public int getCount(String table) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
