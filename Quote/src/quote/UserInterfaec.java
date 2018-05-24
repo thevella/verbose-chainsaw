@@ -5,6 +5,7 @@
  */
 package quote;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -407,15 +408,20 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         ResultSet resultSet = null;
         String test = "";
+        Connection connec = aa.getDBConnection();
+        
         try {
-            resultSet = aa.searchRough(2, Term, 2);
+            resultSet = aa.searchRough(2, Term, 2, connec);
+            connec.commit();
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } //finally {
+            //connec.close();
+        //}
 
         try {
             while (resultSet.next()) {
-                test = resultSet.getString(1);
+                test += resultSet.getString(1);
 
             }
         } catch (SQLException ex) {
