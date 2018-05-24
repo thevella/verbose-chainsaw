@@ -161,7 +161,7 @@ public class Quote {
         }
     }
 
-    public removeAuthor (String deleteTerm, int typeInt) {
+    public void removeAuthor (String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         String type = "";
@@ -196,7 +196,7 @@ public class Quote {
     }
 
 
-    public removeQuote (String deleteTerm, int typeInt) {
+    public void removeQuote (String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         String type = "";
