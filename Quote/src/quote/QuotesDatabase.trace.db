@@ -10,3 +10,5 @@ Create table Quotes (author varchar(255), body varchar(10000)) [42000-197]
 org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
 2018-05-24 12:43:36 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2018-05-24 12:57:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]

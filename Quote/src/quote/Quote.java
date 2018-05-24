@@ -256,10 +256,9 @@ public class Quote {
         return rs;
     }
 
-    public  ResultSet searchRough(int tables, String searchTerm, int type, Connection DBConnection) throws SQLException {
+    public ResultSet searchRough(int tables, String searchTerm, int type, Connection DBConnection, Statement stmt) throws SQLException {
         Connection connection = DBConnection;
 
-        Statement stmt = null;
         ResultSet rs = null;
           String table = "";
 
@@ -271,7 +270,6 @@ public class Quote {
 
         try {
             connection.setAutoCommit(false);
-            stmt = connection.createStatement();
 
             if (isValid(searchTerm)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
@@ -289,7 +287,6 @@ public class Quote {
                 rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%'");
             }
 
-            stmt.close();
             connection.commit();
         } catch (SQLException e) {
             System.out.println("Exception Message " + e.getLocalizedMessage());
