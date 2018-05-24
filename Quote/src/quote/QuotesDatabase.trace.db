@@ -62478,3 +62478,6 @@ select * from quotes where exists author [42001-197]
 2018-05-22 22:28:12 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE VIEW [*]"; expected "identifier"; SQL statement:
 create view [42001-197]
+2018-05-24 13:31:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ALTER TABLE QUOTES AUTO_INCREMENT[*] =1 "; expected "., ADD, SET, RENAME, DROP, CHANGE, MODIFY, ALTER"; SQL statement:
+ALTER TABLE quotes AUTO_INCREMENT =1 [42001-197]

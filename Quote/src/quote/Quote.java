@@ -186,7 +186,7 @@ public class Quote {
 
     }
 
-    public  boolean isValid(String term) {
+    public boolean isValid(String term) {
         String[] splitTerms = term.split(";");
 
         for (String x : splitTerms) {
@@ -212,9 +212,8 @@ public class Quote {
         return false;
     }
 
-    public  ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
-        Connection connection = getDBConnection();
-        Statement stmt = null;
+    public ResultSet searchExact(int tables, String searchTerm, int type, Connection connection, Statement stmt) throws SQLException {
+
         ResultSet rs = null;
         String table = "";
         if (tables == 1) {
@@ -225,7 +224,6 @@ public class Quote {
 
         try {
             connection.setAutoCommit(false);
-            stmt = connection.createStatement();
 
             if (isValid(searchTerm)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
@@ -243,14 +241,11 @@ public class Quote {
                 rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO='" + searchTerm + "'");
             }
 
-            stmt.close();
             connection.commit();
         } catch (SQLException e) {
             System.out.println("Exception Message " + e.getLocalizedMessage());
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            connection.close();
         }
 
         return rs;
@@ -314,7 +309,7 @@ public class Quote {
         return dbConnection;
     }
 
-    public  void resetNumbering(String table) throws SQLException {
+    public void resetNumbering(String table) throws SQLException {
 
         Connection connection = getDBConnection();
         Statement stmt = null;
