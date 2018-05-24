@@ -411,7 +411,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         try {
             resultSet = aa.searchRough(2, Term, 2, connec);
-            connec.commit();
+         
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         } //finally {
