@@ -400,41 +400,76 @@ public class UserInterfaec extends javax.swing.JFrame {
         int todec = 1;
         if (Author_Search.isSelected()) {
             todec = 1;
+            String Term = SearchTerm.getText();
+
+            ResultSet resultSet = null;
+            String test = "";
+            Connection connec = aa.getDBConnection();
+
+            Statement stmt = null;
+
+            try {
+                stmt = connec.createStatement();
+                resultSet = aa.searchRough(2, Term, 2, connec, stmt);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            } //finally {
+            //connec.close();
+            //}
+
+            try {
+                while (resultSet.next()) {
+                    test += resultSet.getString(2) + "\n";
+
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            Output1.setText(test);
+
         } else if (Quote_Search.isSelected()) {
             todec = 2;
-        }
+             String Term = SearchTerm.getText();
 
-        String Term = SearchTerm.getText();
+            ResultSet resultSet = null;
+            String test = "";
+            Connection connec = aa.getDBConnection();
 
-        ResultSet resultSet = null;
-        String test = "";
-        Connection connec = aa.getDBConnection();
+            Statement stmt = null;
 
-        Statement stmt=null;
-        
-        
-        
-        try {
-            stmt=connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
-         
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        } //finally {
-        //connec.close();
-        //}
+            try {
+                stmt = connec.createStatement();
+                resultSet = aa.searchRough(3, Term, 3, connec, stmt);
 
-        try {
-            while (resultSet.next()) {
-                test += resultSet.getString(1);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            } //finally {
+            //connec.close();
+            //}
 
+            try {
+                while (resultSet.next()) {
+                    test += resultSet.getString(3) + "\n";
+                    test +="-"+resultSet.getString(2)+"\n\n";
+
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+
+            Output1.setText(test);
+            
+            
+            
+            
+            
+            
+            
         }
 
-        String ob = Output1.getText();
-        Output1.setText(test + ob);
+
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void Author_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_SearchActionPerformed
@@ -474,17 +509,16 @@ public class UserInterfaec extends javax.swing.JFrame {
         }
 
         Connection connec = aa.getDBConnection();
-    
 
-        Statement stmt=null;
-        
+        Statement stmt = null;
+
         String Term = SearchTerm1.getText();
 
         ResultSet resultSet = null;
         String test = "";
         try {
-                stmt=connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
+            stmt = connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -522,17 +556,16 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         String Term = SearchTerm2.getText();
 
-        Statement stmt=null;
-        
-        
+        Statement stmt = null;
+
         ResultSet resultSet = null;
         String test = "";
 
         Connection connec = aa.getDBConnection();
 
         try {
-            stmt=connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
+            stmt = connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
