@@ -8,6 +8,7 @@ package quote;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -409,8 +410,13 @@ public class UserInterfaec extends javax.swing.JFrame {
         String test = "";
         Connection connec = aa.getDBConnection();
 
+        Statement stmt=null;
+        
+        
+        
         try {
-            resultSet = aa.searchRough(2, Term, 2, connec);
+            stmt=connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
          
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
@@ -468,13 +474,17 @@ public class UserInterfaec extends javax.swing.JFrame {
         }
 
         Connection connec = aa.getDBConnection();
+    
 
+        Statement stmt=null;
+        
         String Term = SearchTerm1.getText();
 
         ResultSet resultSet = null;
         String test = "";
         try {
-            resultSet = aa.searchRough(2, Term, 2, connec);
+                stmt=connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -512,13 +522,17 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         String Term = SearchTerm2.getText();
 
+        Statement stmt=null;
+        
+        
         ResultSet resultSet = null;
         String test = "";
 
         Connection connec = aa.getDBConnection();
 
         try {
-            resultSet = aa.searchRough(2, Term, 2, connec);
+            stmt=connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec,stmt);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author 390715
  */
-public class Tagging {
+/*public class Tagging {
      ArrayList<String> openL = new ArrayList<String>();
         openL.add("Understanding");
         openL.add("Confident");
@@ -292,3 +292,4 @@ public class Tagging {
 
 
 }
+*/
