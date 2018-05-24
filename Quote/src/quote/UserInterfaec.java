@@ -393,64 +393,50 @@ public class UserInterfaec extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-Quote aa = new Quote();
+        Quote aa = new Quote();
 
-int todec=1;
-if (Author_Search.isSelected()){
-    todec=1;
-}else if (Quote_Search.isSelected()){
-    todec=2;
-}
+        int todec = 1;
+        if (Author_Search.isSelected()) {
+            todec = 1;
+        } else if (Quote_Search.isSelected()) {
+            todec = 2;
+        }
 
-String Term=SearchTerm.getText();
+        String Term = SearchTerm.getText();
 
-
-
-
-        
-           ResultSet resultSet = null;
-        String test="";
+        ResultSet resultSet = null;
+        String test = "";
         try {
-            resultSet = aa.searchRough(2,Term,2);
+            resultSet = aa.searchRough(2, Term, 2);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+
         try {
-            while(resultSet.next()){
-                test=resultSet.getString(1);
-                
-                
-            }   } catch (SQLException ex) {
+            while (resultSet.next()) {
+                test = resultSet.getString(1);
+
+            }
+        } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
-
-String ob=Output1.getText();
-Output1.setText(test+ob);
+        String ob = Output1.getText();
+        Output1.setText(test + ob);
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void Author_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_SearchActionPerformed
-      
-      
+
         Quote_Search.setSelected(false);
-       
-    
-       
-       //Search_Author.setOpaque(true);
-       
-       
+
+        //Search_Author.setOpaque(true);
+
     }//GEN-LAST:event_Author_SearchActionPerformed
 
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
-       Author_Search.setSelected(false);
-       
-       
-       
-       
-       
-       
+        Author_Search.setSelected(false);
+
+
     }//GEN-LAST:event_Quote_SearchActionPerformed
 
     private void Tags_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tags_SearchActionPerformed
@@ -458,7 +444,7 @@ Output1.setText(test+ob);
     }//GEN-LAST:event_Tags_SearchActionPerformed
 
     private void Author_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_AddActionPerformed
-       Quote_Add.setSelected(false);
+        Quote_Add.setSelected(false);
     }//GEN-LAST:event_Author_AddActionPerformed
 
     private void Quote_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_AddActionPerformed
@@ -466,89 +452,77 @@ Output1.setText(test+ob);
     }//GEN-LAST:event_Quote_AddActionPerformed
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
-       Quote aa = new Quote();
+        Quote aa = new Quote();
 
-int todec=1;
-if (Author_Add.isSelected()){
-    todec=1;
-}else if (Quote_Add.isSelected()){
-    todec=2;
-}
+        int todec = 1;
+        if (Author_Add.isSelected()) {
+            todec = 1;
+        } else if (Quote_Add.isSelected()) {
+            todec = 2;
+        }
 
-String Term=SearchTerm1.getText();
+        String Term = SearchTerm1.getText();
 
-
-
-
-        
-           ResultSet resultSet = null;
-        String test="";
+        ResultSet resultSet = null;
+        String test = "";
         try {
-            resultSet = aa.searchRough(2,Term,2);
+            resultSet = aa.searchRough(2, Term, 2);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+
         try {
-            while(resultSet.next()){
-                test=resultSet.getString(1);
-                
-                
-            }   } catch (SQLException ex) {
+            while (resultSet.next()) {
+                test = resultSet.getString(1);
+
+            }
+        } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
-
-String ob=Output2.getText();
-Output2.setText(test+ob);
+        String ob = Output2.getText();
+        Output2.setText(test + ob);
     }//GEN-LAST:event_AddButtonActionPerformed
 
     private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
-       Quote_Remove.setSelected(false);
+        Quote_Remove.setSelected(false);
     }//GEN-LAST:event_Author_RemoveActionPerformed
 
     private void Quote_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_RemoveActionPerformed
-      Author_Remove.setSelected(false);
+        Author_Remove.setSelected(false);
     }//GEN-LAST:event_Quote_RemoveActionPerformed
 
     private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
         Quote aa = new Quote();
 
-int todec=1;
-if (Author_Remove.isSelected()){
-    todec=1;
-}else if (Quote_Remove.isSelected()){
-    todec=2;
-}
+        int todec = 1;
+        if (Author_Remove.isSelected()) {
+            todec = 1;
+        } else if (Quote_Remove.isSelected()) {
+            todec = 2;
+        }
 
-String Term=SearchTerm2.getText();
+        String Term = SearchTerm2.getText();
 
-
-
-
-        
-           ResultSet resultSet = null;
-        String test="";
+        ResultSet resultSet = null;
+        String test = "";
         try {
-            resultSet = aa.searchRough(2,Term,2);
+            resultSet = aa.searchRough(2, Term, 2);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
+
         try {
-            while(resultSet.next()){
-                test=resultSet.getString(1);
-                
-                
-            }   } catch (SQLException ex) {
+            while (resultSet.next()) {
+                test = resultSet.getString(1);
+
+            }
+        } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
-
-String ob=Output3.getText();
-Output3.setText(test+ob);
+        String ob = Output3.getText();
+        Output3.setText(test + ob);
     }//GEN-LAST:event_RemoveButtonActionPerformed
 
     /**
