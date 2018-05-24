@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author Coles Laptop
@@ -409,14 +408,14 @@ public class UserInterfaec extends javax.swing.JFrame {
         ResultSet resultSet = null;
         String test = "";
         Connection connec = aa.getDBConnection();
-        
+
         try {
             resultSet = aa.searchRough(2, Term, 2, connec);
             connec.commit();
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         } //finally {
-            //connec.close();
+        //connec.close();
         //}
 
         try {
@@ -468,12 +467,14 @@ public class UserInterfaec extends javax.swing.JFrame {
             todec = 2;
         }
 
+        Connection connec = aa.getDBConnection();
+
         String Term = SearchTerm1.getText();
 
         ResultSet resultSet = null;
         String test = "";
         try {
-            resultSet = aa.searchRough(2, Term, 2);
+            resultSet = aa.searchRough(2, Term, 2, connec);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -513,8 +514,11 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         ResultSet resultSet = null;
         String test = "";
+
+        Connection connec = aa.getDBConnection();
+
         try {
-            resultSet = aa.searchRough(2, Term, 2);
+            resultSet = aa.searchRough(2, Term, 2, connec);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
