@@ -212,10 +212,11 @@ public class Quote {
         return false;
     }
 
-    private static ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
+    public static ResultSet searchExact(int tables, String searchTerm, int type) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
+        String table = "";
         if (tables == 1) {
             table = "AUTHOR";
         } else {
@@ -255,10 +256,12 @@ public class Quote {
         return rs;
     }
 
-    private static ResultSet searchRough(int tables, String searchTerm, int type) throws SQLException {
+    public static ResultSet searchRough(int tables, String searchTerm, int type) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         ResultSet rs = null;
+          String table = "";
+         
         if (tables == 1) {
             table = "AUTHOR";
         } else {
@@ -402,6 +405,7 @@ public class Quote {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
+       
         UserInterfaec aa = new UserInterfaec();
 
         aa.setVisible(true);
