@@ -10,8 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -42,6 +46,8 @@ public class UserInterfaec extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        PopUp = new javax.swing.JPopupMenu();
+        jMenu1 = new javax.swing.JMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -129,6 +135,9 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jRadioButton1.setText("jRadioButton1");
 
+        jMenu1.setText("Remove Author");
+        PopUp.add(jMenu1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(744, 465));
 
@@ -184,6 +193,11 @@ public class UserInterfaec extends javax.swing.JFrame {
             String[] strings = new String[1];
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+        });
+        AuthorDisplay.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AuthorDisplayMouseClicked(evt);
+            }
         });
         jScrollPane2.setViewportView(AuthorDisplay);
 
@@ -449,8 +463,9 @@ public class UserInterfaec extends javax.swing.JFrame {
                         test += resultSet.getString(3) + "\n";
                         test += "-- " + resultSet.getString(2) + "\n" + "\n";
                         ToList.add(resultSet.getString(2));
-                        String [] out = ToList.toArray(new String[ToList.size()]);
-                        AuthorDisplay.setListData(out);
+                        String [] out1 = ToList.toArray(new String[ToList.size()]);
+                        Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
+                        AuthorDisplay.setListData(out.toArray(new String[out.size()]));
                         
                     }
                 } catch (SQLException ex) {
@@ -666,6 +681,14 @@ public class UserInterfaec extends javax.swing.JFrame {
         Output3.setText(test + ob);
     }//GEN-LAST:event_RemoveButtonActionPerformed
 
+    private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()  ){   // if right mouse button clicked
+            PopUp.show(this,evt.getX(),evt.getY());
+            System.out.println("sdsd");
+        }
+
+    }//GEN-LAST:event_AuthorDisplayMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -710,6 +733,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JTextArea Output1;
     private javax.swing.JTextArea Output2;
     private javax.swing.JTextArea Output3;
+    private javax.swing.JPopupMenu PopUp;
     private javax.swing.JRadioButton Quote_Add;
     private javax.swing.JRadioButton Quote_Remove;
     private javax.swing.JRadioButton Quote_Search;
@@ -720,6 +744,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JTextArea SearchTerm2;
     private javax.swing.JRadioButton Tags_Search;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
