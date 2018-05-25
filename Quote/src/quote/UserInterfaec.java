@@ -49,7 +49,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         PopUp = new javax.swing.JPopupMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        Auth_Search = new javax.swing.JMenuItem();
         QuotePopOut = new javax.swing.JPopupMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -142,10 +142,20 @@ public class UserInterfaec extends javax.swing.JFrame {
         jMenuItem1.setText("Remove Author");
         PopUp.add(jMenuItem1);
 
-        jMenuItem2.setText("Search By Author");
-        PopUp.add(jMenuItem2);
+        Auth_Search.setText("Search By Author");
+        Auth_Search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Auth_SearchActionPerformed(evt);
+            }
+        });
+        PopUp.add(Auth_Search);
 
         jMenuItem3.setText("Remove Quote");
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem3MouseClicked(evt);
+            }
+        });
         QuotePopOut.add(jMenuItem3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -692,10 +702,22 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
         if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
-            QuotePopOut.show(this, evt.getX()+120, evt.getY()+50);
+            QuotePopOut.show(this, evt.getX(), evt.getY());
             System.out.println("sdsd");
+        }        
     }//GEN-LAST:event_Output1MouseClicked
-    }
+
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
+       //SearchTerm.setText(
+      
+    
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
+       String to=AuthorDisplay.getSelectedValue();
+        SearchTerm.setText(to);
+    }//GEN-LAST:event_Auth_SearchActionPerformed
+    
 
     /**
      * @param args the command line arguments
@@ -734,6 +756,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddButton;
+    private javax.swing.JMenuItem Auth_Search;
     private javax.swing.JList<String> AuthorDisplay;
     private javax.swing.JRadioButton Author_Add;
     private javax.swing.JRadioButton Author_Remove;
@@ -754,7 +777,6 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JRadioButton Tags_Search;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

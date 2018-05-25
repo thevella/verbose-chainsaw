@@ -95,10 +95,13 @@
             <Property name="text" type="java.lang.String" value="Remove Author"/>
           </Properties>
         </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+        <MenuItem class="javax.swing.JMenuItem" name="Auth_Search">
           <Properties>
             <Property name="text" type="java.lang.String" value="Search By Author"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Auth_SearchActionPerformed"/>
+          </Events>
         </MenuItem>
       </SubComponents>
     </Container>
@@ -112,6 +115,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Remove Quote"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem3MouseClicked"/>
+          </Events>
         </MenuItem>
       </SubComponents>
     </Container>
