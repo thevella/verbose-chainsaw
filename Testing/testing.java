@@ -16,7 +16,41 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+class testHelper {
+    public String[] openL = {"Great", "Gay", "Joyous", "Lucky", "Fortunate", "Delighted", "Overjoyed", "Gleeful", "Thankful", "Important", "Festive", "Ecstatic", "Satisfied", "Glad", "Cheerful", "Sunny", "Merry", "Elated", "Jubilant"};
 
+    public String[] aliveL = {"Playful", "Courageous", "Energetic", "Liberated", "Optimistic", "Provocative", "Impulsive", "Free", "Frisky", "Animated", "Spirited", "Thrilled", "Wonderful"};
+
+    public String[] goodL = {"Calm", "Peaceful", "At Ease", "Comfortable", "Pleased", "Encouraged", "Clever", "Surprised", "Content", "Quiet", "Certain", "Relaxed", "Serene", "Free and Easy", "Bright", "Blessed", "Reassured"};
+
+    public String[] loveL = {"Loving", "Considerate", "Affectionate", "Sensitive", "Tender", "Devoted", "Attracted", "Passionate", "Admiration", "Warm", "Touched", "Sympathy", "Close", "Loved", "Comforted", "Drawn Towards"};
+
+    public String[] interestedL = {"Concerned", "Affected", "Fascinated", "Intrigued", "Absorbed", "Inquisitive", "Nosy", "Snoopy", "Engrossed", "Curious"};
+
+    public String[] positiveL = {"Eager Keen", "Earnest Intent", "Anxious Inspired", "Determined Excited", "Enthusiastic Bold", "Brave Daring", "Challenged Optimistic", "Re - Enforced", "Confident Hopeful"};
+
+    public String[] strongL = {"Impulsive", "Free", "Sure", "Certain", "Rebellious", "Unique", "Dynamic", "Tenacious", "Hardy", "Secure"};
+
+    public String[] angryL = {"Irritated", "Enraged", "Hostile", "Insulting", "Sore", "Annoyed", "Upset", "Hateful", "Unpleasant", "Offensive", "Bitter", "Aggressive", "Resentful", "Inflamed", "Provoked", "Incensed", "Infuriated", "Cross", "Working Up", "Boiling", "Fuming", "Indignant"};
+
+    public String[] depressedL = {"Lousy", "Disappoinnted", "Discouraged", "Ashamed", "Powerless", "Diminished", "Gulity", "Dissatisfied", "Miserable", "Detestable", "Repugnant", "Dispicable", "Disgusting", "Abominable", "Terrible", "In Despair", "Sulky", "Bad", "A Sense of Loss"};
+
+    public String[] confusedL = {"Upset", "Doubtful", "Uncertain", "Indecisive", "Perplexed", "Embarrassed", "Hesitant", "Shy", "Stupefied", "Disillusioned", "Unbelieving", "Skeptical", "Distrustful", "Misgiving", "Lost", "Unsure", "Uneasy", "Pessemistic", "Tense"};
+
+    public String[] helplessL = {"Incapable", "Alone", "Paralyzed", "Fatigued", "Useless", "Inferior", "Vulnerable", "Empty", "Forced", "Hesitant", "Dispair", "Frustrated", "Distressed", "Woeful", "Pathetic", "Tragic", "In A Stew", "Dominated"};
+
+    public String[] indifferentL = {"Insensitive", "Dull", "Nonchalant", "Neutral", "Reserved", "Weary", "Bored", "Preoccupied", "Cold", "Disinterested", "Lifeless"};
+
+    public String[] afraidL = {"Fearful", "Terrified", "Suspicious", "Anxious", "Alarmed", "Panic", "Nervous", "Scared", "Worried", "Frightened", "Timid", "Shaky", "Restless", "Doubtful", "Threatened", "Cowardly", "Quaking", "Menaced", "Wary"};
+
+    public String[] hurtL = {"Crushed", "Tormented", "Deprived", "Pained", "Tortured", "Dejected", "Rejected", "Injured", "Offended", "Afflicted", "Aching", "Victimized", "Heartbroken", "Agonized", "Appalled", "Humiliated", "Wronged", "Alienated"};
+
+    public String[] sadL = {"Tearful", "Sorrowful", "Pained", "Grief", "Anguish", "Desolate", "Desperate", "Pessimistic", "Unhappy", "Lonely", "Grieved", "Mournful", "Dismayed"};
+
+    public testHelper () {
+
+    }
+}
 
 public class testing {
 
@@ -28,6 +62,107 @@ public class testing {
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
 
+    private static testHelper helper = new testHelper();
+
+
+
+    private static ArrayList<String> retTags (String searchBody) {
+        ArrayList<String> tags = new ArrayList<String>();
+
+        for (String x : helper.openL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Open");
+            }
+        }
+
+        for (String x : helper.sadL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Sad");
+            }
+        }
+
+        for (String x : helper.aliveL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Alive");
+            }
+        }
+
+        for (String x : helper.goodL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Good");
+            }
+        }
+
+        for (String x : helper.loveL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Love");
+            }
+        }
+
+        for (String x : helper.interestedL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Interested");
+            }
+        }
+
+        for (String x : helper.positiveL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Positive");
+            }
+        }
+
+        for (String x : helper.strongL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Strong");
+            }
+        }
+
+        for (String x : helper.angryL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Angry");
+            }
+        }
+
+        for (String x : helper.depressedL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Depressed");
+            }
+        }
+
+        for (String x : helper.confusedL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Confused");
+            }
+        }
+
+        for (String x : helper.helplessL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Helpless");
+            }
+        }
+
+        for (String x : helper.indifferentL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Indifferent");
+            }
+        }
+
+        for (String x : helper.afraidL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Afraid");
+            }
+        }
+
+        for (String x : helper.hurtL) {
+            if (searchBody.toUpperCase().contains(x.toUpperCase())) {
+                tags.add("Hurt");
+            }
+        }
+
+        return tags;
+    }
+
+
     // H2 SQL Statement Example
     private static void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
@@ -36,7 +171,8 @@ public class testing {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
-            stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
+            stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
+                    + "')");
 
             stmt.close();
             connection.commit();
@@ -56,7 +192,8 @@ public class testing {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
-            stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3 + "')");
+            stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
+                    + "')");
 
             stmt.close();
             connection.commit();
@@ -83,6 +220,35 @@ public class testing {
             System.out.println(e.getMessage());
         }
         return dbConnection;
+    }
+
+    private static String refactorTagsAuthor (String curTags, ArrayList<String> addTags) {
+        String[] curTagsArr = curTags.split("\n");
+        String newTags = "";
+
+        ArrayList<String> newTagsList = new ArrayList<String>();
+
+        for (String x : curTagsArr) {
+            if (!x.equals("\n")) {
+                newTagsList.add(x.trim());
+            }
+
+        }
+
+        for (String x : addTags.toArray(new String[addTags.size()])) {
+            if (!newTagsList.contains(x)) {
+                newTagsList.add(x);
+            }
+        }
+
+        String[] newTagsArr = newTagsList.toArray(new String[newTagsList.size()]);
+        Arrays.sort(newTagsArr);
+
+        for (String x : newTagsArr) {
+            newTags += " " + x + " \n";
+        }
+
+        return " " + newTags.trim() + " ";
     }
 
     ////////////////////////////////////////////////////
@@ -145,13 +311,42 @@ public class testing {
         }
     }
 
+    private static boolean tagsInAuthors (ArrayList<String[]> turnover, String searching) {
+        for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
+            if (x[1].toUpperCase().contains(" " + searching.toUpperCase() + " ")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean authorInAuthors (ArrayList<String[]> turnover, String searching) {
+        for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
+            if (x[0].equalsIgnoreCase(searching)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static int indexAuthorInAuthors (ArrayList<String[]> turnover, String searching) {
+        int counter = 0;
+        for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
+            if (x[0].equalsIgnoreCase(searching)) {
+                return counter;
+            }
+            counter += 1;
+        }
+        return counter;
+    }
+
     /*private String GetLocation(String x) {
         URL url = getClass().getResource(x);
         return url.getPath().replaceAll("%20", " ");
 
     }*/
 
-    public static void main(String[] args) throws SQLException, InterruptedException{
+    public static void main(String[] args) throws SQLException, InterruptedException {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
         // Neatens up  output after shutdown. Otherwise when run from terminal next line from terminal
         // is on same line as the user input line when terminated with ctrl-c.
@@ -167,8 +362,6 @@ public class testing {
                 }
             }
         });
-
-        //resets the value
 
 
 
@@ -193,8 +386,12 @@ public class testing {
         } finally {
             connection.close();
         }
-        
-        ArrayList<String> authors = new ArrayList<String>();
+
+        ArrayList<String[]> authors = new ArrayList<String[]>();
+
+        boolean found = false;
+
+        String currentTags = "";
 
         String seperator = "--";
 
@@ -207,8 +404,6 @@ public class testing {
             // temp string and int for while loop
             String temper = null;
 
-
-
             try {
 
                 while ((line = fileOpen.readLine()) != null) {
@@ -218,13 +413,16 @@ public class testing {
                     // if the line containes a "--",
                     // add a new arraylist element
                     if (line.contains(seperator)) {
+                        String author = line.trim().substring(seperator.length()).trim();
 
-                        if (!authors.contains(line.trim().substring(seperator.length()).trim())) {
-                            authors.add(line.trim().substring(seperator.length()).trim());
+                        if (!authorInAuthors(authors, author)) {
+                            authors.add(new String[] {author, refactorTagsAuthor("", retTags(temper.trim()))});
+                        } else {
+                            authors.set(indexAuthorInAuthors(authors, author), new String[] {line.trim().substring(seperator.length()).trim(), refactorTagsAuthor(authors.get(indexAuthorInAuthors(authors, author))[1] , retTags(temper.trim()))});
                         }
 
                         try {
-                            insertQuotes(line.trim().substring(seperator.length()).trim(), temper.trim(), "");
+                            insertQuotes(author, temper.trim(), refactorTagsAuthor("", retTags(temper.trim())));
                         } catch (SQLException e) {
                             //e.getMessage();
                         }
@@ -246,19 +444,30 @@ public class testing {
             System.out.print(e.getMessage());
         }
 
-        String[] authorsNew = authors.toArray(new String[authors.size()]);
-        Arrays.sort(authorsNew);
-        for (String x : authorsNew) {
+        String[][] authorsNew = authors.toArray(new String[authors.size()][2]);
+
+        // found at http://www.finesrc.com/2018/04/05/sorting-2d-array-to-row-and-column-wise-in-java/
+        // and modified for strings May 24th
+        Arrays.sort(authorsNew, new Comparator<String[]>() {
+			@Override
+			public int compare(String[] o1, String[] o2) {
+                                //get the item ids which are at index 0 of the array
+				String itemIdOne = o1[0];
+				String itemIdTwo = o2[0];
+				// sort on item id
+				return itemIdOne.compareTo(itemIdTwo);
+			}
+		});
+        //Arrays.sort(authorsNew);
+        for (String[] x : authorsNew) {
             try {
-                insertAuthor(x, "", "");
+                insertAuthor(x[0], "", x[1]);
             } catch (SQLException e) {
                 e.getMessage();
             }
 
         }
 
-
     }
-
 
 }
