@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author 390715
  */
-/*public class Tagging {
+public class Tagging {
      ArrayList<String> openL = new ArrayList<String>();
         openL.add("Understanding");
         openL.add("Confident");
@@ -157,7 +157,7 @@ import java.util.ArrayList;
         angryL.add("Boiling");
         angryL.add("Fuming");
         angryL.add("Indignant");
-       
+
         ArrayList<String> depressedL = new ArrayList<String>();
         depressedL.add("Lousy");
         depressedL.add("Disappoinnted");
@@ -178,7 +178,7 @@ import java.util.ArrayList;
         depressedL.add("Sulky");
         depressedL.add("Bad");
         depressedL.add("A Sense of Loss");
-        
+
         ArrayList<String> confusedL = new ArrayList<String>();
         confusedL.add("Upset");
         confusedL.add("Doubtful");
@@ -199,7 +199,7 @@ import java.util.ArrayList;
         confusedL.add("Uneasy");
         confusedL.add("Pessemistic");
         confusedL.add("Tense");
-        
+
         ArrayList<String> helplessL = new ArrayList<String>();
         helplessL.add("Incapable");
         helplessL.add("Alone");
@@ -219,7 +219,7 @@ import java.util.ArrayList;
         helplessL.add("Tragic");
         helplessL.add("In A Stew");
         helplessL.add("Dominated");
-        
+
         ArrayList<String> indifferentL = new ArrayList<String>();
         indifferentL.add("Insensitive");
         indifferentL.add("Dull");
@@ -232,7 +232,7 @@ import java.util.ArrayList;
         indifferentL.add("Cold");
         indifferentL.add("Disinterested");
         indifferentL.add("Lifeless");
-        
+
         ArrayList<String> afraidL = new ArrayList<String>();
         afraidL.add("Fearful");
         afraidL.add("Terrified");
@@ -253,7 +253,7 @@ import java.util.ArrayList;
         afraidL.add("Quaking");
         afraidL.add("Menaced");
         afraidL.add("Wary");
-        
+
         ArrayList<String> hurtL = new ArrayList<String>();
         hurtL.add("Crushed");
         hurtL.add("Tormented");
@@ -273,7 +273,7 @@ import java.util.ArrayList;
         hurtL.add("Humiliated");
         hurtL.add("Wronged");
         hurtL.add("Alienated");
-        
+
         ArrayList<String> sadL = new ArrayList<String>();
          sadL.add("Tearful");
          sadL.add("Sorrowful");
@@ -288,8 +288,7 @@ import java.util.ArrayList;
          sadL.add("Grieved");
          sadL.add("Mournful");
          sadL.add("Dismayed");
-         
+
 
 
 }
-*/
