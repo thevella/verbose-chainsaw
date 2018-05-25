@@ -464,6 +464,8 @@ public class UserInterfaec extends javax.swing.JFrame {
             //}
              ArrayList<String> ToList= new ArrayList<String>();
               ArrayList<String> QuoteList= new ArrayList<String>();
+             
+              
             if (resultSet != null) {
                 try {
                     while (resultSet.next()) {
@@ -522,58 +524,28 @@ public class UserInterfaec extends javax.swing.JFrame {
             } //finally {
             //connec.close();
             //}
-            if (resultSet != null) {
+             ArrayList<String> QuoteOut= new ArrayList<String>();
+             
+             if (resultSet != null) {
                 try {
                     while (resultSet.next()) {
                         test += resultSet.getString(3) + "\n";
                         test += "-- " + resultSet.getString(2) + "\n\n";
-
+                         QuoteOut.add(("<html>"+resultSet.getString(3) +"<br/>"+"-- " + resultSet.getString(2) + "<br/>" +"<br/>"+"<html>").replaceAll("\n", "<br/>"));
+                     String [] quote1=QuoteOut.toArray(new String[ QuoteOut.size()]);
+                     Output1.setListData(quote1);
                     }
                 } catch (SQLException ex) {
                     Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
-                Output1.setText(test);
+               
             } else {
-                Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
+                //Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
             }
 
         } else if (Quote_Search.isSelected() && Tags_Search.isSelected()){
-             AuthorDisplay.setVisible(false);
-            todec = 2;
-            String Term = SearchTerm.getText();
-
-            ResultSet resultSet = null;
-            String test = "";
-            Connection connec = aa.getDBConnection();
-
-            Statement stmt = null;
-
-            try {
-                stmt = connec.createStatement();
-                resultSet = aa.searchRough(3, Term, 3, connec, stmt);
-
-            } catch (SQLException ex) {
-                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-            } //finally {
-            //connec.close();
-            //}
-            if (resultSet != null) {
-                try {
-                    while (resultSet.next()) {
-                        test += resultSet.getString(3) + "\n";
-                        test += "-- " + resultSet.getString(2) + "\n\n";
-
-                    }
-                } catch (SQLException ex) {
-                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-                Output1.setText(test);
-            } else {
-                Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
-            }
-            
+           
             
             
             
