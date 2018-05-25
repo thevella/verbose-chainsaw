@@ -421,6 +421,8 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         int todec = 1;
         if (Author_Search.isSelected() && !Tags_Search.isSelected()) {
+            
+            
             todec = 1;
             String Term = SearchTerm.getText();
 
@@ -468,7 +470,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             try {
                 stmt = connec.createStatement();
-                resultSet = aa.searchRough(2, Term, 3, connec, stmt);
+                resultSet = aa.searchRough(3, Term, 3, connec, stmt);
 
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
@@ -479,7 +481,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                 try {
                     while (resultSet.next()) {
                         test += resultSet.getString(3) + "\n";
-                        test += "-" + resultSet.getString(1) + "\n\n";
+                        test += "-" + resultSet.getString(2) + "\n\n";
 
                     }
                 } catch (SQLException ex) {
