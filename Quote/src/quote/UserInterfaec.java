@@ -481,6 +481,124 @@ public class UserInterfaec extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
+       //SearchTerm.setText(
+      
+    
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
+       String to=AuthorDisplay.getSelectedValue();
+        SearchTerm.setText(to);
+    }//GEN-LAST:event_Auth_SearchActionPerformed
+
+    private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
+        Quote aa = new Quote();
+
+        int todec = 1;
+        if (Author_Remove.isSelected()) {
+            todec = 1;
+        } else if (Quote_Remove.isSelected()) {
+            todec = 2;
+        }
+
+        String Term = SearchTerm2.getText();
+
+        Statement stmt = null;
+
+        ResultSet resultSet = null;
+        String test = "";
+
+        Connection connec = aa.getDBConnection();
+
+        try {
+            stmt = connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            while (resultSet.next()) {
+                test = resultSet.getString(1);
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String ob = Output3.getText();
+        Output3.setText(test + ob);
+    }//GEN-LAST:event_RemoveButtonActionPerformed
+
+    private void Quote_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_RemoveActionPerformed
+        Author_Remove.setSelected(false);
+    }//GEN-LAST:event_Quote_RemoveActionPerformed
+
+    private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
+        Quote_Remove.setSelected(false);
+    }//GEN-LAST:event_Author_RemoveActionPerformed
+
+    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
+        Quote aa = new Quote();
+
+        int todec = 1;
+        if (Author_Add.isSelected()) {
+            todec = 1;
+        } else if (Quote_Add.isSelected()) {
+            todec = 2;
+        }
+
+        Connection connec = aa.getDBConnection();
+
+        Statement stmt = null;
+
+        String Term = SearchTerm1.getText();
+
+        ResultSet resultSet = null;
+        String test = "";
+        try {
+            stmt = connec.createStatement();
+            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            while (resultSet.next()) {
+                test = resultSet.getString(1);
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String ob = Output2.getText();
+        Output2.setText(test + ob);
+    }//GEN-LAST:event_AddButtonActionPerformed
+
+    private void Quote_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_AddActionPerformed
+        Author_Add.setSelected(false);
+    }//GEN-LAST:event_Quote_AddActionPerformed
+
+    private void Author_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_AddActionPerformed
+        Quote_Add.setSelected(false);
+    }//GEN-LAST:event_Author_AddActionPerformed
+
+    private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
+        if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
+            QuotePopOut.show(this, evt.getX(), evt.getY());
+            System.out.println("sdsd");
+        }
+    }//GEN-LAST:event_Output1MouseClicked
+
+    private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
+        if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
+            PopUp.show(this, evt.getX(), evt.getY());
+            System.out.println("sdsd");
+        }
+    }//GEN-LAST:event_AuthorDisplayMouseClicked
+
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
         Quote aa = new Quote();
 
@@ -504,8 +622,8 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-            //connec.close();
-            //}
+                //connec.close();
+                //}
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
@@ -553,8 +671,8 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-            //connec.close();
-            //}
+                //connec.close();
+                //}
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             if (resultSet != null) {
@@ -578,145 +696,23 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         }
 
-
     }//GEN-LAST:event_SearchButtonActionPerformed
+
+    private void Tags_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tags_SearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Tags_SearchActionPerformed
 
     private void Author_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_SearchActionPerformed
 
         Quote_Search.setSelected(false);
 
         //Search_Author.setOpaque(true);
-
     }//GEN-LAST:event_Author_SearchActionPerformed
 
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
         Author_Search.setSelected(false);
 
-
     }//GEN-LAST:event_Quote_SearchActionPerformed
-
-    private void Tags_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tags_SearchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tags_SearchActionPerformed
-
-    private void Author_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_AddActionPerformed
-        Quote_Add.setSelected(false);
-    }//GEN-LAST:event_Author_AddActionPerformed
-
-    private void Quote_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_AddActionPerformed
-        Author_Add.setSelected(false);
-    }//GEN-LAST:event_Quote_AddActionPerformed
-
-    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
-        Quote aa = new Quote();
-
-        int todec = 1;
-        if (Author_Add.isSelected()) {
-            todec = 1;
-        } else if (Quote_Add.isSelected()) {
-            todec = 2;
-        }
-
-        Connection connec = aa.getDBConnection();
-
-        Statement stmt = null;
-
-        String Term = SearchTerm1.getText();
-
-        ResultSet resultSet = null;
-        String test = "";
-        try {
-            stmt = connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        try {
-            while (resultSet.next()) {
-                test = resultSet.getString(1);
-
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String ob = Output2.getText();
-        Output2.setText(test + ob);
-    }//GEN-LAST:event_AddButtonActionPerformed
-
-    private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
-        Quote_Remove.setSelected(false);
-    }//GEN-LAST:event_Author_RemoveActionPerformed
-
-    private void Quote_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_RemoveActionPerformed
-        Author_Remove.setSelected(false);
-    }//GEN-LAST:event_Quote_RemoveActionPerformed
-
-    private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
-        Quote aa = new Quote();
-
-        int todec = 1;
-        if (Author_Remove.isSelected()) {
-            todec = 1;
-        } else if (Quote_Remove.isSelected()) {
-            todec = 2;
-        }
-
-        String Term = SearchTerm2.getText();
-
-        Statement stmt = null;
-
-        ResultSet resultSet = null;
-        String test = "";
-
-        Connection connec = aa.getDBConnection();
-
-        try {
-            stmt = connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        try {
-            while (resultSet.next()) {
-                test = resultSet.getString(1);
-
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String ob = Output3.getText();
-        Output3.setText(test + ob);
-    }//GEN-LAST:event_RemoveButtonActionPerformed
-
-    private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
-        if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
-            PopUp.show(this, evt.getX(), evt.getY());
-            System.out.println("sdsd");
-        }
-
-    }//GEN-LAST:event_AuthorDisplayMouseClicked
-
-    private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
-        if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
-            QuotePopOut.show(this, evt.getX(), evt.getY());
-            System.out.println("sdsd");
-        }        
-    }//GEN-LAST:event_Output1MouseClicked
-
-    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
-       //SearchTerm.setText(
-      
-    
-    }//GEN-LAST:event_jMenuItem3MouseClicked
-
-    private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
-       String to=AuthorDisplay.getSelectedValue();
-        SearchTerm.setText(to);
-    }//GEN-LAST:event_Auth_SearchActionPerformed
     
 
     /**
