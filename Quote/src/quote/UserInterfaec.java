@@ -33,7 +33,6 @@ public class UserInterfaec extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -290,26 +289,12 @@ public class UserInterfaec extends javax.swing.JFrame {
         jTabbedPane1.addTab("Remove", jPanel6);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
 
         SearchTerm.setColumns(1);
         SearchTerm.setLineWrap(true);
         SearchTerm.setRows(5);
         SearchTerm.setWrapStyleWord(true);
         jScrollPane1.setViewportView(SearchTerm);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 279;
-        gridBagConstraints.ipady = 73;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(12, 144, 0, 0);
-        jPanel2.add(jScrollPane1, gridBagConstraints);
 
         Quote_Search.setBackground(new java.awt.Color(255, 255, 255));
         Quote_Search.setText("Quote");
@@ -318,25 +303,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                 Quote_SearchActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 4;
-        gridBagConstraints.ipady = 19;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 18, 0, 46);
-        jPanel2.add(Quote_Search, gridBagConstraints);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 155;
-        gridBagConstraints.ipady = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 438, 0, 46);
-        jPanel2.add(jSeparator1, gridBagConstraints);
 
         Author_Search.setBackground(new java.awt.Color(255, 255, 255));
         Author_Search.setText("Author");
@@ -345,13 +313,6 @@ public class UserInterfaec extends javax.swing.JFrame {
                 Author_SearchActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipady = 13;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 18, 0, 46);
-        jPanel2.add(Author_Search, gridBagConstraints);
 
         Tags_Search.setBackground(new java.awt.Color(255, 255, 255));
         Tags_Search.setText("Tags");
@@ -360,15 +321,6 @@ public class UserInterfaec extends javax.swing.JFrame {
                 Tags_SearchActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridheight = 4;
-        gridBagConstraints.ipadx = 10;
-        gridBagConstraints.ipady = 12;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 18, 0, 46);
-        jPanel2.add(Tags_Search, gridBagConstraints);
 
         SearchButton.setText("Search");
         SearchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -376,31 +328,12 @@ public class UserInterfaec extends javax.swing.JFrame {
                 SearchButtonActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 12, 22, 46);
-        jPanel2.add(SearchButton, gridBagConstraints);
 
         Output1.setEditable(false);
         Output1.setColumns(20);
         Output1.setRows(5);
         Output1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane5.setViewportView(Output1);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 476;
-        gridBagConstraints.ipady = 132;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        jPanel2.add(jScrollPane5, gridBagConstraints);
 
         AuthorDisplay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AuthorDisplay.setModel(new javax.swing.AbstractListModel<String>() {
@@ -410,17 +343,55 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(AuthorDisplay);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 38;
-        gridBagConstraints.ipady = 132;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
-        jPanel2.add(jScrollPane2, gridBagConstraints);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(517, 517, 517)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Author_Search)
+                            .addComponent(Quote_Search, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tags_Search, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(SearchButton))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(Author_Search, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(Quote_Search, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(Tags_Search, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(SearchButton))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         jTabbedPane1.addTab("Search", jPanel2);
 
@@ -430,7 +401,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -449,7 +420,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         Quote aa = new Quote();
 
         int todec = 1;
-        if (Author_Search.isSelected()) {
+        if (Author_Search.isSelected() && !Tags_Search.isSelected()) {
             todec = 1;
             String Term = SearchTerm.getText();
 
@@ -468,26 +439,61 @@ public class UserInterfaec extends javax.swing.JFrame {
             } //finally {
             //connec.close();
             //}
-            
-            if(resultSet!=null){
-            try {
-                while (resultSet.next()) {
-                    test += resultSet.getString(3) + "\n";
-                    test +="-"+resultSet.getString(2) + "\n"+"\n";
 
+            if (resultSet != null) {
+                try {
+                    while (resultSet.next()) {
+                        test += resultSet.getString(3) + "\n";
+                        test += "-" + resultSet.getString(2) + "\n" + "\n";
+
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                 }
+
+                Output1.setText(test);
+            } else {
+                Output1.setText("You Entered Ilegal SQL TEXT.Please Try Again");
+
+            }
+        } else if (Quote_Search.isSelected() && !Tags_Search.isSelected()) {
+            todec = 2;
+            String Term = SearchTerm.getText();
+
+            ResultSet resultSet = null;
+            String test = "";
+            Connection connec = aa.getDBConnection();
+
+            Statement stmt = null;
+
+            try {
+                stmt = connec.createStatement();
+                resultSet = aa.searchRough(2, Term, 3, connec, stmt);
+
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            } //finally {
+            //connec.close();
+            //}
+            if (resultSet != null) {
+                try {
+                    while (resultSet.next()) {
+                        test += resultSet.getString(3) + "\n";
+                        test += "-" + resultSet.getString(1) + "\n\n";
+
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                Output1.setText(test);
+            } else {
+                Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
             }
 
-            Output1.setText(test);
-            }else{
-                Output1.setText("You Entered Ilegal SQL TEXT.Please Try Again");
-                
-            }
-        } else if (Quote_Search.isSelected()) {
+        } else if (Quote_Search.isSelected() && Tags_Search.isSelected()){
             todec = 2;
-             String Term = SearchTerm.getText();
+            String Term = SearchTerm.getText();
 
             ResultSet resultSet = null;
             String test = "";
@@ -504,21 +510,21 @@ public class UserInterfaec extends javax.swing.JFrame {
             } //finally {
             //connec.close();
             //}
-if(resultSet!=null){
-            try {
-                while (resultSet.next()) {
-                    test += resultSet.getString(3) + "\n";
-                    test +="-"+resultSet.getString(2)+"\n\n";
+            if (resultSet != null) {
+                try {
+                    while (resultSet.next()) {
+                        test += resultSet.getString(3) + "\n";
+                        test += "-" + resultSet.getString(2) + "\n\n";
 
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } catch (SQLException ex) {
-                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-            }
 
-            Output1.setText(test);
-}else{
-    Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
-}
+                Output1.setText(test);
+            } else {
+                Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
+            }
             
             
             
