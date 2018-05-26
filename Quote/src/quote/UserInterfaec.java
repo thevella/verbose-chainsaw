@@ -73,14 +73,6 @@ public class UserInterfaec extends javax.swing.JFrame {
         Author_Add = new javax.swing.JRadioButton();
         Quote_Add = new javax.swing.JRadioButton();
         AddButton = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        SearchTerm2 = new javax.swing.JTextArea();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        Output3 = new javax.swing.JTextArea();
-        Author_Remove = new javax.swing.JRadioButton();
-        Quote_Remove = new javax.swing.JRadioButton();
-        RemoveButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -387,85 +379,6 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Add", jPanel3);
 
-        SearchTerm2.setColumns(20);
-        SearchTerm2.setLineWrap(true);
-        SearchTerm2.setRows(5);
-        SearchTerm2.setWrapStyleWord(true);
-        jScrollPane8.setViewportView(SearchTerm2);
-
-        Output3.setEditable(false);
-        Output3.setColumns(20);
-        Output3.setRows(5);
-        Output3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane9.setViewportView(Output3);
-
-        Author_Remove.setBackground(new java.awt.Color(255, 255, 255));
-        Author_Remove.setText("Author");
-        Author_Remove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Author_RemoveActionPerformed(evt);
-            }
-        });
-
-        Quote_Remove.setBackground(new java.awt.Color(255, 255, 255));
-        Quote_Remove.setText("Quote");
-        Quote_Remove.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Quote_RemoveActionPerformed(evt);
-            }
-        });
-
-        RemoveButton.setText("Remove");
-        RemoveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RemoveButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 739, Short.MAX_VALUE)
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addGap(96, 96, 96)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addGap(76, 76, 76)
-                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(RemoveButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(89, 89, 89)
-                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(Author_Remove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Quote_Remove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                    .addContainerGap(117, Short.MAX_VALUE)))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 415, Short.MAX_VALUE)
-            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addGap(22, 22, 22)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(29, 29, 29)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(22, 22, 22)
-                            .addComponent(RemoveButton))
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(Author_Remove, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Quote_Remove, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(68, Short.MAX_VALUE)))
-        );
-
-        jTabbedPane1.addTab("Remove", jPanel6);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -486,52 +399,21 @@ public class UserInterfaec extends javax.swing.JFrame {
         SearchTerm.setText(to);
     }//GEN-LAST:event_Auth_SearchActionPerformed
 
-    private void RemoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveButtonActionPerformed
+    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
+      
         Quote aa = new Quote();
-
-        int todec = 1;
-        if (Author_Remove.isSelected()) {
-            todec = 1;
-        } else if (Quote_Remove.isSelected()) {
-            todec = 2;
-        }
-
-        String Term = SearchTerm2.getText();
-
-        Statement stmt = null;
-
-        ResultSet resultSet = null;
-        String test = "";
-
-        Connection connec = aa.getDBConnection();
-
-        try {
-            stmt = connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
+        
+    String to=Output1.getSelectedValue().replaceAll("<html>", "");
+   String te=to.replaceAll("<br/>", "");
+   String ta= te.substring(0,te.indexOf("--"));
+    System.out.println(ta);
+       try {
+            aa.removeQuote(ta,3);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        try {
-            while (resultSet.next()) {
-                test = resultSet.getString(1);
-
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String ob = Output3.getText();
-        Output3.setText(test + ob);
-    }//GEN-LAST:event_RemoveButtonActionPerformed
-
-    private void Quote_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_RemoveActionPerformed
-        Author_Remove.setSelected(false);
-    }//GEN-LAST:event_Quote_RemoveActionPerformed
-
-    private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
-        Quote_Remove.setSelected(false);
-    }//GEN-LAST:event_Author_RemoveActionPerformed
+        
+    }//GEN-LAST:event_RemoveActionPerformed
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
         Quote aa = new Quote();
@@ -689,7 +571,6 @@ public class UserInterfaec extends javax.swing.JFrame {
         } else if (Quote_Search.isSelected() && Tags_Search.isSelected()) {
 
         }
-
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void Tags_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tags_SearchActionPerformed
@@ -705,24 +586,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
         Author_Search.setSelected(false);
-
     }//GEN-LAST:event_Quote_SearchActionPerformed
-
-    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-      
-        Quote aa = new Quote();
-        
-    String to=Output1.getSelectedValue().replaceAll("<html>", "");
-   String te=to.replaceAll("<br/>", "");
-   String ta= te.substring(0,te.indexOf("--"));
-    System.out.println(ta);
-       try {
-            aa.removeQuote(ta,3);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }//GEN-LAST:event_RemoveActionPerformed
     
 
     /**
@@ -765,22 +629,17 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JMenuItem Auth_Search;
     private javax.swing.JList<String> AuthorDisplay;
     private javax.swing.JRadioButton Author_Add;
-    private javax.swing.JRadioButton Author_Remove;
     private javax.swing.JRadioButton Author_Search;
     private javax.swing.JList<String> Output1;
     private javax.swing.JTextArea Output2;
-    private javax.swing.JTextArea Output3;
     private javax.swing.JPopupMenu PopUp;
     private javax.swing.JPopupMenu QuotePopOut;
     private javax.swing.JRadioButton Quote_Add;
-    private javax.swing.JRadioButton Quote_Remove;
     private javax.swing.JRadioButton Quote_Search;
     private javax.swing.JMenuItem Remove;
-    private javax.swing.JButton RemoveButton;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextArea SearchTerm;
     private javax.swing.JTextArea SearchTerm1;
-    private javax.swing.JTextArea SearchTerm2;
     private javax.swing.JRadioButton Tags_Search;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenuItem jMenuItem1;
@@ -789,7 +648,6 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
@@ -798,8 +656,6 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
