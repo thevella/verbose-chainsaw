@@ -51,7 +51,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         Auth_Search = new javax.swing.JMenuItem();
         QuotePopOut = new javax.swing.JPopupMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        Remove = new javax.swing.JMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -150,13 +150,13 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
         PopUp.add(Auth_Search);
 
-        jMenuItem3.setText("Remove Quote");
-        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem3MouseClicked(evt);
+        Remove.setText("Remove Quote");
+        Remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RemoveActionPerformed(evt);
             }
         });
-        QuotePopOut.add(jMenuItem3);
+        QuotePopOut.add(Remove);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(744, 465));
@@ -481,12 +481,6 @@ public class UserInterfaec extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
-       //SearchTerm.setText(
-      
-    
-    }//GEN-LAST:event_jMenuItem3MouseClicked
-
     private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
        String to=AuthorDisplay.getSelectedValue();
         SearchTerm.setText(to);
@@ -713,6 +707,22 @@ public class UserInterfaec extends javax.swing.JFrame {
         Author_Search.setSelected(false);
 
     }//GEN-LAST:event_Quote_SearchActionPerformed
+
+    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
+      
+        Quote aa = new Quote();
+        
+    String to=Output1.getSelectedValue().replaceAll("<html>", "");
+   String te=to.replaceAll("<br/>", "");
+   String ta= te.substring(0,te.indexOf("--"));
+    System.out.println(ta);
+       try {
+            aa.removeQuote(ta,3);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_RemoveActionPerformed
     
 
     /**
@@ -765,6 +775,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JRadioButton Quote_Add;
     private javax.swing.JRadioButton Quote_Remove;
     private javax.swing.JRadioButton Quote_Search;
+    private javax.swing.JMenuItem Remove;
     private javax.swing.JButton RemoveButton;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextArea SearchTerm;
@@ -773,7 +784,6 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JRadioButton Tags_Search;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
