@@ -48,10 +48,11 @@ public class UserInterfaec extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
         PopUp = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        Author_Remove = new javax.swing.JMenuItem();
         Auth_Search = new javax.swing.JMenuItem();
         QuotePopOut = new javax.swing.JPopupMenu();
         Remove = new javax.swing.JMenuItem();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -66,13 +67,17 @@ public class UserInterfaec extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         Output1 = new javax.swing.JList<>();
         jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
-        Output2 = new javax.swing.JTextArea();
+        jTextArea3 = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
-        SearchTerm1 = new javax.swing.JTextArea();
-        Author_Add = new javax.swing.JRadioButton();
-        Quote_Add = new javax.swing.JRadioButton();
-        AddButton = new javax.swing.JButton();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -131,8 +136,13 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jRadioButton1.setText("jRadioButton1");
 
-        jMenuItem1.setText("Remove Author");
-        PopUp.add(jMenuItem1);
+        Author_Remove.setText("Remove Author");
+        Author_Remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Author_RemoveActionPerformed(evt);
+            }
+        });
+        PopUp.add(Author_Remove);
 
         Auth_Search.setText("Search By Author");
         Auth_Search.addActionListener(new java.awt.event.ActionListener() {
@@ -150,8 +160,10 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
         QuotePopOut.add(Remove);
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(744, 465));
+        setMinimumSize(new java.awt.Dimension(744, 485));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridBagLayout());
@@ -165,14 +177,14 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridheight = 4;
+        gridBagConstraints.gridheight = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 350;
-        gridBagConstraints.ipady = 90;
+        gridBagConstraints.ipady = 174;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(18, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 47, 11, 0);
         jPanel2.add(jScrollPane1, gridBagConstraints);
 
         Quote_Search.setBackground(new java.awt.Color(255, 255, 255));
@@ -242,9 +254,8 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridheight = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 83, 68, 66);
+        gridBagConstraints.insets = new java.awt.Insets(5, 83, 0, 66);
         jPanel2.add(SearchButton, gridBagConstraints);
 
         AuthorDisplay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -265,7 +276,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 72;
-        gridBagConstraints.ipady = 132;
+        gridBagConstraints.ipady = 137;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
@@ -291,7 +302,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.ipadx = 512;
-        gridBagConstraints.ipady = 132;
+        gridBagConstraints.ipady = 137;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
@@ -300,81 +311,85 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Search", jPanel2);
 
-        Output2.setEditable(false);
-        Output2.setColumns(20);
-        Output2.setRows(5);
-        Output2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane6.setViewportView(Output2);
+        jLabel1.setText("Author");
 
-        SearchTerm1.setColumns(20);
-        SearchTerm1.setLineWrap(true);
-        SearchTerm1.setRows(5);
-        SearchTerm1.setWrapStyleWord(true);
-        jScrollPane7.setViewportView(SearchTerm1);
+        jButton1.setText("Add");
 
-        Author_Add.setBackground(new java.awt.Color(255, 255, 255));
-        Author_Add.setText("Author");
-        Author_Add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Author_AddActionPerformed(evt);
-            }
-        });
+        jLabel4.setText("All Author Entries Should Be Formated \"--Author\".");
 
-        Quote_Add.setBackground(new java.awt.Color(255, 255, 255));
-        Quote_Add.setText("Quote");
-        Quote_Add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Quote_AddActionPerformed(evt);
-            }
-        });
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane5.setViewportView(jTextArea2);
 
-        AddButton.setText("Add");
-        AddButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddButtonActionPerformed(evt);
-            }
-        });
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane6.setViewportView(jTextArea3);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane7.setViewportView(jTextArea4);
+
+        jLabel2.setText("Quote");
+
+        jLabel3.setText("Tags");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(44, 44, 44))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(316, 316, 316)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(321, 321, 321)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(328, 328, 328)
+                        .addComponent(jLabel3)))
+                .addContainerGap(221, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(172, 172, 172)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(AddButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(89, 89, 89)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(Author_Add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Quote_Add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addContainerGap(117, Short.MAX_VALUE)))
+                    .addGap(176, 176, 176)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(220, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1)
+                .addGap(14, 14, 14)
+                .addComponent(jButton1)
+                .addGap(78, 78, 78)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(206, 206, 206)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(22, 22, 22)
-                            .addComponent(AddButton))
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(Author_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Quote_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(68, Short.MAX_VALUE)))
+                    .addGap(45, 45, 45)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(284, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Add", jPanel3);
@@ -387,10 +402,10 @@ public class UserInterfaec extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(760, 482));
+        setSize(new java.awt.Dimension(760, 492));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -404,62 +419,20 @@ public class UserInterfaec extends javax.swing.JFrame {
         Quote aa = new Quote();
         
     String to=Output1.getSelectedValue().replaceAll("<html>", "");
-   String te=to.replaceAll("<br/>", "");
-   String ta= te.substring(0,te.indexOf("--"));
+   String te=to.replaceAll("<br/>", "\n");
+   String ta= te.substring(0,te.indexOf("--")).trim();
     System.out.println(ta);
        try {
             aa.removeQuote(ta,3);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+    
+       SearchButton.doClick();
+       
+       
+       
     }//GEN-LAST:event_RemoveActionPerformed
-
-    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
-        Quote aa = new Quote();
-
-        int todec = 1;
-        if (Author_Add.isSelected()) {
-            todec = 1;
-        } else if (Quote_Add.isSelected()) {
-            todec = 2;
-        }
-
-        Connection connec = aa.getDBConnection();
-
-        Statement stmt = null;
-
-        String Term = SearchTerm1.getText();
-
-        ResultSet resultSet = null;
-        String test = "";
-        try {
-            stmt = connec.createStatement();
-            resultSet = aa.searchRough(2, Term, 2, connec, stmt);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        try {
-            while (resultSet.next()) {
-                test = resultSet.getString(1);
-
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String ob = Output2.getText();
-        Output2.setText(test + ob);
-    }//GEN-LAST:event_AddButtonActionPerformed
-
-    private void Quote_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_AddActionPerformed
-        Author_Add.setSelected(false);
-    }//GEN-LAST:event_Quote_AddActionPerformed
-
-    private void Author_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_AddActionPerformed
-        Quote_Add.setSelected(false);
-    }//GEN-LAST:event_Author_AddActionPerformed
 
     private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
         if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
@@ -587,6 +560,15 @@ public class UserInterfaec extends javax.swing.JFrame {
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
         Author_Search.setSelected(false);
     }//GEN-LAST:event_Quote_SearchActionPerformed
+
+    private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_Author_RemoveActionPerformed
     
 
     /**
@@ -625,24 +607,25 @@ public class UserInterfaec extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AddButton;
     private javax.swing.JMenuItem Auth_Search;
     private javax.swing.JList<String> AuthorDisplay;
-    private javax.swing.JRadioButton Author_Add;
+    private javax.swing.JMenuItem Author_Remove;
     private javax.swing.JRadioButton Author_Search;
     private javax.swing.JList<String> Output1;
-    private javax.swing.JTextArea Output2;
     private javax.swing.JPopupMenu PopUp;
     private javax.swing.JPopupMenu QuotePopOut;
-    private javax.swing.JRadioButton Quote_Add;
     private javax.swing.JRadioButton Quote_Search;
     private javax.swing.JMenuItem Remove;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextArea SearchTerm;
-    private javax.swing.JTextArea SearchTerm1;
     private javax.swing.JRadioButton Tags_Search;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -654,9 +637,13 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
 }
