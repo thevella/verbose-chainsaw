@@ -412,6 +412,8 @@ public class UserInterfaec extends javax.swing.JFrame {
     private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
        String to=AuthorDisplay.getSelectedValue();
         SearchTerm.setText(to);
+         SearchButton.doClick();
+        
     }//GEN-LAST:event_Auth_SearchActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
@@ -476,31 +478,36 @@ public class UserInterfaec extends javax.swing.JFrame {
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
-            if (resultSet != null) {
-                try {
-                    while (resultSet.next()) {
-                        test += resultSet.getString(3) + "\n";
-                        test += "-- " + resultSet.getString(2) + "\n" + "\n";
-                        QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-
-                        ToList.add(resultSet.getString(2));
-
-                        String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
-                        String[] out1 = ToList.toArray(new String[ToList.size()]);
-
-                        Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
-
-                        Output1.setListData(Quote);
-                        AuthorDisplay.setListData(out.toArray(new String[out.size()]));
-
+            try {
+                if (resultSet.next()) {
+                    try {
+                        do {
+                            test += resultSet.getString(3) + "\n";
+                            test += "-- " + resultSet.getString(2) + "\n" + "\n";
+                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            
+                            ToList.add(resultSet.getString(2));
+                            
+                            String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
+                            String[] out1 = ToList.toArray(new String[ToList.size()]);
+                            
+                            Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
+                            
+                            Output1.setListData(Quote);
+                            AuthorDisplay.setListData(out.toArray(new String[out.size()]));
+                            
+                        }while (resultSet.next());
+                    } catch (SQLException ex) {
+                        Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } catch (SQLException ex) {
-                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+                    
+                } else {
+                    String [] er={"No Results Found"};
+                    AuthorDisplay.setListData(er);
+                    
                 }
-
-            } else {
-                //Output1.setListData("You Entered Ilegal SQL TEXT.Please Try Again");
-
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (Quote_Search.isSelected() && !Tags_Search.isSelected()) {
             AuthorDisplay.setVisible(false);
@@ -524,21 +531,27 @@ public class UserInterfaec extends javax.swing.JFrame {
                 //}
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
-            if (resultSet != null) {
-                try {
-                    while (resultSet.next()) {
-                        test += resultSet.getString(3) + "\n";
-                        test += "-- " + resultSet.getString(2) + "\n\n";
-                        QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-                        String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
-                        Output1.setListData(quote1);
+            try {
+                if (resultSet.next()) {
+                    try {
+                        
+                        do {
+                            test += resultSet.getString(3) + "\n";
+                            test += "-- " + resultSet.getString(2) + "\n\n";
+                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
+                            Output1.setListData(quote1);
+                        }while (resultSet.next());
+                    } catch (SQLException ex) {
+                        Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } catch (SQLException ex) {
-                    Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+                    
+                } else {
+                      String [] er={"No Results Found"};
+                    Output1.setListData(er);
                 }
-
-            } else {
-                //Output1.setText("You Entered Ilegal SQL TEXT.Please try Again");
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } else if (Quote_Search.isSelected() && Tags_Search.isSelected()) {
@@ -562,8 +575,15 @@ public class UserInterfaec extends javax.swing.JFrame {
     }//GEN-LAST:event_Quote_SearchActionPerformed
 
     private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
-        // TODO add your handling code here:
+        Quote aa=new Quote();
         
+        try {
+            aa.removeQuote(AuthorDisplay.getSelectedValue(),2);
+            aa.removeAuthor(AuthorDisplay.getSelectedValue(),1);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         SearchButton.doClick();
         
         
         

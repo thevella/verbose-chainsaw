@@ -111,6 +111,7 @@ public class Quote {
     private final String DB_PASSWORD = "";
 
     // H2 SQL Statement Example
+    //author,body,tags
     public void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -135,7 +136,7 @@ public class Quote {
             connection.close();
         }
     }
-
+//author name,info,tags
     public void insertAuthor(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
