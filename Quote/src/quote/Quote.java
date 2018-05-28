@@ -341,15 +341,15 @@ public class Quote {
             }
 
             if (type == 1) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 2) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 3) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 4) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 5) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             }
 
             connection.commit();
