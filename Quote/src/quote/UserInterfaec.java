@@ -470,7 +470,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
         if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
-            PopUp.show(this, evt.getX(), evt.getY());
+            PopUp.show(evt.getComponent(), evt.getX(), evt.getY());
             System.out.println("sdsd");
         }
     }//GEN-LAST:event_AuthorDisplayMouseClicked
