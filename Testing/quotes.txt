@@ -144,7 +144,7 @@ symbols, without ever having to look at the things they stand for.
 
 An expert is, according to my working definition "someone who doesn't
 need to look up answers to easy questions".
--- Eric Lippert.
+-- Eric Lippert
 
 The programmer must seek both perfection of part and adequacy of
 collection.
@@ -375,7 +375,7 @@ indirection.
 A designer knows he has arrived at perfection not when there is no
 longuer anything to add, but when there is no longuer anything to take
 away.
--- Antoine de St Exupery.
+-- Antoine de St Exupery
 
 For the things we have to learn before we can do them, we learn by doing
 them.
@@ -383,7 +383,7 @@ them.
 
 There are many ways to avoid success in life, but the most sure-fire
 just might be procrastination.
--- Hara Estroff Marano.
+-- Hara Estroff Marano
 
 PI seconds is a nanocentury.
 -- [fact]
@@ -455,7 +455,7 @@ ponder a question, they process a question, and when they deliver an
 answer, it is the product of deliberation. They believe they are telling
 the truth. A lie detector would confirm this. In most cases, however,
 they aren't saying what they mean.
--- The culture code.
+-- The culture code
 
 When all you have is a hammer, everything looks like a nail.
 -- Anonymous
@@ -556,7 +556,7 @@ The good thing about reinventing the wheel is that you get a round one.
 
 I feel it is everybodies obligation to reach for the best in themselves
 and use that for the interest of mankind.
--- Corneluis
+-- Cornelius
 
 Abstraction is a form of data compression: absolutely necessary, because
 human short-term memory is so small, but the critically important aspect
@@ -628,7 +628,7 @@ votre potentiel. L'heure est venue maintenant de descendre vraiment en
 vous. L'heure est venue de démontrer pourquoi vous êtes l'élite, les
 quelques élus, les rares lueurs qui offrent à cette compagnie son
 caractère exceptionnel, sa luminescence.
--- Le PDG de NURV, dans "Anti-trust".
+-- Le PDG de NURV, dans "Anti-trust"
 
 If something isn’t working, you need to look back and figure out what
 got you excited in the first place.
@@ -868,7 +868,7 @@ Good work is no done by ‘humble’ men.
 -- G. H. Hardy
 
 Simplicity and pragmatism beat complexity and theory any day.
--- Dennis
+-- Denis Waitley
 
 The proof is by reductio ad absurdum, and reductio ad absurdum, which
 Euclid loved so much, is one of a mathematician’s finest weapons. It is
@@ -937,7 +937,7 @@ Remember: you are alone. Every time you can get help from someone,
 it is an opportunity: you should eagerly size it. But then, promptly
 return to normal mode: you are alone and you must be prepared to solve
 every problem yourself.
--- Eric KEDJI
+-- Eric Kedji
 
 Making All Software Into Tools Reduces Risk.
 -- Anonymous
@@ -1061,7 +1061,7 @@ Chance favors the prepared mind.
 -- Louis Pasteur
 
 Controlling complexity is the essence of computer programming.
--- Brian Kernigan
+-- Brian Kernighan
 
 The function of good software is to make the complex appear to be
 simple.
@@ -1486,7 +1486,7 @@ Be the change you want to see in the world.
 
 The art of getting someone else to do something you want done because he
 wants to do it [Leadership].
--- Dwight D. Enseinhover
+-- Dwight D. Eisenhower
 
 No one is all evil. Everybody has a good side. If you keep waiting, it
 will comme up.
@@ -1563,7 +1563,7 @@ La connaissance d'un défaut ne l'enlève pas, elle nous torture jusqu'à sa
 correction.
 [The knowledge of a defect does not remove it, it tortures us to its
 correction.]
--- Daniel Lovewin
+-- Daniel Ludwin
 
 Je crois au flooding.
 [I believe in flooding.]
@@ -1775,7 +1775,7 @@ a small amount of heat.
 It is the mind that makes good or
 ill. That which makes us happy
 or sad; rich or poor.
--- Edmund Spencer
+-- Edmund Spenser
 
 Failure is merely part of the
 process necessary for success.
@@ -2619,7 +2619,7 @@ In the marathon of life, success
 calls for dedication to the goal,
 perseverance, compassion for my
 fellow man, and faith in God.
--- John A. Kelley.
+-- John A. Kelley
 
 Courage is daring to take the
 first step, or a different path.
@@ -2997,7 +2997,7 @@ You're not puking and nothing's broken so get going.
 -- Vivian McQueeney
 
 The luxurious ache of tired but not weary limbs.
--- Michael Fairless, 'The Roadmender'.
+-- Michael Fairless, 'The Roadmender'
 
 It is not the critic who counts; not the man who points out how the strong
 man stumbles, or where the doer of deeds could have done them better. The
