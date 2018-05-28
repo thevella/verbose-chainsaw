@@ -504,6 +504,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                 } else {
                     String [] er={"No Results Found"};
                     AuthorDisplay.setListData(er);
+                    Output1.setListData(er);
                     
                 }
             } catch (SQLException ex) {
