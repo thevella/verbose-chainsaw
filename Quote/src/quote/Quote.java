@@ -162,7 +162,7 @@ public class Quote {
         }
     }
 
-    public void removeAuthor (String deleteTerm, int typeInt) throws SQLException {
+    public void removeAuthor(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         String type = "";
@@ -196,8 +196,7 @@ public class Quote {
         }
     }
 
-
-    public void removeQuote (String deleteTerm, int typeInt) throws SQLException {
+    public void removeQuote(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
         String type = "";
@@ -283,7 +282,8 @@ public class Quote {
         return false;
     }
 
-    public ResultSet searchExact(int tables, String searchTerm, int type, Connection connection, Statement stmt) throws SQLException {
+    public ResultSet searchExact(int tables, String searchTerm, int type, Connection connection, Statement stmt)
+            throws SQLException {
 
         ResultSet rs = null;
         String table = "";
@@ -322,11 +322,12 @@ public class Quote {
         return rs;
     }
 
-    public ResultSet searchRough(int tables, String searchTerm, int type, Connection DBConnection, Statement stmt) throws SQLException {
+    public ResultSet searchRough(int tables, String searchTerm, int type, Connection DBConnection, Statement stmt)
+            throws SQLException {
         Connection connection = DBConnection;
 
         ResultSet rs = null;
-          String table = "";
+        String table = "";
 
         if (tables == 1) {
             table = "AUTHOR";
@@ -342,15 +343,20 @@ public class Quote {
             }
 
             if (type == 1) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery(
+                        "SELECT * FROM " + table + " WHERE ID like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 2) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery(
+                        "SELECT * FROM " + table + " WHERE AUTHOR like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 3) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery(
+                        "SELECT * FROM " + table + " WHERE BODY like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 4) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery(
+                        "SELECT * FROM " + table + " WHERE TAGS like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             } else if (type == 5) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%'");
+                rs = stmt.executeQuery(
+                        "SELECT * FROM " + table + " WHERE INFO like '%" + searchTerm.trim() + "%' ORDER BY AUTHOR");
             }
 
             connection.commit();
@@ -362,7 +368,6 @@ public class Quote {
 
         return rs;
     }
-
 
     public Connection getDBConnection() {
         Connection dbConnection = null;
