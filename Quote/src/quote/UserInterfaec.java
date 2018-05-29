@@ -554,7 +554,11 @@ public class UserInterfaec extends javax.swing.JFrame {
             }
 
         } else if (Quote_Search.isSelected() && Tags_Search.isSelected()) {
-
+System.out.println("Quotes and Tags are Selected");
+        }else if(Author_Search.isSelected()&& Tags_Search.isSelected()){
+            System.out.println("Author And Tags Are Selected");
+            
+            
         }
     }//GEN-LAST:event_SearchButtonActionPerformed
 
@@ -595,6 +599,13 @@ public class UserInterfaec extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        Author_Add.setText("");
+        Quote_Add.setText("");
+        Tags_Add.setText("");
+        
+        
+        
     }//GEN-LAST:event_Button_AddActionPerformed
 
     /**
