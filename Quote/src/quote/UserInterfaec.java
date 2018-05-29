@@ -739,26 +739,26 @@ public class UserInterfaec extends javax.swing.JFrame {
             tagsNew = tagsNew.substring(0, tagsNew.length() - 1);
             String authorTemp = Author_Add.getText();
             String quoteTemp = Quote_Add.getText();
-            
-            while (true && authorTemp.contains(" ")){
-            for (int x = 0; x < quoteTemp.length(); x ++){
-                if (x % 73 == 0) {
-                    int location = 0;
-                    String test = quoteTemp.substring(0,x);
-                    for (int i = test.length() - 1; i >= 0; i --) {
-                        if (test.charAt(i) == ' ') {
-                            location = i;
-                            break;
+
+            while (true && authorTemp.contains(" ")) {
+                for (int x = 0; x < quoteTemp.length(); x++) {
+                    if (x % 73 == 0) {
+                        int location = 0;
+                        String test = quoteTemp.substring(0, x);
+                        for (int i = test.length() - 1; i >= 0; i--) {
+                            if (test.charAt(i) == ' ') {
+                                location = i;
+                                break;
+                            }
                         }
+
+                        quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
+                        continue;
                     }
-                    
-                    quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
-                    continue;
+                    break;
                 }
-                break;
             }
-            }
-            
+
             while (true && authorTemp.contains(" ")){
             for (int x = 0; x < authorTemp.length(); x ++){
                 if (x % 73 == 0) {
@@ -770,14 +770,14 @@ public class UserInterfaec extends javax.swing.JFrame {
                             break;
                         }
                     }
-                    
+
                     authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location + 1);
                     continue;
                 }
                 break;
             }
             }
-            
+
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
 
             if (!aa.searchExact(1, Author_Add.getText(), 2, connec, stmt).next()) {
@@ -787,7 +787,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                 JTextArea xField = new JTextArea(15, 30);
                 xField.setLineWrap(true);
                 JScrollPane te=new JScrollPane(xField);
-                
+
 
                 JPanel myPanel = new JPanel();
                 myPanel.add(new JLabel("User Info"));
@@ -807,7 +807,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                             break;
                         }
                     }
-                    
+
                     path = path.substring(0, location) + "\n" + path.substring(location + 1);
                 }
             }
