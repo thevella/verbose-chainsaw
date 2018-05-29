@@ -15,6 +15,13 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Box;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 /**
@@ -50,6 +57,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         PopUp = new javax.swing.JPopupMenu();
         Author_Remove = new javax.swing.JMenuItem();
         Auth_Search = new javax.swing.JMenuItem();
+        Author_Info_Search = new javax.swing.JMenuItem();
         QuotePopOut = new javax.swing.JPopupMenu();
         Remove = new javax.swing.JMenuItem();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -77,6 +85,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         Tags_Add = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,6 +159,14 @@ public class UserInterfaec extends javax.swing.JFrame {
             }
         });
         PopUp.add(Auth_Search);
+
+        Author_Info_Search.setText("Author Info");
+        Author_Info_Search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Author_Info_SearchActionPerformed(evt);
+            }
+        });
+        PopUp.add(Author_Info_Search);
 
         Remove.setText("Remove Quote");
         Remove.addActionListener(new java.awt.event.ActionListener() {
@@ -335,6 +352,8 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         jLabel3.setText("Tags");
 
+        jLabel4.setText("Format Tags like tag1,tag2,tag3");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -356,8 +375,13 @@ public class UserInterfaec extends javax.swing.JFrame {
                             .addComponent(jLabel1))))
                 .addGap(69, 69, 69))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jLabel3)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(326, 326, 326)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(279, 279, 279)
+                        .addComponent(jLabel4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -383,7 +407,9 @@ public class UserInterfaec extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel4)
+                .addContainerGap())
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(45, 45, 45)
@@ -602,7 +628,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         } else if (Author_Search.isSelected() && Tags_Search.isSelected()) {
             System.out.println("Author And Tags Are Selected");
-             AuthorDisplay.setVisible(true);
+            AuthorDisplay.setVisible(true);
 
             todec = 1;
             String Term = SearchTerm.getText();
@@ -692,9 +718,111 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void Button_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AddActionPerformed
         Quote aa = new Quote();
+        Connection connec = aa.getDBConnection();
+
+        Statement stmt = null;
 
         try {
-            aa.insertQuotes(Author_Add.getText(), Quote_Add.getText(), Tags_Add.getText());
+            stmt = connec.createStatement();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            String[] tempTags = Tags_Add.getText().replaceAll("'", "''").split(",");
+            String tagsNew = "";
+
+            for (String x : tempTags) {
+                tagsNew += " " + x.trim() + " \n";
+            }
+            tagsNew = tagsNew.substring(0, tagsNew.length() - 1);
+            String authorTemp = Author_Add.getText();
+            String quoteTemp = Quote_Add.getText();
+            
+            while (true && authorTemp.contains(" ")){
+            for (int x = 0; x < quoteTemp.length(); x ++){
+                if (x % 73 == 0) {
+                    int location = 0;
+                    String test = quoteTemp.substring(0,x);
+                    for (int i = test.length() - 1; i >= 0; i --) {
+                        if (test.charAt(i) == ' ') {
+                            location = i;
+                            break;
+                        }
+                    }
+                    
+                    quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
+                    continue;
+                }
+                break;
+            }
+            }
+            
+            while (true && authorTemp.contains(" ")){
+            for (int x = 0; x < authorTemp.length(); x ++){
+                if (x % 73 == 0) {
+                    int location = 0;
+                    String test = authorTemp.substring(0,x);
+                    for (int i = test.length() - 1; i >= 0; i --) {
+                        if (test.charAt(i) == ' ') {
+                            location = i;
+                            break;
+                        }
+                    }
+                    
+                    authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location + 1);
+                    continue;
+                }
+                break;
+            }
+            }
+            
+            aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
+
+            if (!aa.searchExact(1, Author_Add.getText(), 2, connec, stmt).next()) {
+                //JTextField xField = new JTextField(5);
+                //String path = JOptionPane.showInputDialog(xField, "Author Info");
+
+                JTextArea xField = new JTextArea(15, 30);
+                xField.setLineWrap(true);
+                JScrollPane te=new JScrollPane(xField);
+                
+
+                JPanel myPanel = new JPanel();
+                myPanel.add(new JLabel("User Info"));
+                myPanel.add(te);
+                myPanel.add(Box.createVerticalStrut(40)); // a spacer
+
+                int result = JOptionPane.showConfirmDialog(null, myPanel,
+                        "Please Enter Author Info", JOptionPane.OK_CANCEL_OPTION);
+                String path = xField.getText();
+                for (int x = 0; x < path.length(); x ++){
+                if (x % 73 == 0) {
+                    int location = 0;
+                    String test = path.substring(0,x);
+                    for (int i = test.length() - 1; i >= 0; i --) {
+                        if (test.charAt(i) == ' ') {
+                            location = i;
+                            break;
+                        }
+                    }
+                    
+                    path = path.substring(0, location) + "\n" + path.substring(location + 1);
+                }
+            }
+                 path=path.replaceAll("'", "''");
+                aa.insertAuthor(Author_Add.getText(), path, tagsNew);
+
+            } else {
+                ResultSet temperary = aa.searchExact(1, Author_Add.getText(), 2, connec, stmt);
+                temperary.next();
+                String[] temp = {temperary.getString(1), temperary.getString(2), temperary.getString(3)};
+
+                aa.removeAuthor(temp[0], 1);
+                aa.insertAuthor(temp[0], temp[1], temp[2] + "\n" + tagsNew);
+
+            }
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -705,6 +833,37 @@ public class UserInterfaec extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_Button_AddActionPerformed
+
+    private void Author_Info_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_Info_SearchActionPerformed
+        Quote aa = new Quote();
+        String ta = AuthorDisplay.getSelectedValue();
+
+        Connection connec = aa.getDBConnection();
+
+        Statement stmt = null;
+
+        try {
+            stmt = connec.createStatement();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        ResultSet rs = null;
+        try {
+            rs = aa.searchExact(1, ta, 2, connec, stmt);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            while (rs.next()) {
+                Output1.setListData(new String[]{"<html>Author Info -- <br/>" + rs.getString(2).replaceAll("\n", "<br/>" + "</html>")});
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_Author_Info_SearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -745,6 +904,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JMenuItem Auth_Search;
     private javax.swing.JList<String> AuthorDisplay;
     private javax.swing.JTextArea Author_Add;
+    private javax.swing.JMenuItem Author_Info_Search;
     private javax.swing.JMenuItem Author_Remove;
     private javax.swing.JRadioButton Author_Search;
     private javax.swing.JButton Button_Add;
@@ -763,6 +923,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

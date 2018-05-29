@@ -458,6 +458,85 @@ public class testing {
 				return itemIdOne.compareTo(itemIdTwo);
 			}
 		});
+
+        ArrayList<String[]> authorInfo = new ArrayList<String[]>();
+        try {
+            // quotes file from: https://gist.github.com/erickedji/68802
+            BufferedReader fileOpen = new BufferedReader(new FileReader("quotes.txt"));
+            // line initiated as null
+            String line = null;
+
+            // temp string and int for while loop
+            String temper = null;
+
+            try {
+
+                while ((line = fileOpen.readLine()) != null) {
+
+                    // add the line to the last element
+                    // in the arraylist
+                    // if the line containes a "--",
+                    // add a new arraylist element
+                    if (line.contains(seperator)) {
+                        temper = temper.trim();
+
+                        boolean continues = true;
+
+                        int count = 0;
+                        while (continues){
+                            continues = false;
+                            count = 0;
+                            for (int x = 0; x < temper.length(); x ++){
+                                if (temper.charAt(x) != '\n' && (x % 73 == 0 + count)) {
+                                    String tempStore = temper.substring(0,x);
+                                    int location = 0;
+
+                                    for (int y = tempStore.length() - 1; y >= 0; y --) {
+                                        if (tempStore.charAt(x) == ' ') {
+                                            location = x;
+                                            break;
+                                        }
+                                    }
+
+                                    temper = temper.substring(0, location) + "\n" + temper.substring(location+1);
+                                    continues = true;
+                                    break;
+                                } else if (temper.charAt(x) == '\n') {
+                                    count ++;
+                                }
+
+                            }
+
+                        }
+
+                        temper = temper.trim();
+
+                        String author = line.trim().substring(seperator.length()).trim();
+
+                        if (!authorInAuthors(authorInfo, author)) {
+                            authors.add(new String[] {author, temper.trim()});
+                        } else {
+                            ;
+                        }
+
+
+                        temper = "";
+
+                    } else if (!line.matches("\n")) {
+                        //print (line);
+                        //TimeUnit.SECONDS.sleep(5);
+                        temper += line + "\n";
+                    }
+
+                }
+                fileOpen.close();
+            } catch (IOException e) {
+                System.out.print(e.getMessage());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.print(e.getMessage());
+        }
+
         //Arrays.sort(authorsNew);
         for (String[] x : authorsNew) {
             try {
