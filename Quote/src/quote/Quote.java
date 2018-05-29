@@ -287,7 +287,7 @@ public class Quote {
         ResultSet rs = null;
         String table = "";
         if (tables == 1) {
-            table = "AUTHOR";
+            table = "AUTHORS";
         } else {
             table = "QUOTES";
         }
@@ -329,7 +329,7 @@ public class Quote {
         String table = "";
 
         if (tables == 1) {
-            table = "AUTHOR";
+            table = "AUTHORS";
         } else {
             table = "QUOTES";
         }
