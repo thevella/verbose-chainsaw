@@ -342,23 +342,23 @@ public class UserInterfaec extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(175, 175, 175)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                                 .addComponent(Button_Add))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(321, 321, 321)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
-                        .addComponent(jLabel3)))
-                .addGap(81, 81, 81))
+                        .addGap(316, 316, 316)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))))
+                .addGap(69, 69, 69))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(326, 326, 326)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(176, 176, 176)
@@ -370,20 +370,20 @@ public class UserInterfaec extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel1)
-                .addGap(147, 147, 147)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(Button_Add)
-                        .addGap(41, 41, 41)))
+                        .addGap(43, 43, 43)))
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(27, 27, 27))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(45, 45, 45)
@@ -397,7 +397,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,30 +409,29 @@ public class UserInterfaec extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
-       String to=AuthorDisplay.getSelectedValue();
+        String to = AuthorDisplay.getSelectedValue();
         SearchTerm.setText(to);
-         SearchButton.doClick();
-        
+        SearchButton.doClick();
+
     }//GEN-LAST:event_Auth_SearchActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-      
+
         Quote aa = new Quote();
-        
-    String to=Output1.getSelectedValue().replaceAll("<html>", "");
-   String te=to.replaceAll("<br/>", "\n");
-   String ta= te.substring(0,te.indexOf("--")).trim();
-    System.out.println(ta);
-       try {
-            aa.removeQuote(ta,3);
+
+        String to = Output1.getSelectedValue().replaceAll("<html>", "");
+        String te = to.replaceAll("<br/>", "\n");
+        String ta = te.substring(0, te.indexOf("--")).trim();
+        System.out.println(ta);
+        try {
+            aa.removeQuote(ta, 3);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
-       SearchButton.doClick();
-       
-       
-       
+
+        SearchButton.doClick();
+
+
     }//GEN-LAST:event_RemoveActionPerformed
 
     private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
@@ -472,8 +471,8 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-                //connec.close();
-                //}
+            //connec.close();
+            //}
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
@@ -484,27 +483,27 @@ public class UserInterfaec extends javax.swing.JFrame {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n" + "\n";
                             QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-                            
+
                             ToList.add(resultSet.getString(2));
-                            
+
                             String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
                             String[] out1 = ToList.toArray(new String[ToList.size()]);
-                            
+
                             Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
-                            
+
                             Output1.setListData(Quote);
                             AuthorDisplay.setListData(out.toArray(new String[out.size()]));
-                            
-                        }while (resultSet.next());
+
+                        } while (resultSet.next());
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    
+
                 } else {
-                    String [] er={"No Results Found"};
+                    String[] er = {"No Results Found"};
                     AuthorDisplay.setListData(er);
                     Output1.setListData(er);
-                    
+
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
@@ -527,27 +526,27 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-                //connec.close();
-                //}
+            //connec.close();
+            //}
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             try {
                 if (resultSet.next()) {
                     try {
-                        
+
                         do {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n\n";
                             QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
                             String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
                             Output1.setListData(quote1);
-                        }while (resultSet.next());
+                        } while (resultSet.next());
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    
+
                 } else {
-                      String [] er={"No Results Found"};
+                    String[] er = {"No Results Found"};
                     Output1.setListData(er);
                 }
             } catch (SQLException ex) {
@@ -575,32 +574,28 @@ public class UserInterfaec extends javax.swing.JFrame {
     }//GEN-LAST:event_Quote_SearchActionPerformed
 
     private void Author_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_RemoveActionPerformed
-        Quote aa=new Quote();
-        
+        Quote aa = new Quote();
+
         try {
-            aa.removeQuote(AuthorDisplay.getSelectedValue(),2);
-            aa.removeAuthor(AuthorDisplay.getSelectedValue(),1);
+            aa.removeQuote(AuthorDisplay.getSelectedValue(), 2);
+            aa.removeAuthor(AuthorDisplay.getSelectedValue(), 1);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-         SearchButton.doClick();
-        
-        
-        
-        
+        SearchButton.doClick();
+
+
     }//GEN-LAST:event_Author_RemoveActionPerformed
 
     private void Button_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AddActionPerformed
-         Quote aa= new Quote();
-         
-         
+        Quote aa = new Quote();
+
         try {
-            aa.insertQuotes(Author_Add.getText(),Quote_Add.getText(),Tags_Add.getText());
+            aa.insertQuotes(Author_Add.getText(), Quote_Add.getText(), Tags_Add.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_Button_AddActionPerformed
-    
 
     /**
      * @param args the command line arguments
