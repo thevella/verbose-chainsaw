@@ -107,6 +107,9 @@ with such stuff?
 La tactique, c'est ce que vous faites quand il y a quelque chose à
 faire; la stratégie, c'est ce que vous faites quand il n'y a rien à
 faire.
+[Tactics are what you do when there is something to
+make; strategy is what you do when there is nothing to
+make.]
 -- Xavier Tartacover
 
 The only problems we can really solve in a satisfactory manner are those
@@ -121,12 +124,12 @@ unique that this novel experience can teach us a lot about ourselves. It
 should deepen our understanding of the processes of design and creation,
 it should give us better control over the task of organizing our
 thoughts. If it did not do so, to my taste we should no deserve the
-computer at all! It has allready taught us a few lessons, and the one I
+computer at all! It has already taught us a few lessons, and the one I
 have chosen to stress in this talk is the following. We shall do a much
 better programming job, provided that we approach the task with a full
-appreciation of its tremenduous difficulty, provided that we stick to
+appreciation of its tremendous difficulty, provided that we stick to
 modest and elegant programming languages, provided that we respect the
-intrinsec limitations of the human mind and approach the task as Very
+intrinsic limitations of the human mind and approach the task as Very
 Humble Programmers.
 -- Edsger W. Dijkstra
 
@@ -217,7 +220,7 @@ All non-trivial abstractions, to some degree, are leaky.
 XML wasn't designed to be edited by humans on a regular basis.
 -- Guido van Rossum
 
-Premature abstraction is an equally grevious sin as premature
+Premature abstraction is an equally grievous sin as premature
 optimization.
 -- Keith Devens
 
@@ -373,7 +376,7 @@ indirection.
 -- Butler Lampson
 
 A designer knows he has arrived at perfection not when there is no
-longuer anything to add, but when there is no longuer anything to take
+longer anything to add, but when there is no longer anything to take
 away.
 -- Antoine de St Exupery
 
@@ -401,7 +404,7 @@ software world, the larger context would be the utility of the software
 to the end user.
 -- Anonymous
 
-Dont give users the opportunity to lock themselves.
+Don't give users the opportunity to lock themselves.
 -- Anonymous
 
 Any fool can make the simple complex, only a smart person can make the
@@ -418,7 +421,7 @@ is.
 - If you give him a penny for his thoughts, you'd get change.
 - Not the sharpest knife in the drawer.
 - A prime candidate for natural deselection.
--- [Ideas for flamewars]
+-- Anonymous
 
 What I didn't understand was that the value of some new acquisition
 wasn't the difference between its retail price and what I paid for it.
@@ -503,7 +506,7 @@ Another feature about this guy is his low threshold of boredom. He'll
 pick up on a task and work frantically at it, accomplishing wonders in a
 short time and then get bored and drop it before its properly finished.
 He'll do nothing but strum his guitar and lie around in bed for several
-days after. Thats also part of the pattern too; periods of frenetic
+days after. That's also part of the pattern too; periods of frenetic
 activity followed by periods of melancholia, withdrawal and inactivity.
 This is a bipolar personality.
 -- Mark Tarver
@@ -554,7 +557,7 @@ Just like carpentry, measure twice cut once.
 The good thing about reinventing the wheel is that you get a round one.
 -- Douglas Crockford
 
-I feel it is everybodies obligation to reach for the best in themselves
+I feel it is everybody's obligation to reach for the best in themselves
 and use that for the interest of mankind.
 -- Cornelius
 
@@ -628,6 +631,14 @@ votre potentiel. L'heure est venue maintenant de descendre vraiment en
 vous. L'heure est venue de démontrer pourquoi vous êtes l'élite, les
 quelques élus, les rares lueurs qui offrent à cette compagnie son
 caractère exceptionnel, sa luminescence.
+[I do not impose any constraint, no limit. Surprise me,
+Amaze me, challenge me, challenge yourself. You have the choice: you
+can stay in the shadows or get out by being among the all too rare
+exceptions to have succeeded. The time has come to go well beyond
+your potential. Now is the time to go down really
+you. The time has come to demonstrate why you are the elite, the
+few elected, the rare gleams that offer this company its
+exceptional character, its luminescence.]
 -- Le PDG de NURV, dans "Anti-trust"
 
 If something isn’t working, you need to look back and figure out what
@@ -675,7 +686,7 @@ groups.
 
 Argue with idiots, and you become an idiot.
 If you compete with slaves you become a slave.
--- Paul Graham and Norbert Weiner, respectively
+-- Paul Graham and Norbert Wiener, respectively
 
 Always dive down into a problem and get your hands on the deepest issue
 behind the problem. All other considerations are to dismissed as
@@ -766,6 +777,8 @@ than to make a fast program correct.
 
 J'ai toujours préféré la folie des passions à la sagesse de
 l'indifférence.
+[I have always preferred the madness of passions to the wisdom of
+indifference.]
 -- Anatole France
 
 You can’t get to version 500 if you don’t start with a version 1.
@@ -784,7 +797,7 @@ that it is true and try to find out what it could be true of.
 -- George Miller
 
 A journey of a thousand miles must begin with a single step.
--- Lao­Tzu
+-- Lao Tzu
 
 C’s great for what it’s great for.
 -- Ben Hoyts
@@ -848,7 +861,7 @@ Simplicity means the achievement of maximum effect with minimum means.
 -- Dr. Koichi Kawana
 
 Normality is the route to nowhere.
--- Ridderstrale & Nordstorm
+-- Ridderstrale & Nordstrom
 
 The problem is that Microsoft just has no taste. And I don't mean that
 in a small way, I mean that in a big way.
@@ -1179,7 +1192,7 @@ Windows NT addresses 2 Gigabytes of RAM, which is more than any
 application will ever need.
 -- Microsoft
 
-We will never become a truly paper-less society until the Palm Pilot
+We will never become a truly paperless society until the Palm Pilot
 folks come out with WipeMe 1.0.
 -- Andy Pierson
 
@@ -1192,7 +1205,7 @@ mathematician. Imperative programming is like giving instructions to
 an idiot.
 -- arcus
 
-Its a shame that the students of our generation grew up with windows and
+It's a shame that the students of our generation grew up with windows and
 mice because that tainted our mindset not to think in terms of powerful
 tools. Some of us are just so tainted that we will never recover.
 -- Jeffrey Mark Siskind
@@ -1252,7 +1265,7 @@ The only way of discovering the limits of the possible is to venture a
 little way past them into the impossible.
 -- Arthur C. Clarke
 
-Any sufficiently advanced technology is undistinguishable from magic.
+Any sufficiently advanced technology is indistinguishable from magic.
 -- Arthur C. Clarke
 
 That is the inevitable human response. We’re reluctant to believe that
@@ -1570,7 +1583,7 @@ Je crois au flooding.
 -- Karim Baina
 
 Il y a très loin de la velléité à la volnt, de la volonté à la résolution, de la
-résolution au choix des moyens, du choix ds moyens à lapplication.
+résolution au choix des moyens, du choix ds moyens à l'application.
 [There is very far from the vague desire to volunt, from the will to the resolution, from the
 resolution to the choice of the means, from the choice of means to the application.]
 -- Jean-François Paul de Gondi de Retz
@@ -2154,7 +2167,7 @@ evidence and just do it.
 
 Live your imagination,
 not your history.
--- Stephen Covy
+-- Stephen Covey
 
 You don’t have to be great to get
 started, but you have to get started
@@ -2610,7 +2623,7 @@ dream while others are wishing.
 
 The very essence of leadership
 is having vision.
--- Father Theodore Hesburg
+-- Father Theodore Hesburgh
 
 Success comes to those who
 make it happen, not those who
@@ -2649,7 +2662,7 @@ because you are exchanging a
 day of your life for it.
 -- Anonymous
 
-Its kind of fun to do the
+It's kind of fun to do the
 impossible.
 -- Walt Disney
 
@@ -2848,7 +2861,7 @@ make it do :-)
 
 
 Perhaps the genius of ultrarunning is its supreme lack of utility. It makes
-no sense in a world of space ships and supercomputers to run vast distances
+no sense in a world of spaceships and supercomputers to run vast distances
 on foot. There is no money in it and no fame, frequently not even the
 approval of peers. But as poets, apostles and philosophers have insisted
 from the dawn of time, there is more to life than logic and common sense.
@@ -2882,7 +2895,7 @@ Or is it a form of prayer?
 
 
 It's astounding, time is fleeting
-Madness takes it's toll
+Madness takes its toll
 But listen closely, not for very much longer
 I've got to keep control.
 -- The Rocky Horror Picture Show
@@ -2980,7 +2993,7 @@ Auburn in the worst shape of your life.
 -- Andy Black
 
 Perhaps the genius of ultrarunning is its supreme lack of utility. It makes
-no sense in a world of space ships and supercomputers to run vast distances
+no sense in a world of spaceships and supercomputers to run vast distances
 on foot. There is no money in it and no fame, frequently not even the
 approval of peers. But as poets, apostles and philosophers have insisted
 from the dawn of time, there is more to life than logic and common sense.
@@ -3015,7 +3028,7 @@ victory nor defeat.
 Come on, you sons of bitches - do you want to live forever
 -- Gunnery Sergeant Dan Daly
 
-Just go out there and simutaneously piss in your shorts, fart like a
+Just go out there and simultaneously piss in your shorts, fart like a
 foghorn and drink from your mud-caked bottle. While you're at it let
 some liquid dribble down your chin onto your shirt, look up at the
 starry night and laugh like a raving lunatic. Fook em all. You're doing
@@ -3059,7 +3072,7 @@ I would never walk, I would take a car.
 
 You can be out there having your worst day, but at the same time the person
 next to you is having their best day. So there's really no room for crankiness
-in the sport. At least I try to minimalize it
+in the sport. At least I try to minimize it
 -- Suzie Lister, after '98 Western States
 
 When we walk to the edge of all the light we have and take the step into the
@@ -3083,7 +3096,7 @@ You'll be wistful for the wall of the marathon,
 when you hit the death grip of the ultra.
 -- Bob Glover
 
-Why couldn't Pheiddipedes have died at 20 miles?.
+Why couldn't Pheidippides have died at 20 miles?.
 -- Frank Shorter
 
 If you see a fork in the road, take it!
@@ -3197,7 +3210,7 @@ Don't work towards freedom; let the work be the freedom.
 
 Oh man! They should just put me out to stud!
 (just after finishing his first 50-miler)
--- Len Kuentzm
+-- Len Kuntzman
 
 Anybody running beats anybody walking, and anybody walking beats anybody
 sitting.
@@ -3285,7 +3298,7 @@ marathons with no brains than with no shoes.
 -- Don Kardong
 
 The runner need not break four minutes in the mile or four hours in the
-marathon. It is only neccessary that he runs and runs and sometimes
+marathon. It is only necessary that he runs and runs and sometimes
 suffers. Then one day he will wake up and discover that somewhere along the
 the way he has begun to see the order and law and love and truth that makes
 men free.
@@ -3421,7 +3434,7 @@ distances.
 
 The most important thing in life is not the triumph but the struggle.
 The essential thing is not to have conquered but to have fought well.
--- Pierre de Courbertin
+-- Pierre de Coubertin
 
 You can't get lost on this course!
 -- Joe Dabes
@@ -3499,7 +3512,7 @@ can do.
 -- Edward Everett Hale
 
 I'm tired.
--- Jussie Hammalainen
+-- Jussi Hamalainen
 
 A man's got to know his limitations.
 -- Dirty Harry
@@ -3567,7 +3580,7 @@ since I ran my first 50-miler.
 -- John Kendall
 
 Life is not a problem to be solved, but a reality to be experienced
--- Kierkegard
+-- Kierkegaard
 
 If you can't fly, then run.
 If you can't run, then walk.
@@ -3965,7 +3978,7 @@ The trail is well marked.
 -- Anonymous
 
 If we do what we did yesterday, we'll be OK. If we do something new
-we'll be competetive. If we are always looking for new and innovative
+we'll be competitive. If we are always looking for new and innovative
 ways of doing things then we will be the best.
 -- Anonymous
 

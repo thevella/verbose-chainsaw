@@ -111,7 +111,6 @@ public class Quote {
     private final String DB_PASSWORD = "";
 
     // H2 SQL Statement Example
-    //author,body,tags
     public void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -136,7 +135,7 @@ public class Quote {
             connection.close();
         }
     }
-//author name,info,tags
+
     public void insertAuthor(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -301,15 +300,15 @@ public class Quote {
             }
 
             if (type == 1) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID=" + searchTerm);
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE ID=" + searchTerm + " ORDER BY AUTHOR");
             } else if (type == 2) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR='" + searchTerm + "'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE AUTHOR='" + searchTerm + "' ORDER BY AUTHOR");
             } else if (type == 3) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY='" + searchTerm + "'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE BODY='" + searchTerm + "' ORDER BY AUTHOR");
             } else if (type == 4) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '% " + searchTerm + " %'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE TAGS like '% " + searchTerm + " %' ORDER BY AUTHOR");
             } else if (type == 5) {
-                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO='" + searchTerm + "'");
+                rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE INFO='" + searchTerm + "' ORDER BY AUTHOR");
             }
 
             connection.commit();
