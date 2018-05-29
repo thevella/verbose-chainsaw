@@ -554,11 +554,110 @@ public class UserInterfaec extends javax.swing.JFrame {
             }
 
         } else if (Quote_Search.isSelected() && Tags_Search.isSelected()) {
-System.out.println("Quotes and Tags are Selected");
-        }else if(Author_Search.isSelected()&& Tags_Search.isSelected()){
+            System.out.println("Quotes and Tags are Selected");
+            //aa.searchRough(2,SearchTerm.getText(),4           );
+            AuthorDisplay.setVisible(false);
+            todec = 2;
+            String Term = SearchTerm.getText();
+
+            ResultSet resultSet = null;
+            String test = "";
+            Connection connec = aa.getDBConnection();
+
+            Statement stmt = null;
+
+            try {
+                stmt = connec.createStatement();
+                resultSet = aa.searchRough(3, Term, 4, connec, stmt);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            } //finally {
+            //connec.close();
+            //}
+            ArrayList<String> QuoteOut = new ArrayList<String>();
+
+            try {
+                if (resultSet.next()) {
+                    try {
+
+                        do {
+                            test += resultSet.getString(3) + "\n";
+                            test += "-- " + resultSet.getString(2) + "\n\n";
+                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
+                            Output1.setListData(quote1);
+                        } while (resultSet.next());
+                    } catch (SQLException ex) {
+                        Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                } else {
+                    String[] er = {"No Results Found"};
+                    Output1.setListData(er);
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } else if (Author_Search.isSelected() && Tags_Search.isSelected()) {
             System.out.println("Author And Tags Are Selected");
-            
-            
+             AuthorDisplay.setVisible(true);
+
+            todec = 1;
+            String Term = SearchTerm.getText();
+
+            ResultSet resultSet = null;
+            String test = "";
+            Connection connec = aa.getDBConnection();
+
+            Statement stmt = null;
+
+            try {
+                stmt = connec.createStatement();
+                resultSet = aa.searchRough(2, Term, 4, connec, stmt);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            } //finally {
+            //connec.close();
+            //}
+            ArrayList<String> ToList = new ArrayList<String>();
+            ArrayList<String> QuoteList = new ArrayList<String>();
+
+            try {
+                if (resultSet.next()) {
+                    try {
+                        do {
+                            test += resultSet.getString(3) + "\n";
+                            test += "-- " + resultSet.getString(2) + "\n" + "\n";
+                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+
+                            ToList.add(resultSet.getString(2));
+
+                            String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
+                            String[] out1 = ToList.toArray(new String[ToList.size()]);
+
+                            Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
+
+                            Output1.setListData(Quote);
+                            AuthorDisplay.setListData(out.toArray(new String[out.size()]));
+
+                        } while (resultSet.next());
+                    } catch (SQLException ex) {
+                        Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                } else {
+                    String[] er = {"No Results Found"};
+                    AuthorDisplay.setListData(er);
+                    Output1.setListData(er);
+
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }
     }//GEN-LAST:event_SearchButtonActionPerformed
 
@@ -599,13 +698,12 @@ System.out.println("Quotes and Tags are Selected");
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         Author_Add.setText("");
         Quote_Add.setText("");
         Tags_Add.setText("");
-        
-        
-        
+
+
     }//GEN-LAST:event_Button_AddActionPerformed
 
     /**
