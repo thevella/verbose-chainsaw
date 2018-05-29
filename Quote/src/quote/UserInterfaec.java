@@ -740,42 +740,63 @@ public class UserInterfaec extends javax.swing.JFrame {
             String authorTemp = Author_Add.getText();
             String quoteTemp = Quote_Add.getText();
 
-            while (true && authorTemp.contains(" ")) {
-                for (int x = 0; x < quoteTemp.length(); x++) {
-                    if (x % 73 == 0) {
-                        int location = 0;
-                        String test = quoteTemp.substring(0, x);
-                        for (int i = test.length() - 1; i >= 0; i--) {
-                            if (test.charAt(i) == ' ') {
-                                location = i;
-                                break;
-                            }
+            boolean continues = true;
+
+            int count = 1;
+            while (continues && quoteTemp.contains(" ")){
+                continues = false;
+                //count = 0;
+                for (int x = 0; x < quoteTemp.length(); x ++){
+                    if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
+                        count ++;
+                        String test = quoteTemp.substring(0,x);
+                        int location = test.lastIndexOf(" ");
+
+                        if (location == -1) {
+                            continues = false;
+                            //print(test + "\n");
+                            continue;
                         }
 
-                        quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
-                        continue;
+
+                        quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location+1);
+                        continues = true;
+                        break;
                     }
-                    break;
+
+
                 }
+
             }
 
-            while (true && authorTemp.contains(" ")){
-            for (int x = 0; x < authorTemp.length(); x ++){
-                if (x % 73 == 0) {
-                    int location = 0;
-                    String test = authorTemp.substring(0,x);
-                    for (int i = test.length() - 1; i >= 0; i --) {
-                        if (test.charAt(i) == ' ') {
-                            location = i;
-                            break;
+
+            continues = true;
+
+            count = 1;
+            while (continues && authorTemp.contains(" ")){
+                continues = false;
+                //count = 0;
+                for (int x = 0; x < authorTemp.length(); x ++){
+                    if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
+                        count ++;
+                        String test = authorTemp.substring(0,x);
+                        int location = test.lastIndexOf(" ");
+
+                        if (location == -1) {
+                            continues = false;
+                            //print(test + "\n");
+                            continue;
                         }
+
+
+                        authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location+1);
+                        continues = true;
+                        break;
                     }
 
-                    authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location + 1);
-                    continue;
+
                 }
-                break;
-            }
+
             }
 
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
@@ -797,21 +818,38 @@ public class UserInterfaec extends javax.swing.JFrame {
                 int result = JOptionPane.showConfirmDialog(null, myPanel,
                         "Please Enter Author Info", JOptionPane.OK_CANCEL_OPTION);
                 String path = xField.getText();
-                for (int x = 0; x < path.length(); x ++){
-                if (x % 73 == 0) {
-                    int location = 0;
-                    String test = path.substring(0,x);
-                    for (int i = test.length() - 1; i >= 0; i --) {
-                        if (test.charAt(i) == ' ') {
-                            location = i;
+
+                continues = true;
+
+                count = 1;
+                while (continues && path.contains(" ")){
+                    continues = false;
+                    //count = 0;
+                    for (int x = 0; x < path.length(); x ++){
+                        if (!String.valueOf(path.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
+                            count ++;
+                            String test = path.substring(0,x);
+                            int location = test.lastIndexOf(" ");
+
+                            if (location == -1) {
+                                continues = false;
+                                //print(test + "\n");
+                                continue;
+                            }
+
+
+                            path = path.substring(0, location) + "\n" + path.substring(location+1);
+                            continues = true;
                             break;
                         }
+
+
                     }
 
-                    path = path.substring(0, location) + "\n" + path.substring(location + 1);
                 }
-            }
-                 path=path.replaceAll("'", "''");
+
+
+                path=path.replaceAll("'", "''");
                 aa.insertAuthor(Author_Add.getText(), path, tagsNew);
 
             } else {

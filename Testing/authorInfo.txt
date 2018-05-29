@@ -1,5 +1,5 @@
 Hoots the Owl is a fictional character on the children's television program, Sesame Street, performed by Kevin Clash. He was an owl that plays a saxophone.
--- “Hoots”
+-- "Hoots"
 
 Basecamp, formerly named 37signals, is a privately held American web application company based in Chicago, Illinois. The firm was co-founded in 1999 by Jason Fried, Carlos Segura, and Ernest Kim as a web design company.
 -- 37 Signal, getting real
@@ -17,7 +17,7 @@ A man who ran the 50 mile endurance run in San Francisco. With a whopping time o
 Arthur "Al" Howie (September 16, 1945 – June 21, 2016) was a Canadian long-distance runner who won more thanfifty marathons, ultramarathons, and multiday races in over two decades, including the 1991 Trans Canada Highway run (7295 kilometers) in the record time of 72 days and 10 hours.
 -- Al Howie
 
-Alan Cabelly teaches and coaches in Human Resource Management, Leadership, and Negotiations at the undergraduate, graduate, and executive levels.  Alan has a B.A. from Stony Brook University (1972), an MBA from the Pennsylvania State University (1975), a Ph.D. from the University of Washington (1979), and is accredited as a Senior Professional in Human Resources (SPHR) by the Human Resource Certification Institute and as a Senior Certified Professional (SHRM-SCP) by the Society for Human Resource Management (SHRM)
+Alan Cabelly teaches and coaches in Human Resource Management, Leadership, and Negotiations at the undergraduate, graduate, and executive levels. Alan has a B.A. from Stony Brook University (1972), an MBA from the Pennsylvania State University (1975), a Ph.D. from the University of Washington (1979), and is accredited as a Senior Professional in Human Resources (SPHR) by the Human Resource Certification Institute and as a Senior Certified Professional (SHRM-SCP) by the Society for Human Resource Management (SHRM)
 --Alan Cabelly
 
 
@@ -157,7 +157,7 @@ Benjamin Franklin (January 17, 1706 [O.S. January 6, 1705] – April 17, 1790) w
 Bertrand Arthur William Russell, 3rd Earl Russell, ( 18 May 1872 – 2 February 1970) was a British philosopher, logician, mathematician, historian, writer, social critic, political activist, and Nobel laureate. At various points in his life, Russell considered himself a liberal, a socialist and a pacifist, but he also admitted that he had "never been any of these things, in any profound sense".
 --Bertrand Russell
 
-My mission is to help you truly understand new concepts. Let’s move past dry facts and share the Aha! moments that make learning fun and memorable. The guiding philosophy is this Einstein quote: “If you can’t explain it simply, you don’t understand it well enough.” If an intuition-first approach resonates with you, you’ll feel right at home. There’s no pretenses, no fuddy teacher, just an excited friend sharing what actually made an idea click.
+My mission is to help you truly understand new concepts. Let’s move past dry facts and share the Aha! moments that make learning fun and memorable. The guiding philosophy is this Einstein quote: "If you can’t explain it simply, you don’t understand it well enough." If an intuition-first approach resonates with you, you’ll feel right at home. There’s no pretenses, no fuddy teacher, just an excited friend sharing what actually made an idea click.
 --BetterExplained.com
 
 William Jay "Bill" Bowerman (February 19, 1911 – December 24, 1999) was an American track and field coach and co-founder of Nike, Inc. Over his career, he trained 31 Olympic athletes, 51 All-Americans, 12 American record-holders, 22 NCAA champions and 16 sub-4 minute milers.
@@ -168,7 +168,7 @@ William Jay "Bill" Bowerman (February 19, 1911 – December 24, 1999) was an Ame
 
 
 
-William Jefferson Clinton ( born August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001. Prior to the presidency, he was the Governor of Arkansas from 1979 to 1981, and again from 1983 to 1992. A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist "Third Way" political philosophy.
+William Jefferson Clinton (born August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001. Prior to the presidency, he was the Governor of Arkansas from 1979 to 1981, and again from 1983 to 1992. A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist "Third Way" political philosophy.
 --Bill Clinton
 
 William Henry Gates III (born October 28, 1955) is an American business magnate, investor, author, philanthropist, humanitarian, and principal founder of Microsoft Corporation. During his career at Microsoft, Gates held the positions of chairman, CEO and chief software architect, while also being the largest individual shareholder until May 2014.
@@ -195,7 +195,7 @@ Robert is a professional Architect, Registered Professional Planner and an Urban
 Distinguished Professor Emeritus in the Department of Mathematics at the University of South Carolina. And Research Professor in the Interdisciplinary Mathematics Institute at the University of South Carolina
 --Bob Sharpley
 
-Robert Sutton is Professor of Management Science and Engineering and Professor of Organizational Behavior (by courtesy) at Stanford. He co-founded the Stanford Technology Ventures Program (STVP) and the Hasso Plattner Institute of Design (which everyone calls “the d school”). Sutton received his Ph.D. in Organizational Psychology from The University of Michigan and has served on the Stanford faculty since 1983.
+Robert Sutton is Professor of Management Science and Engineering and Professor of Organizational Behavior (by courtesy) at Stanford. He co-founded the Stanford Technology Ventures Program (STVP) and the Hasso Plattner Institute of Design (which everyone calls "the d school"). Sutton received his Ph.D. in Organizational Psychology from The University of Michigan and has served on the Stanford faculty since 1983.
 --Bob Sutton
 
 Booker Taliaferro Washington (c. 1856 – November 14, 1915) was an American educator, author, orator, and advisor to presidents of the United States. Between 1890 and 1915, Washington was the dominant leader in the African-American community. Washington was from the last generation of black American leaders born into slavery and became the leading voice of the former slaves and their descendants. They were newly oppressed in the South by disenfranchisement and the Jim Crow discriminatory laws enacted in the post-Reconstruction Southern states in the late 19th and early 20th centuries.
@@ -240,7 +240,7 @@ Nelson Bunker Hunt (February 22, 1926 – October 21, 2014) was an American oil 
 Butler W. Lampson (born December 23, 1943) is an American computer scientist contributing to the development and implementation of distributed, personal computing. He is a Technical Fellow at Microsoft and an adjunct professor at MIT.
 --Butler Lampson
 
-A bit of a trail running legend you could say, not just because of the grey hair and thousands of miles under his belt. The former record holder for the Colorado Trail and the John Muir Trail is known for his adventurous spirit as much as his endurance prowess. The Boulder, Colorado resident prides himself on running trails where no one has run before, and has explored places like Peru, Bolivia, Tibet with not much else than running shoes and of course his Ultimate Direction water bottle.  Buzz has recently taken on the job as Brand Director of Ultimate Direction. A Colorado based hydration gear company specializing in ultra running water bottles, belts and pack.
+A bit of a trail running legend you could say, not just because of the grey hair and thousands of miles under his belt. The former record holder for the Colorado Trail and the John Muir Trail is known for his adventurous spirit as much as his endurance prowess. The Boulder, Colorado resident prides himself on running trails where no one has run before, and has explored places like Peru, Bolivia, Tibet with not much else than running shoes and of course his Ultimate Direction water bottle. Buzz has recently taken on the job as Brand Director of Ultimate Direction. A Colorado based hydration gear company specializing in ultra running water bottles, belts and pack.
 --Buzz Burrell
 
 
@@ -275,10 +275,10 @@ Charles Franklin Kettering (August 29, 1876 – November 25, 1958) sometimes kno
 Charles Holland Duell (April 13, 1850 – January 29, 1920) was the commissioner of the United States Patent and Trademark Office in 1898 to 1901, and was later a United States federal judge.
 
 Duell has become famous for, during his tenure as United States Commissioner of Patents, purportedly saying "Everything that can be invented has been invented." However, this has been debunked as apocryphal by librarian Samuel Sass who traced the quote back to a 1981 book titled "The Book of Facts and Fallacies" by Chris Morgan and David Langford. In fact, Duell said in 1902:
-    "In my opinion, all previous advances in the various lines of invention will appear totally insignificant when compared with those which the present century will witness. I almost wish that I might live my life over again to see the wonders which are at the threshold."
+ "In my opinion, all previous advances in the various lines of invention will appear totally insignificant when compared with those which the present century will witness. I almost wish that I might live my life over again to see the wonders which are at the threshold."
 --Charles H. Duell
 
-Dr. Charles N. Steele holds the Herman and Suzanne Dettwiler Chair in Economics at Hillsdale College, and regularly teaches the “Austrian Economics” class, as well as “History of Economic Thought.”
+Dr. Charles N. Steele holds the Herman and Suzanne Dettwiler Chair in Economics at Hillsdale College, and regularly teaches the "Austrian Economics" class, as well as "History of Economic Thought."
 
 With his international teaching experience in China, Ukraine, and Russia, Dr. Steele is not your typical college professor. Dr. Steele explains that these experiences opened his eyes to the gulf of economics knowledge between students in the East and the West. Most of his students in China and post-Soviet Russia had never been exposed to economic principles and theories. While difficult at first, Dr. Steele says that his experiences teaching in those countries was extremely rewarding—to this day, he continues to keep in touch with many of those students.
 --Charles N. Steele
@@ -356,7 +356,7 @@ David Charles Olney is an American folk singer-songwriter. He attended the Unive
 The Book of Psalms, which is generally believed to be the most widely read and the most highly treasured of all the books in the Old Testament, is a collection of poems, hymns, and prayers that express the religious feelings of Jews throughout the various periods of their national history. The intrinsic beauty of the poems and the sentiments that they convey have contributed toward their appreciation. Especially adapted for use in worship services, the psalms have been used in Christian churches, as well as in Jewish temples and synagogues.
 --David (Psalm 56:4)
 
-David Blaikie was admitted to the Nova Scotia Barristers’ Society in 1993, and practiced civil litigation with the law firm of Patterson Palmer (now Patterson Law) in Truro, Nova Scotia. He has developed and taught courses in law at the University of Sherbrooke, Québec, Hue University, Vietnam, Dalhousie University and the Atlantic School of Theology, both in Nova Scotia.  He teaches in the areas of evidence, torts, civil procedure, professional responsibility and alternative dispute resolution.
+David Blaikie was admitted to the Nova Scotia Barristers’ Society in 1993, and practiced civil litigation with the law firm of Patterson Palmer (now Patterson Law) in Truro, Nova Scotia. He has developed and taught courses in law at the University of Sherbrooke, Québec, Hue University, Vietnam, Dalhousie University and the Atlantic School of Theology, both in Nova Scotia. He teaches in the areas of evidence, torts, civil procedure, professional responsibility and alternative dispute resolution.
 --David Blaikie
 
 
@@ -498,7 +498,7 @@ David Newton Eagleson (October 4, 1924 – May 23, 2003) was an American lawyer 
 During his four years on the court, Eagleson wrote 54 majority opinions. Among Eagleson's notable opinions is Thing v. La Chusa (1989), which sharply limited the availability of the cause of action for negligent infliction of emotional distress in California.
 --Eagleson’s Law
 
-Earl Nightingale (March 12, 1921 – March 25, 1989) was an American radio speaker and author, dealing mostly with the subjects of human character development, motivation, and meaningful existence. He was the voice during the early 1950s of Sky King, the hero of a radio adventure series, and was a WGN radio program host from 1950 to 1956. Nightingale was the author of The Strangest Secret, which economist Terry Savage has termed “…one of the great motivational books of all time“.
+Earl Nightingale (March 12, 1921 – March 25, 1989) was an American radio speaker and author, dealing mostly with the subjects of human character development, motivation, and meaningful existence. He was the voice during the early 1950s of Sky King, the hero of a radio adventure series, and was a WGN radio program host from 1950 to 1956. Nightingale was the author of The Strangest Secret, which economist Terry Savage has termed "…one of the great motivational books of all time".
 --Earl Nightingale
 
 Earl of Chesterfield, in the County of Derby, was a title in the Peerage of England. It was created in 1628 for Philip Stanhope, 1st Baron Stanhope. He had already been created Baron Stanhope, of Shelford in the County of Nottingham, in 1616, also in the Peerage of England. Stanhope's youngest son the Hon. Alexander Stanhope was the father of James Stanhope, 1st Earl Stanhope while his half-brother Sir John Stanhope of Elvaston was the great-grandfather of William Stanhope, 1st Earl of Harrington.

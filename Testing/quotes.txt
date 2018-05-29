@@ -292,7 +292,7 @@ Fools! Don't they know that tears are a woman's most effective weapon?
 
 It's like a condom; I'd rather have it and not need it than need it and
 not have it.
--- some chick in Alien vs. Predator, when asked why she always carries a gun
+-- Some chick in Alien vs. Predator, when asked why she always carries a gun
 
 C++ is history repeated as tragedy. Java is history repeated as farce.
 -- Scott McKay
@@ -838,7 +838,7 @@ excel in it.
 
 The minute you put the blame on someone else you’ve switch things from
 being a problem you can control to a problem outside of your control.
--- engtech
+-- Anonymous
 
 State is the root of all evil. In particular functions with side effects
 should be avoided.
@@ -1203,7 +1203,7 @@ finger.
 Functional programming is like describing your problem to a
 mathematician. Imperative programming is like giving instructions to
 an idiot.
--- arcus
+-- Arcus
 
 It's a shame that the students of our generation grew up with windows and
 mice because that tainted our mindset not to think in terms of powerful
@@ -1381,7 +1381,7 @@ which contains member data, and only incidentally contains code for
 manipulating the object. In FP, it's the code that's important: you
 define a function which contains code for working with the data, and
 only incidentally define what the data is.
--- almkgor
+-- Almkgor
 
 Des mots simples, quand ils sont bien utilisés, font faire à des gens
 ordinaires des choses extraordinaires.

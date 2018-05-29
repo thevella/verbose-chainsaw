@@ -422,7 +422,7 @@ public class testing {
                         }
 
                         try {
-                            insertQuotes(author, temper.trim(), refactorTagsAuthor("", retTags(temper.trim())));
+                            insertQuotes(author.replaceAll("'", "''"), temper.trim().replaceAll("'", "''"), refactorTagsAuthor("", retTags(temper.trim())));
                         } catch (SQLException e) {
                             //e.getMessage();
                         }
@@ -462,12 +462,12 @@ public class testing {
         ArrayList<String[]> authorInfo = new ArrayList<String[]>();
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
-            BufferedReader fileOpen = new BufferedReader(new FileReader("quotes.txt"));
+            BufferedReader fileOpen = new BufferedReader(new FileReader("authorInfo.txt"));
             // line initiated as null
             String line = null;
 
             // temp string and int for while loop
-            String temper = null;
+            String temper = "";
 
             try {
 
@@ -478,45 +478,46 @@ public class testing {
                     // if the line containes a "--",
                     // add a new arraylist element
                     if (line.contains(seperator)) {
-                        temper = temper.trim();
-
-                        boolean continues = true;
-
-                        int count = 0;
-                        while (continues){
-                            continues = false;
-                            count = 0;
-                            for (int x = 0; x < temper.length(); x ++){
-                                if (temper.charAt(x) != '\n' && (x % 73 == 0 + count)) {
-                                    String tempStore = temper.substring(0,x);
-                                    int location = 0;
-
-                                    for (int y = tempStore.length() - 1; y >= 0; y --) {
-                                        if (tempStore.charAt(x) == ' ') {
-                                            location = x;
-                                            break;
-                                        }
-                                    }
-
-                                    temper = temper.substring(0, location) + "\n" + temper.substring(location+1);
-                                    continues = true;
-                                    break;
-                                } else if (temper.charAt(x) == '\n') {
-                                    count ++;
-                                }
-
-                            }
-
-                        }
-
-                        temper = temper.trim();
 
                         String author = line.trim().substring(seperator.length()).trim();
 
                         if (!authorInAuthors(authorInfo, author)) {
-                            authors.add(new String[] {author, temper.trim()});
-                        } else {
-                            ;
+                            temper = temper.trim();
+
+
+                            boolean continues = true;
+
+                            int count = 1;
+                            while (continues && temper.contains(" ")){
+                                continues = false;
+                                //count = 0;
+                                for (int x = 0; x < temper.length(); x ++){
+                                    if (!String.valueOf(temper.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
+                                        count ++;
+                                        String tempStore = temper.substring(0,x);
+                                        int location = tempStore.lastIndexOf(" ");
+
+                                        if (location == -1) {
+                                            continues = false;
+                                            //print(tempStore + "\n");
+                                            continue;
+                                        }
+
+
+                                        temper = temper.substring(0, location) + "\n" + temper.substring(location+1);
+                                        continues = true;
+                                        break;
+                                    }
+
+
+                                }
+
+                            }
+
+
+                            temper = temper.trim();
+
+                            authorInfo.add(new String[] {author, temper.trim()});
                         }
 
 
@@ -525,7 +526,7 @@ public class testing {
                     } else if (!line.matches("\n")) {
                         //print (line);
                         //TimeUnit.SECONDS.sleep(5);
-                        temper += line + "\n";
+                        temper += line;
                     }
 
                 }
@@ -540,7 +541,12 @@ public class testing {
         //Arrays.sort(authorsNew);
         for (String[] x : authorsNew) {
             try {
-                insertAuthor(x[0], "", x[1]);
+                String info = "";
+                if (authorInAuthors(authorInfo, x[0])) {
+                    info = authorInfo.get(indexAuthorInAuthors(authorInfo, x[0]))[1];
+                }
+
+                insertAuthor(x[0].replaceAll("'", "''"), info.replaceAll("'", "''"), x[1].replaceAll("'", "''"));
             } catch (SQLException e) {
                 e.getMessage();
             }
