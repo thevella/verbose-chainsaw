@@ -895,7 +895,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         try {
             while (rs.next()) {
-                Output1.setListData(new String[]{"<html>Author Info -- <br/>" + rs.getString(2).replaceAll("\n", "<br/>" + "</html>")});
+                Output1.setListData(new String[]{"<html>-- Author Info -- <br/><br/>" + rs.getString(2).replaceAll("\n", "<br/>") + "</html>"});
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);

@@ -429,7 +429,7 @@ public class testing {
 
                         temper = "";
 
-                    } else if (!line.matches("\n")) {
+                    } else /*if (!line.matches("\n"))*/ {
                         //print (line);
                         //TimeUnit.SECONDS.sleep(5);
                         temper += line + "\n";
@@ -523,10 +523,10 @@ public class testing {
 
                         temper = "";
 
-                    } else if (!line.matches("\n")) {
+                    } else /*if (!line.matches("\n"))*/ {
                         //print (line);
                         //TimeUnit.SECONDS.sleep(5);
-                        temper += line;
+                        temper += line + "\n";
                     }
 
                 }
