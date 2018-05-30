@@ -497,6 +497,46 @@
             </Component>
           </SubComponents>
         </Container>
+        <Container class="javax.swing.JPanel" name="jPanel6">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Info ">
+                <Property name="tabTitle" type="java.lang.String" value="Info "/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane4" alignment="0" pref="739" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane4" alignment="0" pref="426" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="This is the Quote&apos;s Database Program. This program is designed to collect quotes from&#xa;various author&apos;s and present them to the user with a description of the author as well. &#xa;The program contains a few useful buttons and areas that are helpful to know:&#xa;&#xa;1. The Search Tab : Used to search for specific authors, quotes, or tags.&#xa;&#x9;- There are three screens on the Search Tab:&#xa;&#x9;&#x9;1. The Author Name Display&#xa;&#x9;&#x9;2. The Author Quote Display&#xa;&#x9;&#x9;3. The Search Box&#xa;&#x9;- There is also three selections with function for searching: Author, Tag, or Quote.&#xa;&#xa;2. The Add Tab: Used to add new authors, quotes, and tags to the program.&#xa;        - There are three displays in the Add tab:&#xa;&#x9;&#x9;1. The Author Input Display&#xa;&#x9;&#x9;2. The Quote Input Display&#xa;&#x9;&#x9;3. The Tag Input Display&#xa;&#x9;- There is a add button which is used after the input of one of the three displays.&#xa;3. The Info Tab: Used to remind the user of the functionality of the program.&#xa;&#xa;4. Tagging Explanation: There are specific tags that identify each quotation, which consist&#xa;of: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,&#xa;Confused, Helpless, Indifferent, Afraid, Hurt, Sad.&#xa;&#xa;&#x9;- These tags are used to identify the quotes, and are your key words for &#xa;&#x9;searching the tags."/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>
