@@ -337,15 +337,21 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
 
         Author_Add.setColumns(20);
+        Author_Add.setLineWrap(true);
         Author_Add.setRows(5);
+        Author_Add.setWrapStyleWord(true);
         jScrollPane5.setViewportView(Author_Add);
 
         Quote_Add.setColumns(20);
+        Quote_Add.setLineWrap(true);
         Quote_Add.setRows(5);
+        Quote_Add.setWrapStyleWord(true);
         jScrollPane6.setViewportView(Quote_Add);
 
         Tags_Add.setColumns(20);
+        Tags_Add.setLineWrap(true);
         Tags_Add.setRows(5);
+        Tags_Add.setWrapStyleWord(true);
         jScrollPane7.setViewportView(Tags_Add);
 
         jLabel2.setText("Quote");
@@ -747,8 +753,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                 continues = false;
                 //count = 0;
                 for (int x = 0; x < quoteTemp.length(); x ++){
-                    if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
-                        count ++;
+                    if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
+                        count = x;
                         String test = quoteTemp.substring(0,x);
                         int location = test.lastIndexOf(" ");
 
@@ -777,8 +783,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                 continues = false;
                 //count = 0;
                 for (int x = 0; x < authorTemp.length(); x ++){
-                    if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
-                        count ++;
+                    if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
+                        count = x;
                         String test = authorTemp.substring(0,x);
                         int location = test.lastIndexOf(" ");
 
@@ -801,7 +807,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
 
-            if (!aa.searchExact(1, Author_Add.getText(), 2, connec, stmt).next()) {
+            if (!aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt).next()) {
                 //JTextField xField = new JTextField(5);
                 //String path = JOptionPane.showInputDialog(xField, "Author Info");
 
@@ -822,12 +828,13 @@ public class UserInterfaec extends javax.swing.JFrame {
                 continues = true;
 
                 count = 1;
+                
                 while (continues && path.contains(" ")){
                     continues = false;
                     //count = 0;
                     for (int x = 0; x < path.length(); x ++){
-                        if (!String.valueOf(path.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
-                            count ++;
+                        if (!String.valueOf(path.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
+                            count =x;
                             String test = path.substring(0,x);
                             int location = test.lastIndexOf(" ");
 
@@ -849,11 +856,11 @@ public class UserInterfaec extends javax.swing.JFrame {
                 }
 
 
-                path=path.replaceAll("'", "''");
-                aa.insertAuthor(Author_Add.getText(), path, tagsNew);
+                path=path.replaceAll("'", "''").trim();
+                aa.insertAuthor(authorTemp.replaceAll("'", "''"), path, tagsNew);
 
             } else {
-                ResultSet temperary = aa.searchExact(1, Author_Add.getText(), 2, connec, stmt);
+                ResultSet temperary = aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt);
                 temperary.next();
                 String[] temp = {temperary.getString(1), temperary.getString(2), temperary.getString(3)};
 
