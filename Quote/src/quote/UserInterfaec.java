@@ -458,42 +458,55 @@ public class UserInterfaec extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
+//this is for when the user clicks on the serach author from the menu .
         String to = AuthorDisplay.getSelectedValue();
+        //getting teh author that the user is whiching for them to search by
+       //setting the search panel equal to what ever the user click on 
         SearchTerm.setText(to);
+        //click the search button and therefore seraching for the author
         SearchButton.doClick();
 
     }//GEN-LAST:event_Auth_SearchActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-
+//so the Quote class can be accessed
         Quote aa = new Quote();
-
+        //getting the selected quote that the user has click on and replacing all of the HTML so that is is usable in the search.
         String to = Output1.getSelectedValue().replaceAll("<html>", "");
+       //more striping of the HTML "<br/>" is the html equivalent of the "\n".
         String te = to.replaceAll("<br/>", "\n");
+        //take everything after the quote off(triming the author.)
         String ta = te.substring(0, te.indexOf("--")).trim();
-        System.out.println(ta);
+        
+        //System.out.println(ta);
+        //calling the remove quote method from the quote class.giving it the quote and the type of thing to remove 
         try {
             aa.removeQuote(ta, 3);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        //essentially refreshing the search result
         SearchButton.doClick();
 
 
     }//GEN-LAST:event_RemoveActionPerformed
 
     private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
+//if the user rights clicks inside the Quote JList the pops up with the option to remove the selected quote.
         if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
+            //calling the quotepopout menu and also telling it where to go.
             QuotePopOut.show(evt.getComponent(), evt.getX(), evt.getY());
-            System.out.println("sdsd");
+           
+// System.out.println("bamao");
         }
     }//GEN-LAST:event_Output1MouseClicked
 
     private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
+      //detecing if the right click has been clickd and if it is it will call the PopUp menu and it will display all of its options
         if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
+            //calling the popup menu with all of the options inside the popup menu.Also getting the location of the mouse click inside the Jlist and displaying the menu there
             PopUp.show(evt.getComponent(), evt.getX(), evt.getY());
-            System.out.println("sdsd");
+            //System.out.println("sdsd");
         }
     }//GEN-LAST:event_AuthorDisplayMouseClicked
 
@@ -501,65 +514,79 @@ public class UserInterfaec extends javax.swing.JFrame {
         Quote aa = new Quote();
 
         int todec = 1;
+        //an if statment so that is the user has the ability to decided that they want to search by the author without tags.
         if (Author_Search.isSelected() && !Tags_Search.isSelected()) {
+            //making the JLIST filled with authors visibile for the user
             AuthorDisplay.setVisible(true);
 
             todec = 1;
+            //getting the author to search from the Search Term panel.
             String Term = SearchTerm.getText();
-
+            //intializing th result set to pass to the Author SQL search
             ResultSet resultSet = null;
             String test = "";
+            //making a connecton for the SQL search methid
             Connection connec = aa.getDBConnection();
-
+            //intializing a statment for the sql search
             Statement stmt = null;
 
             try {
+                //getting a value for STMT by calling the create statment method from the Quote class
                 stmt = connec.createStatement();
+                //settign result set equal to the search results by calling the searchrough method and telling it to search in the Authors table for the entred author, and telling it search for the authors name by passing it the value of two
                 resultSet = aa.searchRough(2, Term, 2, connec, stmt);
-
+              //catching exceptions
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
             //connec.close();
             //}
+            //making an array list to store both the authors names and the authors quote.
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
             try {
+                //getting all of the results and if there is no result it will output a no results found message
                 if (resultSet.next()) {
                     try {
                         do {
-                            test += resultSet.getString(3) + "\n";
-                            test += "-- " + resultSet.getString(2) + "\n" + "\n";
+                            //test += resultSet.getString(3) + "\n";
+                            //test += "-- " + resultSet.getString(2) + "\n" + "\n";
+                            //formatting the text to send to the quote output area and sending it to an array list.
                             QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-
+                            //filling a 2nd array list with the names of all authors.
                             ToList.add(resultSet.getString(2));
-
+                            //converthing both of the array lists to array because that is all that JLists can display
                             String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
                             String[] out1 = ToList.toArray(new String[ToList.size()]);
 
                             Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
-
+                            //sending both of the arrays to their respective positions in teh UI
                             Output1.setListData(Quote);
                             AuthorDisplay.setListData(out.toArray(new String[out.size()]));
 
                         } while (resultSet.next());
+                        //catching exceptins
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-
+                    //this will be send to the ui if no results are found
                 } else {
                     String[] er = {"No Results Found"};
                     AuthorDisplay.setListData(er);
                     Output1.setListData(er);
 
                 }
+                //cathinig exceiptions
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
+            //the 2nd part of the else if statment that will run if the user has decided to search for only quotes.
         } else if (Quote_Search.isSelected() && !Tags_Search.isSelected()) {
+           //making the author display invisibile.Doesnt have a use at this poiint.
             AuthorDisplay.setVisible(false);
             todec = 2;
+            //getting the SearchTerm and storing it to the string called Term.
             String Term = SearchTerm.getText();
 
             ResultSet resultSet = null;
@@ -712,16 +739,18 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void Tags_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tags_SearchActionPerformed
         // TODO add your handling code here:
+        //useless
     }//GEN-LAST:event_Tags_SearchActionPerformed
 
     private void Author_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_SearchActionPerformed
-
+        //so the user cannot search by both author and quote at the same time.This is setting the quote search button equal to false.
         Quote_Search.setSelected(false);
 
         //Search_Author.setOpaque(true);
     }//GEN-LAST:event_Author_SearchActionPerformed
 
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
+       //so the user cannot search by both author and quote at the same time.This is setting the author search buttion equal to false.
         Author_Search.setSelected(false);
     }//GEN-LAST:event_Quote_SearchActionPerformed
 
