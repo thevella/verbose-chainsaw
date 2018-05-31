@@ -854,7 +854,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     //count = 0;
                     for (int x = 0; x < path.length(); x ++){
                         if (!String.valueOf(path.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
-                            count =x;
+
                             String test = path.substring(0,x);
                             location = test.lastIndexOf(" ");
 
