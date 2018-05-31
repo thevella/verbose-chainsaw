@@ -22,6 +22,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class QuotesDatabase {
+
     //Initializing Quote Array in the form of aa array list
     private ArrayList<Quotes> quotesArr = new ArrayList<Quotes>();
 
@@ -74,7 +75,9 @@ class QuotesDatabase {
     }
 }
 // Creating a class for variables author, quote, tags
+
 class Quotes {
+
     private String author;
     private String quote;
     private String[] tags;
@@ -95,6 +98,7 @@ class Quotes {
 
 // Exception thrown when the value is not an expected value in user input.
 class NegNumber extends Exception {
+
     public NegNumber(String s) {
         super(s);
     }
@@ -104,7 +108,6 @@ public class Quote {
 
     // Variables and methods for sqlDatabase
     // TODO: Needs to be customized for this program
-
     private final String DB_DRIVER = "org.h2.Driver";
     private final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
             .substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
@@ -112,6 +115,7 @@ public class Quote {
     private final String DB_PASSWORD = "";
 
     // H2 SQL Statement Example
+    //Insert of new quotes from user
     public void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -123,7 +127,7 @@ public class Quote {
             if (isValid(value1) || isValid(value2) || isValid(value3)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
-            
+
             stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
                     + "')");
 
@@ -137,7 +141,7 @@ public class Quote {
             connection.close();
         }
     }
-
+    //Insert of new authors from user
     public void insertAuthor(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -162,6 +166,7 @@ public class Quote {
             connection.close();
         }
     }
+
     //Public made for the removal of authors 
     public void removeAuthor(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
@@ -196,6 +201,7 @@ public class Quote {
             connection.close();
         }
     }
+
     //Public for the removal of quotes 
     public void removeQuote(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
@@ -256,6 +262,7 @@ public class Quote {
         return rs.getInt(1);
 
     }
+
     //Public for the identification of letters in user inputted strings
     public boolean isValid(String term) {
         String[] splitTerms = term.split(";");
@@ -370,6 +377,7 @@ public class Quote {
         return rs;
     }
 
+    //Public for the connection of Database
     public Connection getDBConnection() {
         Connection dbConnection = null;
         try {
@@ -411,7 +419,6 @@ public class Quote {
 
     ////////////////////////////////////////////////////
     ///////////////////////////////////////////////////
-
     static void print(String stringer) {
         // Just a function to simplify output
         System.out.print(stringer);
