@@ -17,37 +17,60 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class testHelper {
-    public String[] openL = {"Great", "Gay", "Joyous", "Lucky", "Fortunate", "Delighted", "Overjoyed", "Gleeful", "Thankful", "Important", "Festive", "Ecstatic", "Satisfied", "Glad", "Cheerful", "Sunny", "Merry", "Elated", "Jubilant"};
+    public String[] openL = { "Great", "Gay", "Joyous", "Lucky", "Fortunate", "Delighted", "Overjoyed", "Gleeful",
+            "Thankful", "Important", "Festive", "Ecstatic", "Satisfied", "Glad", "Cheerful", "Sunny", "Merry", "Elated",
+            "Jubilant" };
 
-    public String[] aliveL = {"Playful", "Courageous", "Energetic", "Liberated", "Optimistic", "Provocative", "Impulsive", "Free", "Frisky", "Animated", "Spirited", "Thrilled", "Wonderful"};
+    public String[] aliveL = { "Playful", "Courageous", "Energetic", "Liberated", "Optimistic", "Provocative",
+            "Impulsive", "Free", "Frisky", "Animated", "Spirited", "Thrilled", "Wonderful" };
 
-    public String[] goodL = {"Calm", "Peaceful", "At Ease", "Comfortable", "Pleased", "Encouraged", "Clever", "Surprised", "Content", "Quiet", "Certain", "Relaxed", "Serene", "Free and Easy", "Bright", "Blessed", "Reassured"};
+    public String[] goodL = { "Calm", "Peaceful", "At Ease", "Comfortable", "Pleased", "Encouraged", "Clever",
+            "Surprised", "Content", "Quiet", "Certain", "Relaxed", "Serene", "Free and Easy", "Bright", "Blessed",
+            "Reassured" };
 
-    public String[] loveL = {"Loving", "Considerate", "Affectionate", "Sensitive", "Tender", "Devoted", "Attracted", "Passionate", "Admiration", "Warm", "Touched", "Sympathy", "Close", "Loved", "Comforted", "Drawn Towards"};
+    public String[] loveL = { "Loving", "Considerate", "Affectionate", "Sensitive", "Tender", "Devoted", "Attracted",
+            "Passionate", "Admiration", "Warm", "Touched", "Sympathy", "Close", "Loved", "Comforted", "Drawn Towards" };
 
-    public String[] interestedL = {"Concerned", "Affected", "Fascinated", "Intrigued", "Absorbed", "Inquisitive", "Nosy", "Snoopy", "Engrossed", "Curious"};
+    public String[] interestedL = { "Concerned", "Affected", "Fascinated", "Intrigued", "Absorbed", "Inquisitive",
+            "Nosy", "Snoopy", "Engrossed", "Curious" };
 
-    public String[] positiveL = {"Eager Keen", "Earnest Intent", "Anxious Inspired", "Determined Excited", "Enthusiastic Bold", "Brave Daring", "Challenged Optimistic", "Re - Enforced", "Confident Hopeful"};
+    public String[] positiveL = { "Eager Keen", "Earnest Intent", "Anxious Inspired", "Determined Excited",
+            "Enthusiastic Bold", "Brave Daring", "Challenged Optimistic", "Re - Enforced", "Confident Hopeful" };
 
-    public String[] strongL = {"Impulsive", "Free", "Sure", "Certain", "Rebellious", "Unique", "Dynamic", "Tenacious", "Hardy", "Secure"};
+    public String[] strongL = { "Impulsive", "Free", "Sure", "Certain", "Rebellious", "Unique", "Dynamic", "Tenacious",
+            "Hardy", "Secure" };
 
-    public String[] angryL = {"Irritated", "Enraged", "Hostile", "Insulting", "Sore", "Annoyed", "Upset", "Hateful", "Unpleasant", "Offensive", "Bitter", "Aggressive", "Resentful", "Inflamed", "Provoked", "Incensed", "Infuriated", "Cross", "Working Up", "Boiling", "Fuming", "Indignant"};
+    public String[] angryL = { "Irritated", "Enraged", "Hostile", "Insulting", "Sore", "Annoyed", "Upset", "Hateful",
+            "Unpleasant", "Offensive", "Bitter", "Aggressive", "Resentful", "Inflamed", "Provoked", "Incensed",
+            "Infuriated", "Cross", "Working Up", "Boiling", "Fuming", "Indignant" };
 
-    public String[] depressedL = {"Lousy", "Disappoinnted", "Discouraged", "Ashamed", "Powerless", "Diminished", "Gulity", "Dissatisfied", "Miserable", "Detestable", "Repugnant", "Dispicable", "Disgusting", "Abominable", "Terrible", "In Despair", "Sulky", "Bad", "A Sense of Loss"};
+    public String[] depressedL = { "Lousy", "Disappoinnted", "Discouraged", "Ashamed", "Powerless", "Diminished",
+            "Gulity", "Dissatisfied", "Miserable", "Detestable", "Repugnant", "Dispicable", "Disgusting", "Abominable",
+            "Terrible", "In Despair", "Sulky", "Bad", "A Sense of Loss" };
 
-    public String[] confusedL = {"Upset", "Doubtful", "Uncertain", "Indecisive", "Perplexed", "Embarrassed", "Hesitant", "Shy", "Stupefied", "Disillusioned", "Unbelieving", "Skeptical", "Distrustful", "Misgiving", "Lost", "Unsure", "Uneasy", "Pessemistic", "Tense"};
+    public String[] confusedL = { "Upset", "Doubtful", "Uncertain", "Indecisive", "Perplexed", "Embarrassed",
+            "Hesitant", "Shy", "Stupefied", "Disillusioned", "Unbelieving", "Skeptical", "Distrustful", "Misgiving",
+            "Lost", "Unsure", "Uneasy", "Pessemistic", "Tense" };
 
-    public String[] helplessL = {"Incapable", "Alone", "Paralyzed", "Fatigued", "Useless", "Inferior", "Vulnerable", "Empty", "Forced", "Hesitant", "Dispair", "Frustrated", "Distressed", "Woeful", "Pathetic", "Tragic", "In A Stew", "Dominated"};
+    public String[] helplessL = { "Incapable", "Alone", "Paralyzed", "Fatigued", "Useless", "Inferior", "Vulnerable",
+            "Empty", "Forced", "Hesitant", "Dispair", "Frustrated", "Distressed", "Woeful", "Pathetic", "Tragic",
+            "In A Stew", "Dominated" };
 
-    public String[] indifferentL = {"Insensitive", "Dull", "Nonchalant", "Neutral", "Reserved", "Weary", "Bored", "Preoccupied", "Cold", "Disinterested", "Lifeless"};
+    public String[] indifferentL = { "Insensitive", "Dull", "Nonchalant", "Neutral", "Reserved", "Weary", "Bored",
+            "Preoccupied", "Cold", "Disinterested", "Lifeless" };
 
-    public String[] afraidL = {"Fearful", "Terrified", "Suspicious", "Anxious", "Alarmed", "Panic", "Nervous", "Scared", "Worried", "Frightened", "Timid", "Shaky", "Restless", "Doubtful", "Threatened", "Cowardly", "Quaking", "Menaced", "Wary"};
+    public String[] afraidL = { "Fearful", "Terrified", "Suspicious", "Anxious", "Alarmed", "Panic", "Nervous",
+            "Scared", "Worried", "Frightened", "Timid", "Shaky", "Restless", "Doubtful", "Threatened", "Cowardly",
+            "Quaking", "Menaced", "Wary" };
 
-    public String[] hurtL = {"Crushed", "Tormented", "Deprived", "Pained", "Tortured", "Dejected", "Rejected", "Injured", "Offended", "Afflicted", "Aching", "Victimized", "Heartbroken", "Agonized", "Appalled", "Humiliated", "Wronged", "Alienated"};
+    public String[] hurtL = { "Crushed", "Tormented", "Deprived", "Pained", "Tortured", "Dejected", "Rejected",
+            "Injured", "Offended", "Afflicted", "Aching", "Victimized", "Heartbroken", "Agonized", "Appalled",
+            "Humiliated", "Wronged", "Alienated" };
 
-    public String[] sadL = {"Tearful", "Sorrowful", "Pained", "Grief", "Anguish", "Desolate", "Desperate", "Pessimistic", "Unhappy", "Lonely", "Grieved", "Mournful", "Dismayed"};
+    public String[] sadL = { "Tearful", "Sorrowful", "Pained", "Grief", "Anguish", "Desolate", "Desperate",
+            "Pessimistic", "Unhappy", "Lonely", "Grieved", "Mournful", "Dismayed" };
 
-    public testHelper () {
+    public testHelper() {
 
     }
 }
@@ -64,9 +87,7 @@ public class testing {
 
     private static testHelper helper = new testHelper();
 
-
-
-    private static ArrayList<String> retTags (String searchBody) {
+    private static ArrayList<String> retTags(String searchBody) {
         ArrayList<String> tags = new ArrayList<String>();
 
         for (String x : helper.openL) {
@@ -162,7 +183,6 @@ public class testing {
         return tags;
     }
 
-
     // H2 SQL Statement Example
     private static void insertQuotes(String value1, String value2, String value3) throws SQLException {
         Connection connection = getDBConnection();
@@ -222,7 +242,7 @@ public class testing {
         return dbConnection;
     }
 
-    private static String refactorTagsAuthor (String curTags, ArrayList<String> addTags) {
+    private static String refactorTagsAuthor(String curTags, ArrayList<String> addTags) {
         String[] curTagsArr = curTags.split("\n");
         String newTags = "";
 
@@ -311,7 +331,7 @@ public class testing {
         }
     }
 
-    private static boolean tagsInAuthors (ArrayList<String[]> turnover, String searching) {
+    private static boolean tagsInAuthors(ArrayList<String[]> turnover, String searching) {
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
             if (x[1].toUpperCase().contains(" " + searching.toUpperCase() + " ")) {
                 return true;
@@ -320,7 +340,7 @@ public class testing {
         return false;
     }
 
-    private static boolean authorInAuthors (ArrayList<String[]> turnover, String searching) {
+    private static boolean authorInAuthors(ArrayList<String[]> turnover, String searching) {
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
             if (x[0].equalsIgnoreCase(searching)) {
                 return true;
@@ -329,7 +349,7 @@ public class testing {
         return false;
     }
 
-    private static int indexAuthorInAuthors (ArrayList<String[]> turnover, String searching) {
+    private static int indexAuthorInAuthors(ArrayList<String[]> turnover, String searching) {
         int counter = 0;
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
             if (x[0].equalsIgnoreCase(searching)) {
@@ -362,9 +382,6 @@ public class testing {
                 }
             }
         });
-
-
-
 
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -416,13 +433,17 @@ public class testing {
                         String author = line.trim().substring(seperator.length()).trim();
 
                         if (!authorInAuthors(authors, author)) {
-                            authors.add(new String[] {author, refactorTagsAuthor("", retTags(temper.trim()))});
+                            authors.add(new String[] { author, refactorTagsAuthor("", retTags(temper.trim())) });
                         } else {
-                            authors.set(indexAuthorInAuthors(authors, author), new String[] {line.trim().substring(seperator.length()).trim(), refactorTagsAuthor(authors.get(indexAuthorInAuthors(authors, author))[1] , retTags(temper.trim()))});
+                            authors.set(indexAuthorInAuthors(authors, author),
+                                    new String[] { line.trim().substring(seperator.length()).trim(),
+                                            refactorTagsAuthor(authors.get(indexAuthorInAuthors(authors, author))[1],
+                                                    retTags(temper.trim())) });
                         }
 
                         try {
-                            insertQuotes(author.replaceAll("'", "''"), temper.trim().replaceAll("'", "''"), refactorTagsAuthor("", retTags(temper.trim())));
+                            insertQuotes(author.replaceAll("'", "''"), temper.trim().replaceAll("'", "''"),
+                                    refactorTagsAuthor("", retTags(temper.trim())));
                         } catch (SQLException e) {
                             //e.getMessage();
                         }
@@ -449,15 +470,15 @@ public class testing {
         // found at http://www.finesrc.com/2018/04/05/sorting-2d-array-to-row-and-column-wise-in-java/
         // and modified for strings May 24th
         Arrays.sort(authorsNew, new Comparator<String[]>() {
-			@Override
-			public int compare(String[] o1, String[] o2) {
-                                //get the item ids which are at index 0 of the array
-				String itemIdOne = o1[0];
-				String itemIdTwo = o2[0];
-				// sort on item id
-				return itemIdOne.compareTo(itemIdTwo);
-			}
-		});
+            @Override
+            public int compare(String[] o1, String[] o2) {
+                //get the item ids which are at index 0 of the array
+                String itemIdOne = o1[0];
+                String itemIdTwo = o2[0];
+                // sort on item id
+                return itemIdOne.compareTo(itemIdTwo);
+            }
+        });
 
         ArrayList<String[]> authorInfo = new ArrayList<String[]>();
         try {
@@ -484,42 +505,43 @@ public class testing {
                         if (!authorInAuthors(authorInfo, author)) {
                             temper = temper.trim();
 
-
                             boolean continues = true;
 
-                            int count = 1;
-                            while (continues && temper.contains(" ")){
+                            //int count = 1;
+                            int location = 0;
+
+                            while (continues && temper.contains(" ")) {
                                 continues = false;
                                 //count = 0;
-                                for (int x = 0; x < temper.length(); x ++){
-                                    if (!String.valueOf(temper.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x == 73* count) {
-                                        count ++;
-                                        String tempStore = temper.substring(0,x);
-                                        int location = tempStore.lastIndexOf(" ");
+                                for (int x = 0; x < temper.length(); x++) {
+                                    if (!String.valueOf(temper.charAt(x)).matches("\n") && x - location == 73
+                                            && x > 0) {
+                                        //count ++;
+                                        String tempStore = temper.substring(0, x);
+                                        location = tempStore.lastIndexOf(" ");
 
                                         if (location == -1) {
                                             continues = false;
                                             //print(tempStore + "\n");
-                                            continue;
+                                            break;
                                         }
 
-
-                                        temper = temper.substring(0, location) + "\n" + temper.substring(location+1);
+                                        temper = temper.substring(0, location) + "\n"
+                                                + temper.substring(location + 1);
                                         continues = true;
                                         break;
+                                    } else if (String.valueOf(temper.charAt(x)).matches("\n")) {
+                                        location = x;
                                     }
-
 
                                 }
 
                             }
 
+                            temper = temper.trim().replaceAll("'", "''");
 
-                            temper = temper.trim();
-
-                            authorInfo.add(new String[] {author, temper.trim()});
+                            authorInfo.add(new String[] { author, temper.trim() });
                         }
-
 
                         temper = "";
 

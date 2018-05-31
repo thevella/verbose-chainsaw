@@ -28,10 +28,7 @@ Alan Jay Perlis (April 1, 1922 – February 7, 1990) was an American computer sc
 --Alan J. Perlis
 
 
-Alan Curtis Kay (born May 17, 1940) is an American computer scientist. He has been elected a Fellow of the
-American Academy of Arts and Sciences, the National Academy of Engineering, and the Royal Society of Arts.
-He is best known for his pioneering work on object-oriented programming and windowing graphical user
-interface design.
+Alan Curtis Kay (born May 17, 1940) is an American computer scientist. He has been elected a Fellow of the American Academy of Arts and Sciences, the National Academy of Engineering, and the Royal Society of Arts. He is best known for his pioneering work on object-oriented programming and windowing graphical user interface design.
 --Alan Kay
 
 Unknown
@@ -73,6 +70,7 @@ Angela Anaïs Juana Antolina Rosa Edelmira Nin y Culmell (February 21, 1903 – 
 
 Anatole France born François-Anatole Thibault, (16 April 1844 – 12 October 1924) was a French poet, journalist, and successful novelist with several best-sellers. Ironic and skeptical, he was considered in his day the ideal French man of letters.
 --Anatole France
+
 Andreas Zwinkau is a problem solving thinker. He helps to bring automated driving into mass production as a software architect at Bosch, the world's largest supplier of automotive components. With a beautiful wife and two jolly kids, he lives in Karlsruhe, Germany.
 --Andreas Zwinkau
 
@@ -125,6 +123,7 @@ Aristotle was an ancient Greek philosopher and scientist born in the city of Sta
 
 Arnold Alois Schwarzenegger ( born July 30, 1947) is an Austrian-American actor, filmmaker, businessman, investor, author, philanthropist, activist, politician, and former professional bodybuilder. He served two terms as the 38th Governor of California from 2003 to 2011.
 --Arnold Schwarzenegger
+
 Sir Arthur Charles Clarke (16 December 1917 – 19 March 2008) was a British science fiction writer, science writer and futurist, inventor, undersea explorer, and television series host.
 --Arthur C. Clarke
 
@@ -162,10 +161,6 @@ My mission is to help you truly understand new concepts. Let’s move past dry f
 
 William Jay "Bill" Bowerman (February 19, 1911 – December 24, 1999) was an American track and field coach and co-founder of Nike, Inc. Over his career, he trained 31 Olympic athletes, 51 All-Americans, 12 American record-holders, 22 NCAA champions and 16 sub-4 minute milers.
 --Bill Bowerman
-
-
-
-
 
 
 William Jefferson Clinton (born August 19, 1946) is an American politician who served as the 42nd President of the United States from 1993 to 2001. Prior to the presidency, he was the Governor of Arkansas from 1979 to 1981, and again from 1983 to 1992. A member of the Democratic Party, Clinton was ideologically a New Democrat and many of his policies reflected a centrist "Third Way" political philosophy.

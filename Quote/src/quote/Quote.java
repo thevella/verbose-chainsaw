@@ -115,6 +115,7 @@ public class Quote {
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
+            resetNumbering("QUOTES");
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
@@ -399,9 +400,9 @@ public class Quote {
             stmt.close();
             connection.commit();
         } catch (SQLException e) {
-            System.out.println("Exception Message " + e.getLocalizedMessage());
+            //System.out.println("Exception Message " + e.getLocalizedMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } finally {
             connection.close();
         }

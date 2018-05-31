@@ -794,28 +794,29 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             boolean continues = true;
 
-            int count = 1;
+            int location = 0;
             while (continues && quoteTemp.contains(" ")){
                 continues = false;
                 //count = 0;
                 for (int x = 0; x < quoteTemp.length(); x ++){
-                    if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
-                        count = x;
+                    if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
+
                         String test = quoteTemp.substring(0,x);
-                        int location = test.lastIndexOf(" ");
+                        location = test.lastIndexOf(" ");
 
                         if (location == -1) {
                             continues = false;
                             //print(test + "\n");
-                            continue;
+                            break;
                         }
 
 
                         quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location+1);
                         continues = true;
                         break;
+                    } else if (String.valueOf(quoteTemp.charAt(x)).matches("\n")) {
+                        location = x;
                     }
-
 
                 }
 
@@ -824,26 +825,28 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             continues = true;
 
-            count = 1;
+            location = 0;
             while (continues && authorTemp.contains(" ")){
                 continues = false;
                 //count = 0;
                 for (int x = 0; x < authorTemp.length(); x ++){
-                    if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
-                        count = x;
+                    if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
+
                         String test = authorTemp.substring(0,x);
-                        int location = test.lastIndexOf(" ");
+                        location = test.lastIndexOf(" ");
 
                         if (location == -1) {
                             continues = false;
                             //print(test + "\n");
-                            continue;
+                            break;
                         }
 
 
                         authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location+1);
                         continues = true;
                         break;
+                    } else if (String.valueOf(authorTemp.charAt(x)).matches("\n")) {
+                        location = x;
                     }
 
 
@@ -873,27 +876,29 @@ public class UserInterfaec extends javax.swing.JFrame {
 
                 continues = true;
 
-                count = 1;
-                
+                location = 0;
+
                 while (continues && path.contains(" ")){
                     continues = false;
                     //count = 0;
                     for (int x = 0; x < path.length(); x ++){
-                        if (!String.valueOf(path.charAt(x)).matches("\n") && (x % 73 == 0) && x != 0 && x > count) {
-                            count =x;
+                        if (!String.valueOf(path.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
+
                             String test = path.substring(0,x);
-                            int location = test.lastIndexOf(" ");
+                            location = test.lastIndexOf(" ");
 
                             if (location == -1) {
                                 continues = false;
                                 //print(test + "\n");
-                                continue;
+                                break;
                             }
 
 
                             path = path.substring(0, location) + "\n" + path.substring(location+1);
                             continues = true;
                             break;
+                        } else if (String.valueOf(path.charAt(x)).matches("\n")) {
+                            location = x;
                         }
 
 
