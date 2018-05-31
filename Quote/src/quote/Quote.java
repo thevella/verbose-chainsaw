@@ -7,6 +7,7 @@ package quote;
 
 import org.h2.tools.DeleteDbFiles;
 
+//Importing Neccessary Utilities for the program 
 import java.io.*;
 import java.lang.Math;
 import java.net.URL;
@@ -21,7 +22,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 class QuotesDatabase {
-
+    //Initializing Quote Array in the form of aa array list
     private ArrayList<Quotes> quotesArr = new ArrayList<Quotes>();
 
     public QuotesDatabase() {
@@ -72,7 +73,7 @@ class QuotesDatabase {
 
     }
 }
-
+// Creating a class for variables author, quote, tags
 class Quotes {
     private String author;
     private String quote;
@@ -122,7 +123,7 @@ public class Quote {
             if (isValid(value1) || isValid(value2) || isValid(value3)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
-
+            
             stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
                     + "')");
 
@@ -143,7 +144,7 @@ public class Quote {
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
-
+            //Telling that the string causes an error if inputted
             if (isValid(value1) || isValid(value2) || isValid(value3)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
@@ -161,7 +162,7 @@ public class Quote {
             connection.close();
         }
     }
-
+    //Public made for the removal of authors 
     public void removeAuthor(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -182,7 +183,7 @@ public class Quote {
             if (isValid(deleteTerm)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
-
+            //Telling where the author is to be deleted 
             stmt.execute("DELETE FROM AUTHORS WHERE " + type + "='" + deleteTerm + "'");
 
             stmt.close();
@@ -195,7 +196,7 @@ public class Quote {
             connection.close();
         }
     }
-
+    //Public for the removal of quotes 
     public void removeQuote(String deleteTerm, int typeInt) throws SQLException {
         Connection connection = getDBConnection();
         Statement stmt = null;
@@ -213,11 +214,11 @@ public class Quote {
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
-
+            //Tells that the string causes an error when inputted 
             if (isValid(deleteTerm)) {
                 throw new NegNumber("The string contains a valid SQL damaging statement");
             }
-
+            //Telling where the quotes are to be deleted
             stmt.execute("DELETE FROM QUOTES WHERE " + type + "='" + deleteTerm + "'");
 
             stmt.close();
@@ -255,10 +256,10 @@ public class Quote {
         return rs.getInt(1);
 
     }
-
+    //Public for the identification of letters in user inputted strings
     public boolean isValid(String term) {
         String[] splitTerms = term.split(";");
-
+        //For loop checking each letter and special character
         for (String x : splitTerms) {
             if (x.matches(
                     "^\\s*[[D|d][R|r][O|o][P|p]|[A|a][L|l][T|t][E|e][R|r]|[T|t][R|r][U|u][N|n][C|c][A|a][T|t][E|e]]\\s+?[T|t][A|a][B|b][L|l][E|e]\\s+?[[Q|q][U|u][O|o][T|t][E|e][S|s]|[A|a][U|u][T|t][H|h][O|o][R|r][S|s]]")) {
