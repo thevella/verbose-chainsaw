@@ -23,6 +23,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
+import java.awt.datatransfer.*;
+import java.awt.Toolkit;
 
 /**
  *
@@ -60,6 +62,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         Author_Info_Search = new javax.swing.JMenuItem();
         QuotePopOut = new javax.swing.JPopupMenu();
         Remove = new javax.swing.JMenuItem();
+        CopyToClipBoard = new javax.swing.JMenuItem();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -91,38 +94,58 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
-        jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
-        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
-        jPanel5Layout.setVerticalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
-        jPanel7Layout.setVerticalGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
-        jPanel9Layout.setVerticalGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -158,8 +181,15 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
         QuotePopOut.add(Remove);
 
-        jComboBox1.setModel(
-                new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CopyToClipBoard.setText("Copy to Clipboard");
+        CopyToClipBoard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CopyToClipBoardActionPerformed(evt);
+            }
+        });
+        QuotePopOut.add(CopyToClipBoard);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(744, 485));
@@ -260,14 +290,8 @@ public class UserInterfaec extends javax.swing.JFrame {
         AuthorDisplay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AuthorDisplay.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = new String[1];
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public String getElementAt(int i) {
-                return strings[i];
-            }
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         AuthorDisplay.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -289,15 +313,9 @@ public class UserInterfaec extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, gridBagConstraints);
 
         Output1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "" };
-
-            public int getSize() {
-                return strings.length;
-            }
-
-            public String getElementAt(int i) {
-                return strings[i];
-            }
+            String[] strings = {""};
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         Output1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Output1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -430,19 +448,21 @@ public class UserInterfaec extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText(
-                "This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of one of the three displays.\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\nof: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\nConfused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\tsearching the tags.");
+        jTextArea1.setText("This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of one of the three displays.\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\nof: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\nConfused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\tsearching the tags.");
         jScrollPane4.setViewportView(jTextArea1);
 
         jTabbedPane1.addTab("Help", jScrollPane4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE));
-        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-                jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 453,
-                Short.MAX_VALUE));
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 744, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+        );
 
         setSize(new java.awt.Dimension(760, 492));
         setLocationRelativeTo(null);
@@ -970,6 +990,21 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Author_Info_SearchActionPerformed
 
+    private void CopyToClipBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CopyToClipBoardActionPerformed
+        //so the Quote class can be accessed
+        Quote aa = new Quote();
+        //getting the selected quote that the user has click on and replacing all of the HTML so that is is usable in the search.
+        String te = Output1.getSelectedValue().replaceAll("<html>", "");
+        //more striping of the HTML "<br/>" is the html equivalent of the "\n".
+        te = te.replaceAll("<br/>", "\n");
+        
+        // Uses the method from the toolkit to create a new clipboard
+        // object and set the contents as a string selection object
+        // that contains the content of the sanatized input from the 
+        // jPopupMenu, making your clipboard hold that value
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(te.trim()), null);
+    }//GEN-LAST:event_CopyToClipBoardActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1017,6 +1052,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     private javax.swing.JMenuItem Author_Remove;
     private javax.swing.JRadioButton Author_Search;
     private javax.swing.JButton Button_Add;
+    private javax.swing.JMenuItem CopyToClipBoard;
     private javax.swing.JList<String> Output1;
     private javax.swing.JPopupMenu PopUp;
     private javax.swing.JPopupMenu QuotePopOut;
