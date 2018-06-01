@@ -380,7 +380,7 @@ public class Quote {
     // An example is that in this 'bill' would return
     // 'billy', 'arbilly' and any other configuration with
     // the consecutive letters 'bill' in their order.
-    public ResultSet searchRough(int tables, String searchTerm, int type, Connection Connection, Statement stmt)
+    public ResultSet searchRough(int tables, String searchTerm, int type, Connection connection, Statement stmt)
             throws SQLException {
 
         ResultSet rs = null;
