@@ -346,7 +346,8 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.insets = new java.awt.Insets(15, 316, 0, 0);
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 0, 62);
         jPanel3.add(jLabel1, gridBagConstraints);
 
         Button_Add.setText("Add");
@@ -424,23 +425,24 @@ public class UserInterfaec extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(14, 319, 0, 0);
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 62);
         jPanel3.add(jLabel2, gridBagConstraints);
 
         jLabel3.setText("Tags");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.insets = new java.awt.Insets(11, 326, 0, 0);
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(11, 0, 0, 62);
         jPanel3.add(jLabel3, gridBagConstraints);
 
         jLabel4.setText("Format Tags like tag1,tag2,tag3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(2, 279, 11, 0);
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.insets = new java.awt.Insets(2, 0, 11, 62);
         jPanel3.add(jLabel4, gridBagConstraints);
 
         jTabbedPane1.addTab("Add", jPanel3);
@@ -448,7 +450,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of one of the three displays.\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\nof: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\nConfused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\tsearching the tags.");
+        jTextArea1.setText("This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n\t- After a search an author can be first left clicked then right clicked to either\n\t\t1. Show only quotes by that author\n\t\t2. Remove that author entirely, including all quotes by that author\n\t\t3. Show biographical info for that author\n\n\t- Likewise the quotes can be first left clicked then right clicked to\n\t\t1. Remove the quote\n\t\t2. Copy the contents of that quote to your clipboard for pasting\n\t\t     into another document.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of all of the three displays.\n\t- Once the Quote is added, if the author does not already exist the user will\n\t    be prompted to add the info for the author\n\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\n     of: \n          Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\n             Confused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\t   searching the tags. They list exactly their name, if the tag is sad then it was\n\t   thought to be sad.");
         jScrollPane4.setViewportView(jTextArea1);
 
         jTabbedPane1.addTab("Help", jScrollPane4);

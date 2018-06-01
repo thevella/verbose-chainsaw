@@ -392,7 +392,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="15" insetsLeft="316" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                  <GridBagConstraints gridX="0" gridY="0" gridWidth="5" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="15" insetsLeft="0" insetsBottom="0" insetsRight="62" anchor="10" weightX="0.0" weightY="0.0"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -481,7 +481,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridX="0" gridY="2" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="14" insetsLeft="319" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                  <GridBagConstraints gridX="0" gridY="2" gridWidth="5" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="14" insetsLeft="0" insetsBottom="0" insetsRight="62" anchor="10" weightX="0.0" weightY="0.0"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -491,7 +491,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridX="0" gridY="5" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="11" insetsLeft="326" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                  <GridBagConstraints gridX="0" gridY="5" gridWidth="5" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="11" insetsLeft="0" insetsBottom="0" insetsRight="62" anchor="10" weightX="0.0" weightY="0.0"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -501,7 +501,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                  <GridBagConstraints gridX="0" gridY="7" gridWidth="2" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="2" insetsLeft="279" insetsBottom="11" insetsRight="0" anchor="18" weightX="0.0" weightY="0.0"/>
+                  <GridBagConstraints gridX="0" gridY="7" gridWidth="5" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="2" insetsLeft="0" insetsBottom="11" insetsRight="62" anchor="10" weightX="0.0" weightY="0.0"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -526,7 +526,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="This is the Quote&apos;s Database Program. This program is designed to collect quotes from&#xa;various author&apos;s and present them to the user with a description of the author as well. &#xa;The program contains a few useful buttons and areas that are helpful to know:&#xa;&#xa;1. The Search Tab : Used to search for specific authors, quotes, or tags.&#xa;&#x9;- There are three screens on the Search Tab:&#xa;&#x9;&#x9;1. The Author Name Display&#xa;&#x9;&#x9;2. The Author Quote Display&#xa;&#x9;&#x9;3. The Search Box&#xa;&#x9;- There is also three selections with function for searching: Author, Tag, or Quote.&#xa;&#xa;2. The Add Tab: Used to add new authors, quotes, and tags to the program.&#xa;        - There are three displays in the Add tab:&#xa;&#x9;&#x9;1. The Author Input Display&#xa;&#x9;&#x9;2. The Quote Input Display&#xa;&#x9;&#x9;3. The Tag Input Display&#xa;&#x9;- There is a add button which is used after the input of one of the three displays.&#xa;3. The Info Tab: Used to remind the user of the functionality of the program.&#xa;&#xa;4. Tagging Explanation: There are specific tags that identify each quotation, which consist&#xa;of: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,&#xa;Confused, Helpless, Indifferent, Afraid, Hurt, Sad.&#xa;&#xa;&#x9;- These tags are used to identify the quotes, and are your key words for &#xa;&#x9;searching the tags."/>
+                <Property name="text" type="java.lang.String" value="This is the Quote&apos;s Database Program. This program is designed to collect quotes from&#xa;various author&apos;s and present them to the user with a description of the author as well. &#xa;The program contains a few useful buttons and areas that are helpful to know:&#xa;&#xa;1. The Search Tab : Used to search for specific authors, quotes, or tags.&#xa;&#x9;- There are three screens on the Search Tab:&#xa;&#x9;&#x9;1. The Author Name Display&#xa;&#x9;&#x9;2. The Author Quote Display&#xa;&#x9;&#x9;3. The Search Box&#xa;&#xa;&#x9;- There is also three selections with function for searching: Author, Tag, or Quote.&#xa;&#xa;&#x9;- After a search an author can be first left clicked then right clicked to either&#xa;&#x9;&#x9;1. Show only quotes by that author&#xa;&#x9;&#x9;2. Remove that author entirely, including all quotes by that author&#xa;&#x9;&#x9;3. Show biographical info for that author&#xa;&#xa;&#x9;- Likewise the quotes can be first left clicked then right clicked to&#xa;&#x9;&#x9;1. Remove the quote&#xa;&#x9;&#x9;2. Copy the contents of that quote to your clipboard for pasting&#xa;&#x9;&#x9;     into another document.&#xa;&#xa;2. The Add Tab: Used to add new authors, quotes, and tags to the program.&#xa;        - There are three displays in the Add tab:&#xa;&#x9;&#x9;1. The Author Input Display&#xa;&#x9;&#x9;2. The Quote Input Display&#xa;&#x9;&#x9;3. The Tag Input Display&#xa;&#x9;- There is a add button which is used after the input of all of the three displays.&#xa;&#x9;- Once the Quote is added, if the author does not already exist the user will&#xa;&#x9;    be prompted to add the info for the author&#xa;&#xa;3. The Info Tab: Used to remind the user of the functionality of the program.&#xa;&#xa;4. Tagging Explanation: There are specific tags that identify each quotation, which consist&#xa;     of: &#xa;          Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,&#xa;             Confused, Helpless, Indifferent, Afraid, Hurt, Sad.&#xa;&#xa;&#x9;- These tags are used to identify the quotes, and are your key words for &#xa;&#x9;   searching the tags. They list exactly their name, if the tag is sad then it was&#xa;&#x9;   thought to be sad."/>
               </Properties>
             </Component>
           </SubComponents>
