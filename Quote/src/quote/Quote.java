@@ -376,7 +376,7 @@ public class Quote {
         return rs;
     }
 
-    // Same as return exact except with more rough
+    // Same as returnExact except with more rough
     // An example is that in this 'bill' would return
     // 'billy', 'arbilly' and any other configuration with
     // the consecutive letters 'bill' in their order.
