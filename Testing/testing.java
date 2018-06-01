@@ -16,6 +16,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+// All the tags that are currently available
+// had to be in helper class for whatever reason
 class testHelper {
     public String[] openL = { "Great", "Gay", "Joyous", "Lucky", "Fortunate", "Delighted", "Overjoyed", "Gleeful",
             "Thankful", "Important", "Festive", "Ecstatic", "Satisfied", "Glad", "Cheerful", "Sunny", "Merry", "Elated",
@@ -75,21 +77,29 @@ class testHelper {
     }
 }
 
+
 public class testing {
 
     // Variables and methods for sqlDatabase
     // TODO: Needs to be customized for this program
 
+    // initiate driver, location of db, and user credetials
     private static final String DB_DRIVER = "org.h2.Driver";
     private static final String DB_CONNECTION = "jdbc:h2:./QuotesDatabase";
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
 
+    // create helper that can be used to access tags
     private static testHelper helper = new testHelper();
 
+    // Returns all the tags that exist in the body text provided
+    // inside and arraylist
     private static ArrayList<String> retTags(String searchBody) {
+        // arraylist to put tags into
         ArrayList<String> tags = new ArrayList<String>();
 
+        // Checks each tag array for if it
+        // is contained in the body text
         for (String x : helper.openL) {
             if (searchBody.toUpperCase().contains(x.toUpperCase())) {
                 tags.add("Open");
@@ -180,20 +190,33 @@ public class testing {
             }
         }
 
+        // returns the tags from the body text
         return tags;
     }
 
-    // H2 SQL Statement Example
-    private static void insertQuotes(String value1, String value2, String value3) throws SQLException {
+
+    // SQL method for inserting a quote into the quote table
+    // takes the | Author | Body of quote | tags of quote |
+    // all as strings, returns nothing.
+    public static void insertQuotes(String value1, String value2, String value3) throws SQLException {
+        // Grabs connection and creates statement as null
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
+            // Resets the id numbering in the table
+            // for easier manual editing in the H2.jar
+            // program
+            resetNumbering("QUOTES");
+
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
+            // Actual statement that creates the quote in the document
             stmt.execute("INSERT INTO QUOTES(AUTHOR, BODY, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
                     + "')");
 
+            // closes the statement and the database connection after
+            // successful completion
             stmt.close();
             connection.commit();
         } catch (SQLException e) {
@@ -205,16 +228,24 @@ public class testing {
         }
     }
 
-    private static void insertAuthor(String value1, String value2, String value3) throws SQLException {
+    // SQL method for inserting an author into the author table
+    // takes the | Author | Info | tags of author |
+    // all as strings, returns nothing.
+    public static void insertAuthor(String value1, String value2, String value3) throws SQLException {
+        // Grabs connection and creates statement as null
         Connection connection = getDBConnection();
         Statement stmt = null;
+
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
 
+            // Actual statement that creates the author in the document
             stmt.execute("INSERT INTO AUTHORS(AUTHOR, INFO, TAGS) VALUES('" + value1 + "', '" + value2 + "', '" + value3
                     + "')");
 
+            // closes the statement and the database connection after
+            // successful completion
             stmt.close();
             connection.commit();
         } catch (SQLException e) {
@@ -226,6 +257,8 @@ public class testing {
         }
     }
 
+    // Method provided by h2 for getting the
+    // databse connection
     private static Connection getDBConnection() {
         Connection dbConnection = null;
         try {
@@ -242,12 +275,23 @@ public class testing {
         return dbConnection;
     }
 
+    // Refactors author tags by taking the current tags
+    // of the author, and the tags to be added
+    // and sorting as well as adding them
+    // together
     private static String refactorTagsAuthor(String curTags, ArrayList<String> addTags) {
+        // array to temperarily store the current tags
+        // split by their \n
         String[] curTagsArr = curTags.split("\n");
+
+        // new tags variable so that it can be returne
         String newTags = "";
 
+        // the list of newTags that has to be
+        // put into the newTags string
         ArrayList<String> newTagsList = new ArrayList<String>();
 
+        // Strips the beginning and ending whitespace out of it
         for (String x : curTagsArr) {
             if (!x.equals("\n")) {
                 newTagsList.add(x.trim());
@@ -255,19 +299,26 @@ public class testing {
 
         }
 
+        // if the tagsList doesnt already contain that tag
+        // add it
         for (String x : addTags.toArray(new String[addTags.size()])) {
             if (!newTagsList.contains(x)) {
                 newTagsList.add(x);
             }
         }
 
+        // turns the newTagsList into an array to be sorted
         String[] newTagsArr = newTagsList.toArray(new String[newTagsList.size()]);
         Arrays.sort(newTagsArr);
 
+        // adds all the elements of the array to the output
+        // string
         for (String x : newTagsArr) {
             newTags += " " + x + " \n";
         }
 
+        // outputs the newTags string after
+        // trimming whitespace
         return " " + newTags.trim() + " ";
     }
 
@@ -331,16 +382,23 @@ public class testing {
         }
     }
 
+    // check to see if a tag exsists in an author
+    // UNIMPLEMENTED
     private static boolean tagsInAuthors(ArrayList<String[]> turnover, String searching) {
+        // For each String array in the arraylist, check if the
+        // Second value (index 1) is the tag being searhced for
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
-            if (x[1].toUpperCase().contains(" " + searching.toUpperCase() + " ")) {
+            if (x[1].toUpperCase().contains(" " + searching.toUpperCase().strip() + " ")) {
                 return true;
             }
         }
         return false;
     }
 
+    // Check if author exists in the author array
     private static boolean authorInAuthors(ArrayList<String[]> turnover, String searching) {
+        // For each String array in the arraylist, check if the
+        // First value (index 0) is the author being searhced for
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
             if (x[0].equalsIgnoreCase(searching)) {
                 return true;
@@ -349,8 +407,12 @@ public class testing {
         return false;
     }
 
+    // Return the index of an author in the arraylist
     private static int indexAuthorInAuthors(ArrayList<String[]> turnover, String searching) {
         int counter = 0;
+        // For each String array in the arraylist, check if the
+        // First value (index 0) is the author being searhced for
+        // if it is return the count value
         for (String[] x : turnover.toArray(new String[turnover.size()][2])) {
             if (x[0].equalsIgnoreCase(searching)) {
                 return counter;
@@ -383,6 +445,8 @@ public class testing {
             }
         });
 
+
+        // reset the numbering of the database
         Connection connection = getDBConnection();
         Statement stmt = null;
         try {
@@ -406,9 +470,6 @@ public class testing {
 
         ArrayList<String[]> authors = new ArrayList<String[]>();
 
-        boolean found = false;
-
-        String currentTags = "";
 
         String seperator = "--";
 
@@ -423,6 +484,7 @@ public class testing {
 
             try {
 
+                // read from the file
                 while ((line = fileOpen.readLine()) != null) {
 
                     // add the line to the last element
@@ -430,8 +492,14 @@ public class testing {
                     // if the line containes a "--",
                     // add a new arraylist element
                     if (line.contains(seperator)) {
+
+                        // Get the author from the line with the seperator
                         String author = line.trim().substring(seperator.length()).trim();
 
+                        // If the author doesn't exist in author
+                        // Then add a new entry.
+                        // Otherwise set the author entry as a new
+                        // array with updated entries
                         if (!authorInAuthors(authors, author)) {
                             authors.add(new String[] { author, refactorTagsAuthor("", retTags(temper.trim())) });
                         } else {
@@ -442,6 +510,7 @@ public class testing {
                         }
 
                         try {
+                            // Insert the quote into the database
                             insertQuotes(author.replaceAll("'", "''"), temper.trim().replaceAll("'", "''"),
                                     refactorTagsAuthor("", retTags(temper.trim())));
                         } catch (SQLException e) {
@@ -450,9 +519,7 @@ public class testing {
 
                         temper = "";
 
-                    } else /*if (!line.matches("\n"))*/ {
-                        //print (line);
-                        //TimeUnit.SECONDS.sleep(5);
+                    } else {
                         temper += line + "\n";
                     }
 
@@ -465,10 +532,12 @@ public class testing {
             System.out.print(e.getMessage());
         }
 
+        // String array that can be sorted from authorsArray
         String[][] authorsNew = authors.toArray(new String[authors.size()][2]);
 
         // found at http://www.finesrc.com/2018/04/05/sorting-2d-array-to-row-and-column-wise-in-java/
         // and modified for strings May 24th
+        // Sorts the array alphabetically
         Arrays.sort(authorsNew, new Comparator<String[]>() {
             @Override
             public int compare(String[] o1, String[] o2) {
@@ -480,6 +549,7 @@ public class testing {
             }
         });
 
+        // Grabs the author info
         ArrayList<String[]> authorInfo = new ArrayList<String[]>();
         try {
             // quotes file from: https://gist.github.com/erickedji/68802
@@ -510,6 +580,10 @@ public class testing {
                             //int count = 1;
                             int location = 0;
 
+                            // Wraps the info at 73 characters to nearest space
+                            // This is done by taking the last wrap location and
+                            // subtracting it from x, if that equals 73 then find
+                            // the last nearest space and change it to a \n
                             while (continues && temper.contains(" ")) {
                                 continues = false;
                                 //count = 0;
@@ -520,6 +594,8 @@ public class testing {
                                         String tempStore = temper.substring(0, x);
                                         location = tempStore.lastIndexOf(" ");
 
+                                        // If location not found it doesnt conatain
+                                        // a space, exit this iteration
                                         if (location == -1) {
                                             continues = false;
                                             //print(tempStore + "\n");
@@ -545,9 +621,7 @@ public class testing {
 
                         temper = "";
 
-                    } else /*if (!line.matches("\n"))*/ {
-                        //print (line);
-                        //TimeUnit.SECONDS.sleep(5);
+                    } else {
                         temper += line + "\n";
                     }
 
@@ -560,7 +634,9 @@ public class testing {
             System.out.print(e.getMessage());
         }
 
-        //Arrays.sort(authorsNew);
+        // for every String array, add it to the author database
+        // Along with its info, single quotes are replaced with
+        // double quotes to escape them for sql
         for (String[] x : authorsNew) {
             try {
                 String info = "";
