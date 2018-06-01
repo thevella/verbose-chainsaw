@@ -461,7 +461,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 //this is for when the user clicks on the serach author from the menu .
         String to = AuthorDisplay.getSelectedValue();
         //getting teh author that the user is whiching for them to search by
-       //setting the search panel equal to what ever the user click on 
+        //setting the search panel equal to what ever the user click on 
         SearchTerm.setText(to);
         //click the search button and therefore seraching for the author
         SearchButton.doClick();
@@ -473,11 +473,11 @@ public class UserInterfaec extends javax.swing.JFrame {
         Quote aa = new Quote();
         //getting the selected quote that the user has click on and replacing all of the HTML so that is is usable in the search.
         String to = Output1.getSelectedValue().replaceAll("<html>", "");
-       //more striping of the HTML "<br/>" is the html equivalent of the "\n".
+        //more striping of the HTML "<br/>" is the html equivalent of the "\n".
         String te = to.replaceAll("<br/>", "\n");
         //take everything after the quote off(triming the author.)
         String ta = te.substring(0, te.indexOf("--")).trim();
-        
+
         //System.out.println(ta);
         //calling the remove quote method from the quote class.giving it the quote and the type of thing to remove 
         try {
@@ -496,13 +496,13 @@ public class UserInterfaec extends javax.swing.JFrame {
         if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
             //calling the quotepopout menu and also telling it where to go.
             QuotePopOut.show(evt.getComponent(), evt.getX(), evt.getY());
-           
+
 // System.out.println("bamao");
         }
     }//GEN-LAST:event_Output1MouseClicked
 
     private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
-      //detecing if the right click has been clickd and if it is it will call the PopUp menu and it will display all of its options
+        //detecing if the right click has been clickd and if it is it will call the PopUp menu and it will display all of its options
         if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
             //calling the popup menu with all of the options inside the popup menu.Also getting the location of the mouse click inside the Jlist and displaying the menu there
             PopUp.show(evt.getComponent(), evt.getX(), evt.getY());
@@ -535,7 +535,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                 stmt = connec.createStatement();
                 //settign result set equal to the search results by calling the searchrough method and telling it to search in the Authors table for the entred author, and telling it search for the authors name by passing it the value of two
                 resultSet = aa.searchRough(2, Term, 2, connec, stmt);
-              //catching exceptions
+                //catching exceptions
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
@@ -583,12 +583,13 @@ public class UserInterfaec extends javax.swing.JFrame {
             }
             //the 2nd part of the else if statment that will run if the user has decided to search for only quotes.
         } else if (Quote_Search.isSelected() && !Tags_Search.isSelected()) {
-           //making the author display invisibile.Doesnt have a use at this poiint.
+            //making the author display invisibile.Doesnt have a use at this poiint.
             AuthorDisplay.setVisible(false);
             todec = 2;
-            //getting the SearchTerm and storing it to the string called Term.
+            //getting the SearchTerm from the search box and storing it to the string called Term.
             String Term = SearchTerm.getText();
 
+            //same as in if (Author_Search.isSelected() && !Tags_Search.isSelected())
             ResultSet resultSet = null;
             String test = "";
             Connection connec = aa.getDBConnection();
@@ -596,31 +597,36 @@ public class UserInterfaec extends javax.swing.JFrame {
             Statement stmt = null;
 
             try {
+                //calling method to get stmt value for when the method is called
                 stmt = connec.createStatement();
+                //passing the values that was taken from user and sending it to the search rough method so that is returhs the quote search results
                 resultSet = aa.searchRough(3, Term, 3, connec, stmt);
-
+                //catching any exceptionsg
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-            } //finally {
-            //connec.close();
-            //}
+            }
+            //intilizing array list to store the quotes values 
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             try {
+                //if any results turn up or else it will send out a measage saying no results.
                 if (resultSet.next()) {
                     try {
 
                         do {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n\n";
+                            //adding the results to the array list while formating it for the JList
                             QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            //converting the array list to an array so that it can be passed to the JList
                             String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
                             Output1.setListData(quote1);
                         } while (resultSet.next());
+                        //cathing any excceptions
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-
+                    //if no results are found it will send ro results.
                 } else {
                     String[] er = {"No Results Found"};
                     Output1.setListData(er);
@@ -635,7 +641,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             AuthorDisplay.setVisible(false);
             todec = 2;
             String Term = SearchTerm.getText();
-
+            //Same as in if (Author_Search.isSelected() && !Tags_Search.isSelected())
             ResultSet resultSet = null;
             String test = "";
             Connection connec = aa.getDBConnection();
@@ -643,31 +649,38 @@ public class UserInterfaec extends javax.swing.JFrame {
             Statement stmt = null;
 
             try {
+                //if (Author_Search.isSelected() && !Tags_Search.isSelected())
                 stmt = connec.createStatement();
+                //passing the tag to search quote by to the search rough method tags sections
                 resultSet = aa.searchRough(3, Term, 4, connec, stmt);
-
+                //cathching exception
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
             //connec.close();
             //}
+            //making arraylist to store the quotes that the tags search yields
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             try {
+                //if there are any results else it will display no results found.
                 if (resultSet.next()) {
                     try {
 
                         do {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n\n";
+                            //formating the output to the JLlist and sending the results to an arraylist
                             QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            //converting it to an array so that it can be sent to a JList
                             String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
+                           //sending the results to the Jlist output..
                             Output1.setListData(quote1);
                         } while (resultSet.next());
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-
+                    //if there are no results found.
                 } else {
                     String[] er = {"No Results Found"};
                     Output1.setListData(er);
@@ -675,14 +688,16 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
-
+            //if the user is searching by author for tag
         } else if (Author_Search.isSelected() && Tags_Search.isSelected()) {
-            System.out.println("Author And Tags Are Selected");
+            //making the author Jlist visibile
             AuthorDisplay.setVisible(true);
 
             todec = 1;
+            //setting the users input from the search box equal to a string so that it can be passed to the search method for tags
             String Term = SearchTerm.getText();
 
+            //intilizaing resultssets and connection while calling the get conncetion methods
             ResultSet resultSet = null;
             String test = "";
             Connection connec = aa.getDBConnection();
@@ -690,30 +705,34 @@ public class UserInterfaec extends javax.swing.JFrame {
             Statement stmt = null;
 
             try {
+                //calling the statment funciton to assign its value to the STMT
                 stmt = connec.createStatement();
+                //Calling the serach method and storing what ever it returns to the resultset variable which is ready to be converted to a string 
                 resultSet = aa.searchRough(2, Term, 4, connec, stmt);
-
+                //catching any errors
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
-            } //finally {
-            //connec.close();
-            //}
+            }
+            //making array list to store the quotes and the authors
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
             try {
+                //if there is any result it will display or else the else statment will run
                 if (resultSet.next()) {
                     try {
                         do {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n" + "\n";
+                            //formating what we send to the arraylist for the actual quote Jlist
                             QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-
+                            //sending the info for the author JList to a another arraylist 
                             ToList.add(resultSet.getString(2));
 
+                            //converting the ArrayList to a normal array so that it can be sent to the Jlist
                             String[] Quote = QuoteList.toArray(new String[QuoteList.size()]);
                             String[] out1 = ToList.toArray(new String[ToList.size()]);
-
+                            //to store and sort rs.
                             Set<String> out = new LinkedHashSet<String>(Arrays.asList(out1));
 
                             Output1.setListData(Quote);
@@ -723,12 +742,12 @@ public class UserInterfaec extends javax.swing.JFrame {
                     } catch (SQLException ex) {
                         Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
                     }
-
+                    // if resultSet.next() returns false that means that no results were found so it sends this to the panels instead
                 } else {
                     String[] er = {"No Results Found"};
                     AuthorDisplay.setListData(er);
                     Output1.setListData(er);
-
+                    //catcihng exceptions
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
@@ -750,7 +769,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     }//GEN-LAST:event_Author_SearchActionPerformed
 
     private void Quote_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quote_SearchActionPerformed
-       //so the user cannot search by both author and quote at the same time.This is setting the author search buttion equal to false.
+        //so the user cannot search by both author and quote at the same time.This is setting the author search buttion equal to false.
         Author_Search.setSelected(false);
     }//GEN-LAST:event_Quote_SearchActionPerformed
 
@@ -758,18 +777,23 @@ public class UserInterfaec extends javax.swing.JFrame {
         Quote aa = new Quote();
 
         try {
+            /*for when the user removes the author in the Author Jlist
+            it will remove both the author from the sql database and the quotes of the authors*/
             aa.removeQuote(AuthorDisplay.getSelectedValue(), 2);
             aa.removeAuthor(AuthorDisplay.getSelectedValue(), 1);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //refreshing the results that is displayed
         SearchButton.doClick();
 
 
     }//GEN-LAST:event_Author_RemoveActionPerformed
 
     private void Button_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AddActionPerformed
+        //so that the methods in the quote class can be accesed
         Quote aa = new Quote();
+        //Same as in if (Author_Search.isSelected() && !Tags_Search.isSelected())
         Connection connec = aa.getDBConnection();
 
         Statement stmt = null;
@@ -795,13 +819,13 @@ public class UserInterfaec extends javax.swing.JFrame {
             boolean continues = true;
 
             int location = 0;
-            while (continues && quoteTemp.contains(" ")){
+            while (continues && quoteTemp.contains(" ")) {
                 continues = false;
                 //count = 0;
-                for (int x = 0; x < quoteTemp.length(); x ++){
+                for (int x = 0; x < quoteTemp.length(); x++) {
                     if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
 
-                        String test = quoteTemp.substring(0,x);
+                        String test = quoteTemp.substring(0, x);
                         location = test.lastIndexOf(" ");
 
                         if (location == -1) {
@@ -810,8 +834,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                             break;
                         }
 
-
-                        quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location+1);
+                        quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
                         continues = true;
                         break;
                     } else if (String.valueOf(quoteTemp.charAt(x)).matches("\n")) {
@@ -822,17 +845,16 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             }
 
-
             continues = true;
 
             location = 0;
-            while (continues && authorTemp.contains(" ")){
+            while (continues && authorTemp.contains(" ")) {
                 continues = false;
                 //count = 0;
-                for (int x = 0; x < authorTemp.length(); x ++){
+                for (int x = 0; x < authorTemp.length(); x++) {
                     if (!String.valueOf(authorTemp.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
 
-                        String test = authorTemp.substring(0,x);
+                        String test = authorTemp.substring(0, x);
                         location = test.lastIndexOf(" ");
 
                         if (location == -1) {
@@ -841,14 +863,12 @@ public class UserInterfaec extends javax.swing.JFrame {
                             break;
                         }
 
-
-                        authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location+1);
+                        authorTemp = authorTemp.substring(0, location) + "\n" + authorTemp.substring(location + 1);
                         continues = true;
                         break;
                     } else if (String.valueOf(authorTemp.charAt(x)).matches("\n")) {
                         location = x;
                     }
-
 
                 }
 
@@ -857,13 +877,11 @@ public class UserInterfaec extends javax.swing.JFrame {
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
 
             if (!aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt).next()) {
-                //JTextField xField = new JTextField(5);
-                //String path = JOptionPane.showInputDialog(xField, "Author Info");
-
+               //if there is no author found for the author set it will ask for info on the author
+                //making a popup windows so that the user has some where to insert the authors info
                 JTextArea xField = new JTextArea(15, 30);
                 xField.setLineWrap(true);
-                JScrollPane te=new JScrollPane(xField);
-
+                JScrollPane te = new JScrollPane(xField);
 
                 JPanel myPanel = new JPanel();
                 myPanel.add(new JLabel("User Info"));
@@ -878,13 +896,13 @@ public class UserInterfaec extends javax.swing.JFrame {
 
                 location = 0;
 
-                while (continues && path.contains(" ")){
+                while (continues && path.contains(" ")) {
                     continues = false;
                     //count = 0;
-                    for (int x = 0; x < path.length(); x ++){
+                    for (int x = 0; x < path.length(); x++) {
                         if (!String.valueOf(path.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
 
-                            String test = path.substring(0,x);
+                            String test = path.substring(0, x);
                             location = test.lastIndexOf(" ");
 
                             if (location == -1) {
@@ -893,21 +911,18 @@ public class UserInterfaec extends javax.swing.JFrame {
                                 break;
                             }
 
-
-                            path = path.substring(0, location) + "\n" + path.substring(location+1);
+                            path = path.substring(0, location) + "\n" + path.substring(location + 1);
                             continues = true;
                             break;
                         } else if (String.valueOf(path.charAt(x)).matches("\n")) {
                             location = x;
                         }
 
-
                     }
 
                 }
 
-
-                path=path.replaceAll("'", "''").trim();
+                path = path.replaceAll("'", "''").trim();
                 aa.insertAuthor(authorTemp.replaceAll("'", "''"), path, tagsNew);
 
             } else {
@@ -932,8 +947,9 @@ public class UserInterfaec extends javax.swing.JFrame {
 
     private void Author_Info_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Author_Info_SearchActionPerformed
         Quote aa = new Quote();
+        //getting the value for the selected quote so that the correct author can be removed
         String ta = AuthorDisplay.getSelectedValue();
-
+        //
         Connection connec = aa.getDBConnection();
 
         Statement stmt = null;
