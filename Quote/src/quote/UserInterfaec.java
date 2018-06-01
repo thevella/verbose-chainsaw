@@ -91,58 +91,38 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel5Layout.setHorizontalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel5Layout.setVerticalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel7Layout.setHorizontalGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel7Layout.setVerticalGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel9Layout.setHorizontalGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
+        jPanel9Layout.setVerticalGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 100, Short.MAX_VALUE));
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -178,7 +158,8 @@ public class UserInterfaec extends javax.swing.JFrame {
         });
         QuotePopOut.add(Remove);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(
+                new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(744, 485));
@@ -279,8 +260,14 @@ public class UserInterfaec extends javax.swing.JFrame {
         AuthorDisplay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         AuthorDisplay.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = new String[1];
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+
+            public int getSize() {
+                return strings.length;
+            }
+
+            public String getElementAt(int i) {
+                return strings[i];
+            }
         });
         AuthorDisplay.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -302,9 +289,15 @@ public class UserInterfaec extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, gridBagConstraints);
 
         Output1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = {""};
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            String[] strings = { "" };
+
+            public int getSize() {
+                return strings.length;
+            }
+
+            public String getElementAt(int i) {
+                return strings[i];
+            }
         });
         Output1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Output1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -437,31 +430,29 @@ public class UserInterfaec extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of one of the three displays.\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\nof: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\nConfused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\tsearching the tags.");
+        jTextArea1.setText(
+                "This is the Quote's Database Program. This program is designed to collect quotes from\nvarious author's and present them to the user with a description of the author as well. \nThe program contains a few useful buttons and areas that are helpful to know:\n\n1. The Search Tab : Used to search for specific authors, quotes, or tags.\n\t- There are three screens on the Search Tab:\n\t\t1. The Author Name Display\n\t\t2. The Author Quote Display\n\t\t3. The Search Box\n\t- There is also three selections with function for searching: Author, Tag, or Quote.\n\n2. The Add Tab: Used to add new authors, quotes, and tags to the program.\n        - There are three displays in the Add tab:\n\t\t1. The Author Input Display\n\t\t2. The Quote Input Display\n\t\t3. The Tag Input Display\n\t- There is a add button which is used after the input of one of the three displays.\n3. The Info Tab: Used to remind the user of the functionality of the program.\n\n4. Tagging Explanation: There are specific tags that identify each quotation, which consist\nof: Open, Happy, Alive, Good, Love, Interested, Positive, Strong, Angry, Depressed,\nConfused, Helpless, Indifferent, Afraid, Hurt, Sad.\n\n\t- These tags are used to identify the quotes, and are your key words for \n\tsearching the tags.");
         jScrollPane4.setViewportView(jTextArea1);
 
         jTabbedPane1.addTab("Help", jScrollPane4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
-        );
+        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(
+                jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 453,
+                Short.MAX_VALUE));
 
         setSize(new java.awt.Dimension(760, 492));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Auth_SearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Auth_SearchActionPerformed
-//this is for when the user clicks on the serach author from the menu .
+        //this is for when the user clicks on the serach author from the menu .
         String to = AuthorDisplay.getSelectedValue();
         //getting teh author that the user is whiching for them to search by
-        //setting the search panel equal to what ever the user click on 
+        //setting the search panel equal to what ever the user click on
         SearchTerm.setText(to);
         //click the search button and therefore seraching for the author
         SearchButton.doClick();
@@ -469,7 +460,7 @@ public class UserInterfaec extends javax.swing.JFrame {
     }//GEN-LAST:event_Auth_SearchActionPerformed
 
     private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
-//so the Quote class can be accessed
+        //so the Quote class can be accessed
         Quote aa = new Quote();
         //getting the selected quote that the user has click on and replacing all of the HTML so that is is usable in the search.
         String to = Output1.getSelectedValue().replaceAll("<html>", "");
@@ -479,7 +470,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         String ta = te.substring(0, te.indexOf("--")).trim();
 
         //System.out.println(ta);
-        //calling the remove quote method from the quote class.giving it the quote and the type of thing to remove 
+        //calling the remove quote method from the quote class.giving it the quote and the type of thing to remove
         try {
             aa.removeQuote(ta, 3);
         } catch (SQLException ex) {
@@ -488,22 +479,21 @@ public class UserInterfaec extends javax.swing.JFrame {
         //essentially refreshing the search result
         SearchButton.doClick();
 
-
     }//GEN-LAST:event_RemoveActionPerformed
 
     private void Output1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Output1MouseClicked
-//if the user rights clicks inside the Quote JList the pops up with the option to remove the selected quote.
-        if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) {   // if right mouse button clicked
+        //if the user rights clicks inside the Quote JList the pops up with the option to remove the selected quote.
+        if (SwingUtilities.isRightMouseButton(evt) && !Output1.isSelectionEmpty()) { // if right mouse button clicked
             //calling the quotepopout menu and also telling it where to go.
             QuotePopOut.show(evt.getComponent(), evt.getX(), evt.getY());
 
-// System.out.println("bamao");
+            // System.out.println("bamao");
         }
     }//GEN-LAST:event_Output1MouseClicked
 
     private void AuthorDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AuthorDisplayMouseClicked
         //detecing if the right click has been clickd and if it is it will call the PopUp menu and it will display all of its options
-        if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) {   // if right mouse button clicked
+        if (SwingUtilities.isRightMouseButton(evt) && !AuthorDisplay.isSelectionEmpty()) { // if right mouse button clicked
             //calling the popup menu with all of the options inside the popup menu.Also getting the location of the mouse click inside the Jlist and displaying the menu there
             PopUp.show(evt.getComponent(), evt.getX(), evt.getY());
             //System.out.println("sdsd");
@@ -539,9 +529,9 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-            //connec.close();
-            //}
-            //making an array list to store both the authors names and the authors quote.
+              //connec.close();
+              //}
+              //making an array list to store both the authors names and the authors quote.
             ArrayList<String> ToList = new ArrayList<String>();
             ArrayList<String> QuoteList = new ArrayList<String>();
 
@@ -553,7 +543,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                             //test += resultSet.getString(3) + "\n";
                             //test += "-- " + resultSet.getString(2) + "\n" + "\n";
                             //formatting the text to send to the quote output area and sending it to an array list.
-                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2)
+                                    + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
                             //filling a 2nd array list with the names of all authors.
                             ToList.add(resultSet.getString(2));
                             //converthing both of the array lists to array because that is all that JLists can display
@@ -572,7 +563,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     }
                     //this will be send to the ui if no results are found
                 } else {
-                    String[] er = {"No Results Found"};
+                    String[] er = { "No Results Found" };
                     AuthorDisplay.setListData(er);
                     Output1.setListData(er);
 
@@ -605,7 +596,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             }
-            //intilizing array list to store the quotes values 
+            //intilizing array list to store the quotes values
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             try {
@@ -617,7 +608,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n\n";
                             //adding the results to the array list while formating it for the JList
-                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2)
+                                    + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
                             //converting the array list to an array so that it can be passed to the JList
                             String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
                             Output1.setListData(quote1);
@@ -628,7 +620,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     }
                     //if no results are found it will send ro results.
                 } else {
-                    String[] er = {"No Results Found"};
+                    String[] er = { "No Results Found" };
                     Output1.setListData(er);
                 }
             } catch (SQLException ex) {
@@ -657,9 +649,9 @@ public class UserInterfaec extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
             } //finally {
-            //connec.close();
-            //}
-            //making arraylist to store the quotes that the tags search yields
+              //connec.close();
+              //}
+              //making arraylist to store the quotes that the tags search yields
             ArrayList<String> QuoteOut = new ArrayList<String>();
 
             try {
@@ -671,10 +663,11 @@ public class UserInterfaec extends javax.swing.JFrame {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n\n";
                             //formating the output to the JLlist and sending the results to an arraylist
-                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            QuoteOut.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2)
+                                    + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
                             //converting it to an array so that it can be sent to a JList
                             String[] quote1 = QuoteOut.toArray(new String[QuoteOut.size()]);
-                           //sending the results to the Jlist output..
+                            //sending the results to the Jlist output..
                             Output1.setListData(quote1);
                         } while (resultSet.next());
                     } catch (SQLException ex) {
@@ -682,7 +675,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     }
                     //if there are no results found.
                 } else {
-                    String[] er = {"No Results Found"};
+                    String[] er = { "No Results Found" };
                     Output1.setListData(er);
                 }
             } catch (SQLException ex) {
@@ -707,7 +700,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             try {
                 //calling the statment funciton to assign its value to the STMT
                 stmt = connec.createStatement();
-                //Calling the serach method and storing what ever it returns to the resultset variable which is ready to be converted to a string 
+                //Calling the serach method and storing what ever it returns to the resultset variable which is ready to be converted to a string
                 resultSet = aa.searchRough(2, Term, 4, connec, stmt);
                 //catching any errors
             } catch (SQLException ex) {
@@ -725,8 +718,9 @@ public class UserInterfaec extends javax.swing.JFrame {
                             test += resultSet.getString(3) + "\n";
                             test += "-- " + resultSet.getString(2) + "\n" + "\n";
                             //formating what we send to the arraylist for the actual quote Jlist
-                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2) + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
-                            //sending the info for the author JList to a another arraylist 
+                            QuoteList.add(("<html>" + resultSet.getString(3) + "<br/>" + "-- " + resultSet.getString(2)
+                                    + "<br/>" + "<br/>" + "<html>").replaceAll("\n", "<br/>"));
+                            //sending the info for the author JList to a another arraylist
                             ToList.add(resultSet.getString(2));
 
                             //converting the ArrayList to a normal array so that it can be sent to the Jlist
@@ -744,7 +738,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                     }
                     // if resultSet.next() returns false that means that no results were found so it sends this to the panels instead
                 } else {
-                    String[] er = {"No Results Found"};
+                    String[] er = { "No Results Found" };
                     AuthorDisplay.setListData(er);
                     Output1.setListData(er);
                     //catcihng exceptions
@@ -786,7 +780,6 @@ public class UserInterfaec extends javax.swing.JFrame {
         }
         //refreshing the results that is displayed
         SearchButton.doClick();
-
 
     }//GEN-LAST:event_Author_RemoveActionPerformed
 
@@ -877,7 +870,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
 
             if (!aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt).next()) {
-               //if there is no author found for the author set it will ask for info on the author
+                //if there is no author found for the author set it will ask for info on the author
                 //making a popup windows so that the user has some where to insert the authors info
                 JTextArea xField = new JTextArea(15, 30);
                 xField.setLineWrap(true);
@@ -888,8 +881,8 @@ public class UserInterfaec extends javax.swing.JFrame {
                 myPanel.add(te);
                 myPanel.add(Box.createVerticalStrut(40)); // a spacer
 
-                int result = JOptionPane.showConfirmDialog(null, myPanel,
-                        "Please Enter Author Info", JOptionPane.OK_CANCEL_OPTION);
+                int result = JOptionPane.showConfirmDialog(null, myPanel, "Please Enter Author Info",
+                        JOptionPane.OK_CANCEL_OPTION);
                 String path = xField.getText();
 
                 continues = true;
@@ -928,7 +921,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             } else {
                 ResultSet temperary = aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt);
                 temperary.next();
-                String[] temp = {temperary.getString(1), temperary.getString(2), temperary.getString(3)};
+                String[] temp = { temperary.getString(1), temperary.getString(2), temperary.getString(3) };
 
                 aa.removeAuthor(temp[0], 1);
                 aa.insertAuthor(temp[0], temp[1], temp[2] + "\n" + tagsNew);
@@ -941,7 +934,6 @@ public class UserInterfaec extends javax.swing.JFrame {
         Author_Add.setText("");
         Quote_Add.setText("");
         Tags_Add.setText("");
-
 
     }//GEN-LAST:event_Button_AddActionPerformed
 
@@ -969,7 +961,8 @@ public class UserInterfaec extends javax.swing.JFrame {
 
         try {
             while (rs.next()) {
-                Output1.setListData(new String[]{"<html>-- Author Info -- <br/><br/>" + rs.getString(2).replaceAll("\n", "<br/>") + "</html>"});
+                Output1.setListData(new String[] {
+                        "<html>-- Author Info -- <br/><br/>" + rs.getString(2).replaceAll("\n", "<br/>") + "</html>" });
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
@@ -994,13 +987,17 @@ public class UserInterfaec extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserInterfaec.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
         //</editor-fold>
 
