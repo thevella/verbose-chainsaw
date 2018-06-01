@@ -821,7 +821,7 @@ public class UserInterfaec extends javax.swing.JFrame {
         }
 
         try {
-            String[] tempTags = Tags_Add.getText().replaceAll("'", "''").split(",");
+            String[] tempTags = Tags_Add.getText().split(",");
             String tagsNew = "";
 
             for (String x : tempTags) {
@@ -889,7 +889,7 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             }
 
-            aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew);
+            aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew.replaceAll("'", "''"));
 
             if (!aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt).next()) {
                 //if there is no author found for the author set it will ask for info on the author
@@ -938,7 +938,7 @@ public class UserInterfaec extends javax.swing.JFrame {
                 }
 
                 path = path.replaceAll("'", "''").trim();
-                aa.insertAuthor(authorTemp.replaceAll("'", "''"), path, tagsNew);
+                aa.insertAuthor(authorTemp.replaceAll("'", "''"), " " + path + " ", tagsNew);
 
             } else {
                 ResultSet temperary = aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt);
@@ -999,10 +999,10 @@ public class UserInterfaec extends javax.swing.JFrame {
         String te = Output1.getSelectedValue().replaceAll("<html>", "");
         //more striping of the HTML "<br/>" is the html equivalent of the "\n".
         te = te.replaceAll("<br/>", "\n");
-        
+
         // Uses the method from the toolkit to create a new clipboard
         // object and set the contents as a string selection object
-        // that contains the content of the sanatized input from the 
+        // that contains the content of the sanatized input from the
         // jPopupMenu, making your clipboard hold that value
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(te.trim()), null);
     }//GEN-LAST:event_CopyToClipBoardActionPerformed
