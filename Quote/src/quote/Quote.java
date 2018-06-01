@@ -477,62 +477,7 @@ public class Quote {
     ////////////////////////////////////////////////////
     ///////////////////////////////////////////////////
 
-    static void print(String stringer) {
-        // Just a function to simplify output
-        System.out.print(stringer);
-    }
 
-    // String to hold os value
-    private static String OS = null;
-
-    // return the os value
-    public static String getOsName() {
-        if (OS == null) {
-            OS = System.getProperty("os.name");
-        }
-        return OS;
-    }
-
-    // Return true if windows
-    public static boolean isWindows() {
-        return getOsName().startsWith("Windows");
-    }
-
-    // return true if linux
-    public static boolean isUnix() {
-        return getOsName().startsWith("Linux");
-    }
-
-    // function to clear screen
-    static void clearScreen() {
-        // try block to stop all exceptions
-        // so that errors do not cause problems
-        try {
-            // Get runtime
-            java.lang.Runtime rt = java.lang.Runtime.getRuntime();
-
-            // Start a new process:
-            // if unix, use the clear command
-            // if windows, use the cls command
-            // otherwise do not create a command
-            if (isUnix()) {
-                java.lang.Process p = rt.exec("clear");
-                p.waitFor();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
-
-                String line = "";
-                while ((line = reader.readLine()) != null) {
-                    print(line);
-                }
-            } else if (isWindows()) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } else {
-                ;
-            }
-        } catch (Exception e) {
-            ;
-        }
-    }
 
     public static void main(String[] args) {
         // Taken from stack overflow: https://stackoverflow.com/questions/1611931/catching-ctrlc-in-java
@@ -542,7 +487,7 @@ public class Quote {
             public void run() {
                 try {
                     Thread.sleep(200);
-                    print("\n");
+                    System.out.print("\n");
                     //some cleaning up code...
 
                 } catch (InterruptedException e) {
