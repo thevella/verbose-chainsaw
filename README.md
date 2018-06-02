@@ -1,6 +1,16 @@
 # verbose-chainsaw
-School Quotes project
+## School Quotes project
 
+# **Authors:**
+=================
+Mitchell Vella, Cole Mollica, Gabe Mercier
+
+# Purpose
+=========
+The purpose of this program is to store and access quotes in a meaningful way. It allows the addition and removal of quotes/authors and allows for searching by author/quotes:tags/plaintext. This allows for exact and rough searches to find precisely what you want to. 
+
+# Compiling
+===========
 MUST be compiled using
 ```sh
 javac -cp ".:h2.jar:quote/h2.jar" UserInterfaec.java Quote.java
