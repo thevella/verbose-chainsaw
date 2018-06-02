@@ -821,37 +821,87 @@ public class UserInterfaec extends javax.swing.JFrame {
         }
 
         try {
+            // splits tags by comma to get each tag seperate
             String[] tempTags = Tags_Add.getText().split(",");
+
+            // temperary tags holder
             String tagsNew = "";
 
+            // for every value of tag, trim it and surround
+            // with spaces adding to the temp storage of tags
             for (String x : tempTags) {
                 tagsNew += " " + x.trim() + " \n";
             }
+
+            // set the tags substring as everything but
+            // the last newline character
             tagsNew = tagsNew.substring(0, tagsNew.length() - 1);
+
+            // set temp author and quote variables for
+            // processing as the text cannot be processed
+            // directely
             String authorTemp = Author_Add.getText();
             String quoteTemp = Quote_Add.getText();
 
+            // Boolean for continueing or
+            // exiting
             boolean continues = true;
 
+            // Location of last find of space
+            // so that the wrap is 73 characters from
+            // there not from the last x location, making the
+            // wrap more predicable with no lines that are only
+            // 3 or 4 characters long
             int location = 0;
+
+            // loop to go back to beginning once one
+            // iteration has been completed. This is so
+            // that something isnt miss. Could probably
+            // Be removed for better efficiency but less
+            // reliant results
             while (continues && quoteTemp.contains(" ")) {
+                // sets continues false at beginning of loop so that it
+                // exits if the for loop completes without
+                // finding anything
                 continues = false;
-                //count = 0;
+
+                // loops over the array, looking for numbers that are
+                // 73 away from eachother
                 for (int x = 0; x < quoteTemp.length(); x++) {
+                    // if the string is not only a newline character
+                    // and the string is 73 if the last find is
+                    // subtracted from it, and it is greater than 0
+                    // then format it
                     if (!String.valueOf(quoteTemp.charAt(x)).matches("\n") && x - location == 73 && x > 0) {
 
+                        // create a test string that does not contain the
+                        // space that was found
                         String test = quoteTemp.substring(0, x);
+
+                        // find the last instance of a space in
+                        // the test string, this is so that words
+                        // are not cut in the middle
                         location = test.lastIndexOf(" ");
 
+                        // if the space was not found, exit both loops
                         if (location == -1) {
                             continues = false;
                             //print(test + "\n");
                             break;
                         }
 
+                        // create a new quote that is the last quote upto
+                        // the space non-inclusive, with a newline
+                        // plus everything after the space non inclusive
+                        // this keeps the string the same length
                         quoteTemp = quoteTemp.substring(0, location) + "\n" + quoteTemp.substring(location + 1);
                         continues = true;
                         break;
+
+                    // if the location of the x is a newline
+                    // that means that a new paragraph was created
+                    // so the numbering should restart for 73
+                    // set location equal to x
                     } else if (String.valueOf(quoteTemp.charAt(x)).matches("\n")) {
                         location = x;
                     }
@@ -860,6 +910,10 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             }
 
+
+            // reset up the previous formatting for another round
+            // exactly the same except the string being formatted
+            // is the authors now
             continues = true;
 
             location = 0;
@@ -889,9 +943,13 @@ public class UserInterfaec extends javax.swing.JFrame {
 
             }
 
+            // Insert quotes into database, properly escaping the
+            // ' character so that it doesnt mess with input
             aa.insertQuotes(authorTemp.replaceAll("'", "''"), quoteTemp.replaceAll("'", "''"), tagsNew.replaceAll("'", "''"));
 
+            // if the author doesnt exist, then create it
             if (!aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt).next()) {
+
                 //if there is no author found for the author set it will ask for info on the author
                 //making a popup windows so that the user has some where to insert the authors info
                 JTextArea xField = new JTextArea(15, 30);
@@ -907,6 +965,9 @@ public class UserInterfaec extends javax.swing.JFrame {
                         JOptionPane.OK_CANCEL_OPTION);
                 String path = xField.getText();
 
+                // reset up the previous formatting for another round
+                // exactly the same except the string being formatted
+                // is the author info now
                 continues = true;
 
                 location = 0;
@@ -937,10 +998,14 @@ public class UserInterfaec extends javax.swing.JFrame {
 
                 }
 
+                // same as last insert, but with the author instead
                 path = path.replaceAll("'", "''").trim();
                 aa.insertAuthor(authorTemp.replaceAll("'", "''"), " " + path + " ", tagsNew);
 
             } else {
+                // otherwise store the author temperarily in a
+                // array and feed it back with the new
+                // tags
                 ResultSet temperary = aa.searchExact(1, authorTemp.replaceAll("'", "''"), 2, connec, stmt);
                 temperary.next();
                 String[] temp = { temperary.getString(1), temperary.getString(2), temperary.getString(3) };
@@ -953,6 +1018,7 @@ public class UserInterfaec extends javax.swing.JFrame {
             Logger.getLogger(UserInterfaec.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        // reset add text
         Author_Add.setText("");
         Quote_Add.setText("");
         Tags_Add.setText("");
