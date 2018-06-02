@@ -1,6 +1,7 @@
 # verbose-chainsaw
 ## School Quotes project
 
+
 **Authors:**
 =================
 Mitchell Vella, Cole Mollica, Gabe Mercier
