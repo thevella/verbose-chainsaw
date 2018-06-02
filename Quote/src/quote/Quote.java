@@ -1,8 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* Authors: Mitchell Vella, Cole Mollica, Gabe Mercier
+* Quotes database code
+* this database stores and sorts quotes by various
+* authors to create a searchable and editable experience
+* Date: June 1st 2018
+*/
 package quote;
 
 import org.h2.tools.DeleteDbFiles;
