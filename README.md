@@ -1,5 +1,6 @@
 # verbose-chainsaw
-## School Quotes project
+*School Quotes project*
+
 
 **Authors:**
 =================
