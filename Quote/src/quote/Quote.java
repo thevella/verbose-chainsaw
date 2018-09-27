@@ -7,6 +7,7 @@
 package quote;
 
 import org.h2.tools.DeleteDbFiles;
+import org.h2.Driver;
 
 import java.io.*;
 import java.lang.Math;
@@ -60,6 +61,7 @@ public class Quote {
     // file to be accessed
     private final String DB_CONNECTION = "jdbc:h2:" + (new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
             .substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
+
 
     // The database user and password,
     // is only the default user
@@ -496,7 +498,8 @@ public class Quote {
                 }
             }
         });
-
+        System.out.println(new QuotesDatabase().GetLocation("QuotesDatabase.mv.db")
+                .substring(0, new QuotesDatabase().GetLocation("QuotesDatabase.mv.db").length() - 1 - 5));
         // runs the user interface and sets to visible.
         // exits when this closes
         UserInterfaec aa = new UserInterfaec();
